@@ -1,0 +1,376 @@
+<?php $__env->startSection('meta_title', isset($setting) ? $setting->site_title : 'Accrosian – Turning Ideas Into Reality'); ?>
+<?php $__env->startSection('meta_description', isset($setting) ? $setting->meta_description : 'Accrosian is a premium software company
+delivering innovative web, mobile, cloud, and AI solutions for modern businesses.'); ?>
+
+<?php $__env->startSection('content'); ?>
+
+
+<section class="hero">
+    <img src="<?php echo e(asset('assets/images/hero-bg-img.png')); ?>" alt="Hero Background" class="hero-bg-img" />
+    <div class="hero-bg-effects">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-grid"></div>
+    </div>
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Award-Winning Software Company
+            </div>
+            <h1 class="hero-title">
+                Innovative Software Solutions for
+                <span class="text-gradient">Modern Businesses</span>
+            </h1>
+            <p class="hero-description">
+                We craft cutting-edge digital experiences — from powerful web platforms to intelligent AI solutions —
+                helping businesses accelerate growth and outpace competition.
+            </p>
+            <div class="hero-actions">
+                <a href="<?php echo e(route('services')); ?>" class="btn btn-primary btn-arrow">Explore Services</a>
+                <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-outline">View Our Work</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-num" data-target="250" data-suffix="+"
+                        style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--orange);">250+
+                    </div>
+                    <div class="hero-stat-label">Projects Delivered</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num" data-target="98" data-suffix="%"
+                        style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--orange);">98%
+                    </div>
+                    <div class="hero-stat-label">Client Satisfaction</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num" data-target="8" data-suffix="+"
+                        style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--orange);">8+
+                    </div>
+                    <div class="hero-stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card-main">
+                <div class="hero-card-header">
+                    <div class="hero-card-icon">📊</div>
+                    <div>
+                        <div class="hero-card-title">Project Analytics</div>
+                        <div class="hero-card-subtitle">Real-time performance metrics</div>
+                    </div>
+                </div>
+                <div class="progress-list">
+                    <div>
+                        <div class="progress-item-label"><span>Web Development</span><span>96%</span></div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:96%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progress-item-label"><span>Mobile Apps</span><span>91%</span></div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:91%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progress-item-label"><span>AI Solutions</span><span>88%</span></div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:88%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progress-item-label"><span>Cloud Services</span><span>94%</span></div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:94%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-float-cards">
+                <div class="float-card">
+                    <div class="float-card-icon">🚀</div>
+                    <div>
+                        <div class="float-card-value">+127%</div>
+                        <div class="float-card-text">Performance boost</div>
+                    </div>
+                </div>
+                <div class="float-card">
+                    <div class="float-card-icon">⭐</div>
+                    <div>
+                        <div class="float-card-value">4.9 / 5.0</div>
+                        <div class="float-card-text">Client rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="clients-section">
+    <div class="container">
+        <p class="clients-label">Trusted by leading companies worldwide</p>
+        <div class="clients-scroll-wrap">
+            <div class="clients-track">
+                <?php $__currentLoopData = ['TechCorp','InnovateLabs','DataStream','NexaGroup','CloudBase','FutureScale','DigitalWave','SmartEdge','ProVenture','BuildNext']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="client-logo"><?php echo e($client); ?></div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php $__currentLoopData = ['TechCorp','InnovateLabs','DataStream','NexaGroup','CloudBase','FutureScale','DigitalWave','SmartEdge','ProVenture','BuildNext']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="client-logo"><?php echo e($client); ?></div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="services-section" id="services">
+    <div class="container">
+        <div style="text-align:center;margin-bottom:60px" class="reveal">
+            <span class="section-tag">What We Do</span>
+            <h2 class="section-title">Services That Drive <span class="text-gradient">Real Results</span></h2>
+            <p class="section-subtitle" style="margin:0 auto 0">We offer a comprehensive range of technology services to
+                help your business thrive in the digital age.</p>
+        </div>
+        <div class="services-grid">
+            <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="service-card reveal reveal-delay-<?php echo e(($i % 3) + 1); ?>">
+                <?php if($service->image && !str_starts_with($service->image, 'assets/')): ?>
+                <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>"
+                    class="service-card-img" />
+                <?php elseif($service->image): ?>
+                <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>" class="service-card-img" />
+                <?php else: ?>
+                <img src="<?php echo e(asset('assets/images/web-dev-img.png')); ?>" alt="<?php echo e($service->title); ?>"
+                    class="service-card-img" />
+                <?php endif; ?>
+                <div class="service-card-overlay"></div>
+                <div class="service-card-content">
+                    <h3 class="service-title"><?php echo e($service->icon); ?> <?php echo e($service->title); ?></h3>
+                    <a href="<?php echo e(route('services.show', $service->slug)); ?>" class="service-link">
+                        Learn More
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </div>
+    </div>
+</section>
+
+
+<section class="process-section">
+    <div class="container">
+        <div class="process-header reveal">
+            <span class="section-tag">Our Process</span>
+            <h2 class="section-title">How We Build <span class="text-gradient">Extraordinary</span> Software Together
+            </h2>
+            <p class="process-header-sub">Our streamlined development workflow ensures high-quality, scalable, and
+                reliable digital products — delivered on time, every time.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-card reveal reveal-delay-1">
+                <img src="<?php echo e(asset('assets/images/discover-img.png')); ?>" alt="Discovery" class="process-card-img" />
+                <div class="process-overlay"></div>
+                <div class="process-content">
+                    <div class="process-step-num">01</div>
+                    <h3 class="process-title">Discovery</h3>
+                    <p class="process-desc">We analyze your goals, challenges, and vision to design the perfect
+                        solution.</p>
+                </div>
+            </div>
+            <div class="process-card reveal reveal-delay-2">
+                <img src="<?php echo e(asset('assets/images/design-img.png')); ?>" alt="Design" class="process-card-img" />
+                <div class="process-overlay"></div>
+                <div class="process-content">
+                    <div class="process-step-num">02</div>
+                    <h3 class="process-title">Design</h3>
+                    <p class="process-desc">Our designers craft intuitive, modern UI/UX experiences people love to use.
+                    </p>
+                </div>
+            </div>
+            <div class="process-card reveal reveal-delay-3">
+                <img src="<?php echo e(asset('assets/images/dev-img-proccess.png')); ?>" alt="Development"
+                    class="process-card-img" />
+                <div class="process-overlay"></div>
+                <div class="process-content">
+                    <div class="process-step-num">03</div>
+                    <h3 class="process-title">Development</h3>
+                    <p class="process-desc">Our engineers build secure, scalable apps with the latest modern
+                        technologies.</p>
+                </div>
+            </div>
+            <div class="process-card reveal reveal-delay-4">
+                <img src="<?php echo e(asset('assets/images/lunch-img.png')); ?>" alt="Launch" class="process-card-img" />
+                <div class="process-overlay"></div>
+                <div class="process-content">
+                    <div class="process-step-num">04</div>
+                    <h3 class="process-title">Launch</h3>
+                    <p class="process-desc">We deploy your product and provide continuous support to ensure lasting
+                        success.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="features-section">
+    <div class="container">
+        <div style="text-align:center;margin-bottom:60px" class="reveal">
+            <span class="section-tag">Why Accrosian</span>
+            <h2 class="section-title">Built for <span class="text-gradient">Performance & Scale</span></h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Fast Delivery</h3>
+                <p class="feature-text">Agile processes ensure rapid delivery without sacrificing quality or attention
+                    to detail.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">Enterprise Security</h3>
+                <p class="feature-text">Bank-grade security practices baked into every layer of our solutions.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="feature-icon">📈</div>
+                <h3 class="feature-title">Scalable Architecture</h3>
+                <p class="feature-text">Systems designed to grow with your business from startup to enterprise scale.
+                </p>
+            </div>
+            <div class="feature-card reveal reveal-delay-4">
+                <div class="feature-icon">🤝</div>
+                <h3 class="feature-title">Dedicated Support</h3>
+                <p class="feature-text">24/7 dedicated support teams ensuring your systems run flawlessly around the
+                    clock.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<?php if($portfolio->isNotEmpty()): ?>
+<section style="padding:100px 0;background:var(--surface)">
+    <div class="container">
+        <div style="text-align:center;margin-bottom:60px" class="reveal">
+            <span class="section-tag">Our Work</span>
+            <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+        </div>
+        <div class="portfolio-grid">
+            <?php $__currentLoopData = $portfolio->take(6); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="portfolio-card reveal reveal-delay-<?php echo e(($i%3)+1); ?>">
+                <?php if($item->image && !str_starts_with($item->image,'assets/')): ?>
+                <img src="<?php echo e(asset('storage/'.$item->image)); ?>" alt="<?php echo e($item->title); ?>" class="portfolio-img" />
+                <?php else: ?>
+                <img src="<?php echo e(asset('assets/images/about-us.jpg')); ?>" alt="<?php echo e($item->title); ?>" class="portfolio-img" />
+                <?php endif; ?>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-tag"><?php echo e($item->category); ?></div>
+                    <h3 class="portfolio-title"><?php echo e($item->title); ?></h3>
+                </div>
+            </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </div>
+        <div style="text-align:center;margin-top:48px">
+            <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-primary">View All Projects</a>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
+
+
+<section class="testimonials-section">
+    <div class="container">
+        <div style="text-align:center;margin-bottom:60px" class="reveal">
+            <span class="section-tag">Client Love</span>
+            <h2 class="section-title">What Our Clients <span class="text-gradient">Say About Us</span></h2>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonials-track">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Accrosian transformed our entire digital infrastructure. Their team's
+                        technical expertise and commitment to our vision was extraordinary. The platform they built
+                        handles 10x our previous traffic flawlessly."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RK</div>
+                        <div>
+                            <div class="testimonial-name">Rajesh Kumar</div>
+                            <div class="testimonial-role">CTO, TechVenture India</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The mobile app they developed for us exceeded all expectations. Our
+                        user engagement increased by 340% in the first quarter post-launch. Truly world-class
+                        development team."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">PD</div>
+                        <div>
+                            <div class="testimonial-name">Priya Desai</div>
+                            <div class="testimonial-role">Product Manager, NexaScale</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Their AI solution automated 70% of our data processing workflows,
+                        saving us hundreds of hours monthly. The ROI was evident within the first month of deployment."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AM</div>
+                        <div>
+                            <div class="testimonial-name">Arjun Mehta</div>
+                            <div class="testimonial-role">CEO, DataStream Analytics</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Professional, innovative, and reliable. Accrosian delivered our
+                        e-commerce platform 2 weeks ahead of schedule with zero critical bugs at launch. Our best tech
+                        partnership yet."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SA</div>
+                        <div>
+                            <div class="testimonial-name">Sunita Agarwal</div>
+                            <div class="testimonial-role">Founder, ShopEase</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-btn slider-prev">←</button>
+            <div class="slider-dots">
+                <div class="slider-dot active"></div>
+                <div class="slider-dot"></div>
+            </div>
+            <button class="slider-btn slider-next">→</button>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="cta-section">
+    <div class="container cta-inner">
+        <span class="section-tag" style="margin-bottom:24px">Ready to Start?</span>
+        <h2 class="cta-title">Let's Build Something <span class="text-gradient">Extraordinary</span> Together</h2>
+        <p class="cta-subtitle">Tell us your vision and we'll turn it into reality. Free consultation, no commitment.
+        </p>
+        <div class="cta-actions">
+            <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary btn-arrow">Start Your Project</a>
+            <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-outline">See Our Work</a>
+        </div>
+    </div>
+</section>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xamppNew\htdocs\accroNew\resources\views/frontend/home.blade.php ENDPATH**/ ?>
