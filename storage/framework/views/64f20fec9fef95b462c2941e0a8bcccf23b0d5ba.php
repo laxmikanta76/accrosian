@@ -1,14 +1,12 @@
-@extends('layouts.app')
+<?php $__env->startSection('meta_title', isset($setting) ? $setting->site_title : 'Accrosian – Turning Ideas Into Reality'); ?>
+<?php $__env->startSection('meta_description', isset($setting) ? $setting->meta_description : 'Accrosian is a premium software company
+delivering innovative web, mobile, cloud, and AI solutions for modern businesses.'); ?>
 
-@section('meta_title', isset($setting) ? $setting->site_title : 'Accrosian – Turning Ideas Into Reality')
-@section('meta_description', isset($setting) ? $setting->meta_description : 'Accrosian is a premium software company
-delivering innovative web, mobile, cloud, and AI solutions for modern businesses.')
+<?php $__env->startSection('content'); ?>
 
-@section('content')
 
-{{-- HERO --}}
 <section class="hero">
-    <img src="{{ asset('assets/images/hero-bg-img.png') }}" alt="Hero Background" class="hero-bg-img" />
+    <img src="<?php echo e(asset('assets/images/hero-bg-img.png')); ?>" alt="Hero Background" class="hero-bg-img" />
     <div class="hero-bg-effects">
         <div class="hero-orb hero-orb-1"></div>
         <div class="hero-orb hero-orb-2"></div>
@@ -29,8 +27,8 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                 helping businesses accelerate growth and outpace competition.
             </p>
             <div class="hero-actions">
-                <a href="{{ route('services') }}" class="btn btn-primary btn-arrow">Explore Services</a>
-                <a href="{{ route('portfolio') }}" class="btn btn-outline">View Our Work</a>
+                <a href="<?php echo e(route('services')); ?>" class="btn btn-primary btn-arrow">Explore Services</a>
+                <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-outline">View Our Work</a>
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
@@ -109,26 +107,24 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
     </div>
 </section>
 
-{{-- CLIENTS --}}
+
 <section class="clients-section">
     <div class="container">
         <p class="clients-label">Trusted by leading companies worldwide</p>
         <div class="clients-scroll-wrap">
             <div class="clients-track">
-                @foreach(['TechCorp','InnovateLabs','DataStream','NexaGroup','CloudBase','FutureScale','DigitalWave','SmartEdge','ProVenture','BuildNext']
-                as $client)
-                <div class="client-logo">{{ $client }}</div>
-                @endforeach
-                @foreach(['TechCorp','InnovateLabs','DataStream','NexaGroup','CloudBase','FutureScale','DigitalWave','SmartEdge','ProVenture','BuildNext']
-                as $client)
-                <div class="client-logo">{{ $client }}</div>
-                @endforeach
+                <?php $__currentLoopData = ['TechCorp','InnovateLabs','DataStream','NexaGroup','CloudBase','FutureScale','DigitalWave','SmartEdge','ProVenture','BuildNext']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="client-logo"><?php echo e($client); ?></div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php $__currentLoopData = ['TechCorp','InnovateLabs','DataStream','NexaGroup','CloudBase','FutureScale','DigitalWave','SmartEdge','ProVenture','BuildNext']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="client-logo"><?php echo e($client); ?></div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </div>
 </section>
 
-{{-- SERVICES --}}
+
 <section class="services-section" id="services">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
@@ -138,21 +134,21 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                 help your business thrive in the digital age.</p>
         </div>
         <div class="services-grid">
-            @foreach($services as $i => $service)
-            <div class="service-card reveal reveal-delay-{{ ($i % 3) + 1 }}">
-                @if($service->image && !str_starts_with($service->image, 'assets/'))
-                <img src="{{ asset('storage/'.$service->image) }}" alt="{{ $service->title }}"
+            <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="service-card reveal reveal-delay-<?php echo e(($i % 3) + 1); ?>">
+                <?php if($service->image && !str_starts_with($service->image, 'assets/')): ?>
+                <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>"
                     class="service-card-img" />
-                @elseif($service->image)
-                <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" class="service-card-img" />
-                @else
-                <img src="{{ asset('assets/images/web-dev-img.png') }}" alt="{{ $service->title }}"
+                <?php elseif($service->image): ?>
+                <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>" class="service-card-img" />
+                <?php else: ?>
+                <img src="<?php echo e(asset('assets/images/web-dev-img.png')); ?>" alt="<?php echo e($service->title); ?>"
                     class="service-card-img" />
-                @endif
+                <?php endif; ?>
                 <div class="service-card-overlay"></div>
                 <div class="service-card-content">
-                    <h3 class="service-title">{{ $service->icon }} {{ $service->title }}</h3>
-                    <a href="{{ route('services.show', $service->slug) }}" class="service-link">
+                    <h3 class="service-title"><?php echo e($service->icon); ?> <?php echo e($service->title); ?></h3>
+                    <a href="<?php echo e(route('services.show', $service->slug)); ?>" class="service-link">
                         Learn More
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
@@ -161,12 +157,12 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                     </a>
                 </div>
             </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </div>
 </section>
 
-{{-- PROCESS --}}
+
 <section class="process-section">
     <div class="container">
         <div class="process-header reveal">
@@ -178,7 +174,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
         </div>
         <div class="process-grid">
             <div class="process-card reveal reveal-delay-1">
-                <img src="{{ asset('assets/images/discover-img.png') }}" alt="Discovery" class="process-card-img" />
+                <img src="<?php echo e(asset('assets/images/discover-img.png')); ?>" alt="Discovery" class="process-card-img" />
                 <div class="process-overlay"></div>
                 <div class="process-content">
                     <div class="process-step-num">01</div>
@@ -188,7 +184,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                 </div>
             </div>
             <div class="process-card reveal reveal-delay-2">
-                <img src="{{ asset('assets/images/design-img.png') }}" alt="Design" class="process-card-img" />
+                <img src="<?php echo e(asset('assets/images/design-img.png')); ?>" alt="Design" class="process-card-img" />
                 <div class="process-overlay"></div>
                 <div class="process-content">
                     <div class="process-step-num">02</div>
@@ -198,7 +194,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                 </div>
             </div>
             <div class="process-card reveal reveal-delay-3">
-                <img src="{{ asset('assets/images/dev-img-proccess.png') }}" alt="Development"
+                <img src="<?php echo e(asset('assets/images/dev-img-proccess.png')); ?>" alt="Development"
                     class="process-card-img" />
                 <div class="process-overlay"></div>
                 <div class="process-content">
@@ -209,7 +205,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                 </div>
             </div>
             <div class="process-card reveal reveal-delay-4">
-                <img src="{{ asset('assets/images/lunch-img.png') }}" alt="Launch" class="process-card-img" />
+                <img src="<?php echo e(asset('assets/images/lunch-img.png')); ?>" alt="Launch" class="process-card-img" />
                 <div class="process-overlay"></div>
                 <div class="process-content">
                     <div class="process-step-num">04</div>
@@ -222,7 +218,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
     </div>
 </section>
 
-{{-- WHY CHOOSE US --}}
+
 <section class="features-section">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
@@ -257,8 +253,8 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
     </div>
 </section>
 
-{{-- PORTFOLIO PREVIEW --}}
-@if($portfolio->isNotEmpty())
+
+<?php if($portfolio->isNotEmpty()): ?>
 <section style="padding:100px 0;background:var(--surface)">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
@@ -266,28 +262,28 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
             <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
         </div>
         <div class="portfolio-grid">
-            @foreach($portfolio->take(6) as $i => $item)
-            <div class="portfolio-card reveal reveal-delay-{{ ($i%3)+1 }}">
-                @if($item->image && !str_starts_with($item->image,'assets/'))
-                <img src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}" class="portfolio-img" />
-                @else
-                <img src="{{ asset('assets/images/about-us.jpg') }}" alt="{{ $item->title }}" class="portfolio-img" />
-                @endif
+            <?php $__currentLoopData = $portfolio->take(6); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="portfolio-card reveal reveal-delay-<?php echo e(($i%3)+1); ?>">
+                <?php if($item->image && !str_starts_with($item->image,'assets/')): ?>
+                <img src="<?php echo e(asset('storage/'.$item->image)); ?>" alt="<?php echo e($item->title); ?>" class="portfolio-img" />
+                <?php else: ?>
+                <img src="<?php echo e(asset('assets/images/about-us.jpg')); ?>" alt="<?php echo e($item->title); ?>" class="portfolio-img" />
+                <?php endif; ?>
                 <div class="portfolio-overlay">
-                    <div class="portfolio-tag">{{ $item->category }}</div>
-                    <h3 class="portfolio-title">{{ $item->title }}</h3>
+                    <div class="portfolio-tag"><?php echo e($item->category); ?></div>
+                    <h3 class="portfolio-title"><?php echo e($item->title); ?></h3>
                 </div>
             </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
         <div style="text-align:center;margin-top:48px">
-            <a href="{{ route('portfolio') }}" class="btn btn-primary">View All Projects</a>
+            <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-primary">View All Projects</a>
         </div>
     </div>
 </section>
-@endif
+<?php endif; ?>
 
-{{-- TESTIMONIALS --}}
+
 <section class="testimonials-section">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
@@ -362,7 +358,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
 </section>
 
 
-{{-- CTA --}}
+
 <section class="cta-section">
     <div class="container cta-inner">
         <span class="section-tag" style="margin-bottom:24px">Ready to Start?</span>
@@ -370,10 +366,11 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
         <p class="cta-subtitle">Tell us your vision and we'll turn it into reality. Free consultation, no commitment.
         </p>
         <div class="cta-actions">
-            <a href="{{ route('contact') }}" class="btn btn-primary btn-arrow">Start Your Project</a>
-            <a href="{{ route('portfolio') }}" class="btn btn-outline">See Our Work</a>
+            <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary btn-arrow">Start Your Project</a>
+            <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-outline">See Our Work</a>
         </div>
     </div>
 </section>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xamppNew\htdocs\accroNew\resources\views/frontend/home.blade.php ENDPATH**/ ?>
