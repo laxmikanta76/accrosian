@@ -2608,6 +2608,16 @@ select option {
 .loader-dots span:nth-child(6) {
   animation-delay: 0.5s;
 }
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-12px);
+    opacity: 1;
+  }
+}
 
 /* ============ BACK TO TOP ============ */
 .back-to-top {
