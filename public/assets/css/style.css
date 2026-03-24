@@ -215,6 +215,7 @@ body {
 }
 
 .nav-inner {
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -231,10 +232,9 @@ body {
 }
 
 .nav-logo img {
-  height: 100px;
-  width: 100px;
+  max-height: 50px; /* 🔥 control size */
+  width: auto;
   object-fit: contain;
-  border-radius: 8px;
 }
 
 .nav-logo-text {
@@ -2609,7 +2609,8 @@ select option {
   animation-delay: 0.5s;
 }
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
     opacity: 0.4;
   }
