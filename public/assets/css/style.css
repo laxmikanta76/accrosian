@@ -2608,7 +2608,6 @@ select option {
 .loader-dots span:nth-child(6) {
   animation-delay: 0.5s;
 }
-
 @keyframes bounce {
   0%,
   100% {
