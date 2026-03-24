@@ -231,8 +231,8 @@ body {
 }
 
 .nav-logo img {
-  height: 48px;
-  width: 48px;
+  height: 76px;
+  width: 76px;
   object-fit: contain;
   border-radius: 8px;
 }
@@ -2559,6 +2559,9 @@ select option {
     opacity 0.5s ease,
     visibility 0.5s ease;
 }
+.no-loader .loader {
+  display: none !important;
+}
 .loader.hidden {
   opacity: 0;
   visibility: hidden;
@@ -2571,25 +2574,50 @@ select option {
 .loader-logo span {
   color: var(--orange);
 }
-.loader-bar {
-  width: 200px;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  overflow: hidden;
+/* 🔥 DOT LOADER (NEW) */
+.loader-dots {
+  display: flex;
+  gap: 10px;
 }
-.loader-fill {
-  height: 100%;
-  background: var(--gradient-orange);
-  border-radius: 2px;
-  animation: loadFill 1.5s ease forwards;
+
+.loader-dots span {
+  width: 10px;
+  height: 10px;
+  background: var(--orange);
+  border-radius: 50%;
+  display: inline-block;
+  animation: bounce 0.6s infinite ease-in-out;
 }
-@keyframes loadFill {
-  from {
-    width: 0;
+
+/* wave animation */
+.loader-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+.loader-dots span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.loader-dots span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.loader-dots span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.loader-dots span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.loader-dots span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
   }
-  to {
-    width: 100%;
+  50% {
+    transform: translateY(-12px);
+    opacity: 1;
   }
 }
 

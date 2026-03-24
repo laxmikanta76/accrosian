@@ -4,21 +4,16 @@
 
 // ============ LOADER ============
 window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
+  const loader = document.querySelector(".loader");
 
   if (!loader) return;
 
-  // Check if already shown
   if (!sessionStorage.getItem("loaderShown")) {
-    // First time → show loader
     sessionStorage.setItem("loaderShown", "true");
 
     setTimeout(() => {
       loader.classList.add("hidden");
-    }, 1800);
-  } else {
-    // Next pages → hide instantly
-    loader.classList.add("hidden");
+    }, 2000);
   }
 });
 

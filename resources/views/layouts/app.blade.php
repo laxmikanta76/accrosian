@@ -1,28 +1,34 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+    if (sessionStorage.getItem('loaderShown')) {
+        document.documentElement.classList.add('no-loader');
+    }
+    </script>
 
     {{-- Dynamic SEO --}}
     <title>@yield('meta_title', $setting->site_title ?? config('app.name'))</title>
     <meta name="description" content="@yield('meta_description', $setting->meta_description ?? '')">
-    <meta name="keywords"    content="@yield('meta_keywords', $setting->meta_keywords ?? '')">
+    <meta name="keywords" content="@yield('meta_keywords', $setting->meta_keywords ?? '')">
 
     {{-- Open Graph --}}
-    <meta property="og:title"       content="@yield('meta_title', $setting->site_title ?? config('app.name'))">
+    <meta property="og:title" content="@yield('meta_title', $setting->site_title ?? config('app.name'))">
     <meta property="og:description" content="@yield('meta_description', $setting->meta_description ?? '')">
-    <meta property="og:type"        content="website">
-    <meta property="og:url"         content="{{ url()->current() }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
     @if(isset($setting) && $setting->og_image)
     <meta property="og:image" content="{{ asset('storage/' . $setting->og_image) }}">
     @endif
 
     {{-- Favicon --}}
     @if(isset($setting) && $setting->favicon)
-        <link rel="icon" href="{{ asset('storage/' . $setting->favicon) }}" type="image/png">
+    <link rel="icon" href="{{ asset('storage/' . $setting->favicon) }}" type="image/png">
     @else
-        <link rel="icon" href="{{ asset('assets/images/logo2.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('assets/images/logo2.png') }}" type="image/png">
     @endif
 
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
@@ -32,20 +38,30 @@
 
     {{-- Google Analytics --}}
     @if(isset($setting) && $setting->google_analytics)
-        {!! $setting->google_analytics !!}
+    {!! $setting->google_analytics !!}
     @endif
 </head>
+
 <body>
 
     {{-- Loader --}}
     <div class="loader" id="loader">
         @if(isset($setting) && $setting->logo)
-            <img src="{{ asset('storage/' . $setting->logo) }}" alt="{{ $setting->site_name ?? 'Logo' }}" style="height:64px;border-radius:12px">
+        <img src="{{ asset('storage/' . $setting->logo) }}" alt="{{ $setting->site_name ?? 'Logo' }}"
+            style="height:64px;border-radius:12px">
         @else
-            <img src="{{ asset('assets/images/logo2.png') }}" alt="Accrosian" style="height:64px;border-radius:12px">
+        <img src="{{ asset('assets/images/logo2.png') }}" alt="Accrosian" style="height:84px;border-radius:12px">
         @endif
-        <div class="loader-logo">Accr<span>o</span>sian</div>
-        <div class="loader-bar"><div class="loader-fill"></div></div>
+        <div class="loader-logo">Loading</div>
+
+        <div class="loader-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
     @include('partials.navbar')
@@ -53,14 +69,14 @@
 
     <main>
         @if(session('success'))
-            <div style="background:#10b981;color:#fff;padding:14px 24px;text-align:center;font-weight:600;">
-                {{ session('success') }}
-            </div>
+        <div style="background:#10b981;color:#fff;padding:14px 24px;text-align:center;font-weight:600;">
+            {{ session('success') }}
+        </div>
         @endif
         @if(session('error'))
-            <div style="background:#ef4444;color:#fff;padding:14px 24px;text-align:center;font-weight:600;">
-                {{ session('error') }}
-            </div>
+        <div style="background:#ef4444;color:#fff;padding:14px 24px;text-align:center;font-weight:600;">
+            {{ session('error') }}
+        </div>
         @endif
         @yield('content')
     </main>
@@ -70,4 +86,5 @@
     <script src="{{ asset('assets/js/script.js') }}"></script>
     @stack('scripts')
 </body>
+
 </html>
