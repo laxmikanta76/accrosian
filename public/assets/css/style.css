@@ -1415,8 +1415,8 @@ body {
   margin-bottom: 20px;
 }
 .footer-logo img {
-  height: 48px;
-  width: 48px;
+  height: 100px;
+  width: 100px;
   object-fit: contain;
   border-radius: 8px;
 }

@@ -4,13 +4,14 @@
             <div class="footer-brand">
                 <a href="<?php echo e(route('home')); ?>" class="footer-logo">
                     <?php if(isset($setting) && $setting->footer_logo): ?>
-                        <img src="<?php echo e(asset('storage/'.$setting->footer_logo)); ?>" alt="<?php echo e($setting->site_name ?? 'Accrosian'); ?>" />
+                    <img src="<?php echo e(asset('storage/'.$setting->footer_logo)); ?>"
+                        alt="<?php echo e($setting->site_name ?? 'Accrosian'); ?>" />
                     <?php elseif(isset($setting) && $setting->logo): ?>
-                        <img src="<?php echo e(asset('storage/'.$setting->logo)); ?>" alt="<?php echo e($setting->site_name ?? 'Accrosian'); ?>" />
+                    <img src="<?php echo e(asset('storage/'.$setting->logo)); ?>" alt="<?php echo e($setting->site_name ?? 'Accrosian'); ?>" />
                     <?php else: ?>
-                        <img src="<?php echo e(asset('assets/images/logo2.png')); ?>" alt="Accrosian" />
+                    <img src="<?php echo e(asset('assets/images/logo2.png')); ?>" alt="Accrosian" />
                     <?php endif; ?>
-                    <span class="footer-logo-text">Accr<span>o</span>sian</span>
+                    <!-- <span class="footer-logo-text">Accr<span>o</span>sian</span> -->
                 </a>
                 <p class="footer-tagline">
                     Turning ideas into reality through innovative software solutions
@@ -18,22 +19,26 @@
                 </p>
                 <div class="social-links">
                     <?php if(isset($setting) && $setting->linkedin): ?>
-                    <a href="<?php echo e($setting->linkedin); ?>" class="social-link" title="LinkedIn" target="_blank" rel="noopener">
+                    <a href="<?php echo e($setting->linkedin); ?>" class="social-link" title="LinkedIn" target="_blank"
+                        rel="noopener">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <?php endif; ?>
                     <?php if(isset($setting) && $setting->twitter): ?>
-                    <a href="<?php echo e($setting->twitter); ?>" class="social-link" title="Twitter" target="_blank" rel="noopener">
+                    <a href="<?php echo e($setting->twitter); ?>" class="social-link" title="Twitter" target="_blank"
+                        rel="noopener">
                         <i class="fab fa-x-twitter"></i>
                     </a>
                     <?php endif; ?>
                     <?php if(isset($setting) && $setting->instagram): ?>
-                    <a href="<?php echo e($setting->instagram); ?>" class="social-link" title="Instagram" target="_blank" rel="noopener">
+                    <a href="<?php echo e($setting->instagram); ?>" class="social-link" title="Instagram" target="_blank"
+                        rel="noopener">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <?php endif; ?>
                     <?php if(isset($setting) && $setting->facebook): ?>
-                    <a href="<?php echo e($setting->facebook); ?>" class="social-link" title="Facebook" target="_blank" rel="noopener">
+                    <a href="<?php echo e($setting->facebook); ?>" class="social-link" title="Facebook" target="_blank"
+                        rel="noopener">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                     <?php endif; ?>
@@ -96,11 +101,11 @@
 
         <div class="footer-bottom">
             <p class="footer-copy">
-                <?php echo isset($setting) && $setting->footer_text ? $setting->footer_text : '© '.date('Y').' <span>Accrosian</span>. All rights reserved.'; ?>
+                <?php echo isset($setting) && $setting->footer_text ? $setting->footer_text : '© '.date('Y').'
+                <span>Accrosian</span>. All rights reserved.'; ?>
 
             </p>
             <p class="footer-copy">Made with ❤️ in <span>India</span></p>
         </div>
     </div>
-</footer>
-<?php /**PATH C:\xamppNew\htdocs\accroNew\resources\views/partials/footer.blade.php ENDPATH**/ ?>
+</footer><?php /**PATH C:\xamppNew\htdocs\accroNew\resources\views/partials/footer.blade.php ENDPATH**/ ?>
