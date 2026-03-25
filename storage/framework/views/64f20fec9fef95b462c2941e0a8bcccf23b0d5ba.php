@@ -1,3 +1,5 @@
+
+
 <?php $__env->startSection('meta_title', isset($setting) ? $setting->site_title : 'Accrosian – Turning Ideas Into Reality'); ?>
 <?php $__env->startSection('meta_description', isset($setting) ? $setting->meta_description : 'Accrosian is a premium software company
 delivering innovative web, mobile, cloud, and AI solutions for modern businesses.'); ?>
@@ -14,10 +16,10 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
     </div>
     <div class="hero-inner">
         <div class="hero-content">
-            <div class="hero-badge">
+            <!-- <div class="hero-badge">
                 <span class="hero-badge-dot"></span>
                 Award-Winning Software Company
-            </div>
+            </div> -->
             <h1 class="hero-title">
                 Innovative Software Solutions for
                 <span class="text-gradient">Modern Businesses</span>

@@ -16,10 +16,10 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
     </div>
     <div class="hero-inner">
         <div class="hero-content">
-            <div class="hero-badge">
+            <!-- <div class="hero-badge">
                 <span class="hero-badge-dot"></span>
                 Award-Winning Software Company
-            </div>
+            </div> -->
             <h1 class="hero-title">
                 Innovative Software Solutions for
                 <span class="text-gradient">Modern Businesses</span>
