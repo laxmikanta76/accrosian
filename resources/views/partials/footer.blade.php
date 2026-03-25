@@ -4,13 +4,14 @@
             <div class="footer-brand">
                 <a href="{{ route('home') }}" class="footer-logo">
                     @if(isset($setting) && $setting->footer_logo)
-                        <img src="{{ asset('storage/'.$setting->footer_logo) }}" alt="{{ $setting->site_name ?? 'Accrosian' }}" />
+                    <img src="{{ asset('storage/'.$setting->footer_logo) }}"
+                        alt="{{ $setting->site_name ?? 'Accrosian' }}" />
                     @elseif(isset($setting) && $setting->logo)
-                        <img src="{{ asset('storage/'.$setting->logo) }}" alt="{{ $setting->site_name ?? 'Accrosian' }}" />
+                    <img src="{{ asset('storage/'.$setting->logo) }}" alt="{{ $setting->site_name ?? 'Accrosian' }}" />
                     @else
-                        <img src="{{ asset('assets/images/logo2.png') }}" alt="Accrosian" />
+                    <img src="{{ asset('assets/images/logo2.png') }}" alt="Accrosian" />
                     @endif
-                    <span class="footer-logo-text">Accr<span>o</span>sian</span>
+                    <!-- <span class="footer-logo-text">Accr<span>o</span>sian</span> -->
                 </a>
                 <p class="footer-tagline">
                     Turning ideas into reality through innovative software solutions
@@ -18,22 +19,26 @@
                 </p>
                 <div class="social-links">
                     @if(isset($setting) && $setting->linkedin)
-                    <a href="{{ $setting->linkedin }}" class="social-link" title="LinkedIn" target="_blank" rel="noopener">
+                    <a href="{{ $setting->linkedin }}" class="social-link" title="LinkedIn" target="_blank"
+                        rel="noopener">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     @endif
                     @if(isset($setting) && $setting->twitter)
-                    <a href="{{ $setting->twitter }}" class="social-link" title="Twitter" target="_blank" rel="noopener">
+                    <a href="{{ $setting->twitter }}" class="social-link" title="Twitter" target="_blank"
+                        rel="noopener">
                         <i class="fab fa-x-twitter"></i>
                     </a>
                     @endif
                     @if(isset($setting) && $setting->instagram)
-                    <a href="{{ $setting->instagram }}" class="social-link" title="Instagram" target="_blank" rel="noopener">
+                    <a href="{{ $setting->instagram }}" class="social-link" title="Instagram" target="_blank"
+                        rel="noopener">
                         <i class="fab fa-instagram"></i>
                     </a>
                     @endif
                     @if(isset($setting) && $setting->facebook)
-                    <a href="{{ $setting->facebook }}" class="social-link" title="Facebook" target="_blank" rel="noopener">
+                    <a href="{{ $setting->facebook }}" class="social-link" title="Facebook" target="_blank"
+                        rel="noopener">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                     @endif
@@ -96,7 +101,8 @@
 
         <div class="footer-bottom">
             <p class="footer-copy">
-                {!! isset($setting) && $setting->footer_text ? $setting->footer_text : '© '.date('Y').' <span>Accrosian</span>. All rights reserved.' !!}
+                {!! isset($setting) && $setting->footer_text ? $setting->footer_text : '© '.date('Y').'
+                <span>Accrosian</span>. All rights reserved.' !!}
             </p>
             <p class="footer-copy">Made with ❤️ in <span>India</span></p>
         </div>
