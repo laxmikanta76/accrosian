@@ -8,18 +8,18 @@
 
 <section class="page-hero">
     @if($service->image && !str_starts_with($service->image,'assets/'))
-        <img src="{{ asset('storage/'.$service->image) }}" alt="{{ $service->title }}" class="page-hero-image" />
+    <img src="{{ asset('storage/'.$service->image) }}" alt="{{ $service->title }}" class="page-hero-image" />
     @elseif($service->image)
-        <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" class="page-hero-image" />
+    <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" class="page-hero-image" />
     @else
-        <img src="{{ asset('assets/images/hero-bg-img-2.png') }}" alt="{{ $service->title }}" class="page-hero-image" />
+    <img src="{{ asset('assets/images/hero-bg-img-2.png') }}" alt="{{ $service->title }}" class="page-hero-image" />
     @endif
     <div class="hero-bg-effects">
         <div class="hero-orb hero-orb-1" style="opacity:0.1"></div>
         <div class="hero-grid"></div>
     </div>
     <div class="container page-hero-inner">
-        <div style="font-size:4rem;margin-bottom:16px">{{ $service->icon }}</div>
+        <!-- <div style="font-size:4rem;margin-bottom:16px">{{ $service->icon }}</div> -->
         <h1 class="page-hero-title"><span class="text-gradient">{{ $service->title }}</span></h1>
         <p class="page-hero-sub">{{ $service->short_description }}</p>
     </div>
@@ -41,9 +41,11 @@
             </div>
             <div class="reveal reveal-delay-2">
                 @if($service->image && !str_starts_with($service->image,'assets/'))
-                    <img src="{{ asset('storage/'.$service->image) }}" alt="{{ $service->title }}" style="width:100%;border-radius:16px;object-fit:cover" />
+                <img src="{{ asset('storage/'.$service->image) }}" alt="{{ $service->title }}"
+                    style="width:100%;border-radius:16px;object-fit:cover" />
                 @elseif($service->image)
-                    <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" style="width:100%;border-radius:16px;object-fit:cover" />
+                <img src="{{ asset($service->image) }}" alt="{{ $service->title }}"
+                    style="width:100%;border-radius:16px;object-fit:cover" />
                 @endif
             </div>
         </div>
@@ -59,10 +61,13 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px">
             @foreach($others as $other)
-            <a href="{{ route('services.show', $other->slug) }}" style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;transition:all 0.3s;display:block" class="reveal">
+            <a href="{{ route('services.show', $other->slug) }}"
+                style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;transition:all 0.3s;display:block"
+                class="reveal">
                 <div style="font-size:2rem;margin-bottom:12px">{{ $other->icon }}</div>
                 <h4 style="color:var(--text);font-weight:700;margin-bottom:8px">{{ $other->title }}</h4>
-                <p style="color:var(--text-light);font-size:0.9rem;line-height:1.6">{{ Str::limit($other->short_description, 80) }}</p>
+                <p style="color:var(--text-light);font-size:0.9rem;line-height:1.6">
+                    {{ Str::limit($other->short_description, 80) }}</p>
             </a>
             @endforeach
         </div>
