@@ -15,10 +15,10 @@
         <div class="hero-orb hero-orb-1" style="opacity:0.08"></div>
         <div class="hero-grid"></div>
     </div>
-    <!-- <div class="container page-hero-inner">
+    <div class="container page-hero-inner">
         <h1 class="page-hero-title">Our <span class="text-gradient">Services</span></h1>
         <p class="page-hero-sub">Comprehensive technology solutions designed to accelerate your business growth.</p>
-    </div> -->
+    </div>
 </section>
 
 <section style="padding:100px 0">
