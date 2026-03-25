@@ -6,18 +6,18 @@
 
 <section class="page-hero">
     <?php if($service->image && !str_starts_with($service->image,'assets/')): ?>
-        <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>" class="page-hero-image" />
+    <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>" class="page-hero-image" />
     <?php elseif($service->image): ?>
-        <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>" class="page-hero-image" />
+    <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>" class="page-hero-image" />
     <?php else: ?>
-        <img src="<?php echo e(asset('assets/images/hero-bg-img-2.png')); ?>" alt="<?php echo e($service->title); ?>" class="page-hero-image" />
+    <img src="<?php echo e(asset('assets/images/hero-bg-img-2.png')); ?>" alt="<?php echo e($service->title); ?>" class="page-hero-image" />
     <?php endif; ?>
     <div class="hero-bg-effects">
         <div class="hero-orb hero-orb-1" style="opacity:0.1"></div>
         <div class="hero-grid"></div>
     </div>
     <div class="container page-hero-inner">
-        <div style="font-size:4rem;margin-bottom:16px"><?php echo e($service->icon); ?></div>
+        <!-- <div style="font-size:4rem;margin-bottom:16px"><?php echo e($service->icon); ?></div> -->
         <h1 class="page-hero-title"><span class="text-gradient"><?php echo e($service->title); ?></span></h1>
         <p class="page-hero-sub"><?php echo e($service->short_description); ?></p>
     </div>
@@ -40,9 +40,11 @@
             </div>
             <div class="reveal reveal-delay-2">
                 <?php if($service->image && !str_starts_with($service->image,'assets/')): ?>
-                    <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>" style="width:100%;border-radius:16px;object-fit:cover" />
+                <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>"
+                    style="width:100%;border-radius:16px;object-fit:cover" />
                 <?php elseif($service->image): ?>
-                    <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>" style="width:100%;border-radius:16px;object-fit:cover" />
+                <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>"
+                    style="width:100%;border-radius:16px;object-fit:cover" />
                 <?php endif; ?>
             </div>
         </div>
@@ -58,10 +60,13 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px">
             <?php $__currentLoopData = $others; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $other): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <a href="<?php echo e(route('services.show', $other->slug)); ?>" style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;transition:all 0.3s;display:block" class="reveal">
+            <a href="<?php echo e(route('services.show', $other->slug)); ?>"
+                style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;transition:all 0.3s;display:block"
+                class="reveal">
                 <div style="font-size:2rem;margin-bottom:12px"><?php echo e($other->icon); ?></div>
                 <h4 style="color:var(--text);font-weight:700;margin-bottom:8px"><?php echo e($other->title); ?></h4>
-                <p style="color:var(--text-light);font-size:0.9rem;line-height:1.6"><?php echo e(Str::limit($other->short_description, 80)); ?></p>
+                <p style="color:var(--text-light);font-size:0.9rem;line-height:1.6">
+                    <?php echo e(Str::limit($other->short_description, 80)); ?></p>
             </a>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
@@ -82,5 +87,4 @@
 </section>
 
 <?php $__env->stopSection(); ?>
-
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xamppNew\htdocs\accroNew\resources\views/frontend/service-detail.blade.php ENDPATH**/ ?>
