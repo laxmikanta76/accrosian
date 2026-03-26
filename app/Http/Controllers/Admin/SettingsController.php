@@ -49,7 +49,13 @@ class SettingsController extends Controller
             $data['og_image'] = $request->file('og_image')->store('branding', 'public');
         }
 
-        $setting->update($data);
+        // SAFE SAVE
+    foreach ($data as $key => $value) {
+        $setting->$key = $value;
+    }
+
+    $setting->save();
+        //$setting->update($data);
 
         return back()->with('success', 'Settings saved successfully.');
     }
