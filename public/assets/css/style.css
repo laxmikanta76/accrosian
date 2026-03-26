@@ -235,6 +235,7 @@ body {
   max-height: 140px; /* 🔥 control size */
   width: auto;
   object-fit: contain;
+  margin-top: 5px;
 }
 
 .nav-logo-text {
