@@ -2091,6 +2091,7 @@ body {
   color: var(--text-light);
   font-size: 0.9rem;
   line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 /* ============ BLOG PAGE ============ */
