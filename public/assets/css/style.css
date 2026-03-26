@@ -2079,7 +2079,7 @@ body {
   color: var(--orange-light);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .portfolio-title {
   font-family: var(--font-display);
@@ -2091,7 +2091,6 @@ body {
   color: var(--text-light);
   font-size: 0.9rem;
   line-height: 1.6;
-  margin-bottom: 10px;
 }
 
 /* ============ BLOG PAGE ============ */
