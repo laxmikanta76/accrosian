@@ -16,7 +16,8 @@ class SettingsController extends Controller
 
     public function update(Request $request)
     {
-        dd($request->file('logo'));
+        dd($request->file('logo')); // 👈 ADD HERE
+
         $request->validate([
             'site_name'        => 'required|string|max:255',
             'site_title'       => 'required|string|max:255',
@@ -50,13 +51,7 @@ class SettingsController extends Controller
             $data['og_image'] = $request->file('og_image')->store('branding', 'public');
         }
 
-        // SAFE SAVE
-    foreach ($data as $key => $value) {
-        $setting->$key = $value;
-    }
-
-    $setting->save();
-        //$setting->update($data);
+        $setting->update($data);
 
         return back()->with('success', 'Settings saved successfully.');
     }
