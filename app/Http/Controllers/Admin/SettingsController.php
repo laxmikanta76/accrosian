@@ -16,6 +16,7 @@ class SettingsController extends Controller
 
     public function update(Request $request)
     {
+        dd($request->file('logo'));
         $request->validate([
             'site_name'        => 'required|string|max:255',
             'site_title'       => 'required|string|max:255',
