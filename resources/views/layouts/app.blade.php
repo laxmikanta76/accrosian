@@ -31,7 +31,7 @@
     <link rel="icon" href="{{ asset('assets/images/logo2.png') }}" type="image/png">
     @endif
 
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     @stack('head')
@@ -83,7 +83,7 @@
 
     @include('partials.footer')
 
-    <script src="{{ asset('assets/js/script.js') }}"></script>
+    <script src="{{ asset('assets/js/script.js') }}?v={{ time() }}"></script>
     @stack('scripts')
 </body>
 
