@@ -15,6 +15,7 @@ class ServiceSeeder extends Seeder
                 'slug'              => 'web-development',
                 'icon'              => '🌐',
                 'image'             => 'assets/images/web-dev-img.png',
+                'content_image'     => 'assets/images/web-dev-img.png',
                 'short_description' => 'Fast, beautiful, and scalable web solutions built with the latest technologies.',
                 'full_description'  => '<p>We build high-performance web applications tailored to your business needs. From landing pages to complex enterprise platforms, our team delivers exceptional digital experiences using React, Vue, Laravel, Node.js, and more.</p><h3>What We Deliver</h3><ul><li>Custom web applications & portals</li><li>E-commerce platforms</li><li>Progressive Web Apps (PWA)</li><li>API development & integration</li><li>Performance optimization</li><li>Ongoing maintenance & support</li></ul>',
                 'meta_title'        => 'Web Development Services – Accrosian',
