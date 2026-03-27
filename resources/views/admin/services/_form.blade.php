@@ -97,13 +97,8 @@
             </p>
             @if(isset($service) && $service && $service->image)
             <div style="margin-bottom:12px">
-                @if(str_starts_with($service->image,'assets/'))
-                <img src="{{ asset($service->image) }}"
-                    style="width:100%;border-radius:8px;object-fit:cover;max-height:150px" />
-                @else
                 <img src="{{ asset('storage/'.$service->image) }}"
                     style="width:100%;border-radius:8px;object-fit:cover;max-height:150px" />
-                @endif
                 <p style="font-size:0.75rem;color:var(--muted);margin-top:4px">Current hero image</p>
             </div>
             @endif
@@ -128,13 +123,8 @@
             </p>
             @if(isset($service) && $service && $service->content_image)
             <div style="margin-bottom:12px">
-                @if(str_starts_with($service->content_image,'assets/'))
-                <img src="{{ asset($service->content_image) }}"
-                    style="width:100%;border-radius:8px;object-fit:cover;max-height:150px" />
-                @else
                 <img src="{{ asset('storage/'.$service->content_image) }}"
                     style="width:100%;border-radius:8px;object-fit:cover;max-height:150px" />
-                @endif
                 <p style="font-size:0.75rem;color:var(--orange);margin-top:4px">Current content image</p>
             </div>
             @else
