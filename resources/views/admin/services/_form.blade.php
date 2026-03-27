@@ -123,7 +123,6 @@
             </p>
             @if(isset($service) && $service && $service->content_image)
             <div style="margin-bottom:12px">
-                {{ dd($service->content_image) }}
                 <img src="{{ asset('storage/'.$service->content_image) }}"
                     style="width:100%;border-radius:8px;object-fit:cover;max-height:150px" />
                 <p style="font-size:0.75rem;color:var(--orange);margin-top:4px">Current content image</p>
