@@ -89,25 +89,88 @@
             </div>
         </div>
 
+        {{-- HERO / BANNER IMAGE --}}
         <div class="admin-card">
-            <h3 class="admin-card-title" style="margin-bottom:16px">Service Image</h3>
+            <h3 class="admin-card-title" style="margin-bottom:8px">Hero / Banner Image</h3>
+            <p style="font-size:0.82rem;color:var(--muted);margin-bottom:14px">
+                Background of the <strong>page top hero</strong> section.
+            </p>
             @if(isset($service) && $service && $service->image)
             <div style="margin-bottom:12px">
                 @if(str_starts_with($service->image,'assets/'))
                 <img src="{{ asset($service->image) }}"
-                    style="width:100%;border-radius:8px;object-fit:cover;max-height:160px" />
+                    style="width:100%;border-radius:8px;object-fit:cover;max-height:150px" />
                 @else
                 <img src="{{ asset('storage/'.$service->image) }}"
-                    style="width:100%;border-radius:8px;object-fit:cover;max-height:160px" />
+                    style="width:100%;border-radius:8px;object-fit:cover;max-height:150px" />
                 @endif
-                <p style="font-size:0.75rem;color:var(--muted);margin-top:4px">Current image</p>
+                <p style="font-size:0.75rem;color:var(--muted);margin-top:4px">Current hero image</p>
             </div>
             @endif
             <div class="form-field">
-                <label>Upload New Image</label>
-                <input type="file" name="image" accept="image/jpg,image/jpeg,image/png,image/webp,image/svg+xml" />
-                <span class="hint">JPG, PNG, WebP. Max 2MB.</span>
+                <label>{{ (isset($service) && $service->image) ? 'Replace Hero Image' : 'Upload Hero Image' }}</label>
+                <input type="file" name="image" accept="image/jpg,image/jpeg,image/png,image/webp,image/svg+xml"
+                    onchange="previewImg(this,'heroPreview')" />
+                <span class="hint">Leave blank to keep current. JPG, PNG, WebP. Max 2MB.</span>
+                <div id="heroPreview" style="display:none;margin-top:10px">
+                    <img
+                        style="width:100%;border-radius:8px;object-fit:cover;max-height:140px;border:2px solid var(--orange)" />
+                    <p style="font-size:0.75rem;color:var(--orange);margin-top:4px">✓ New hero preview</p>
+                </div>
+            </div>
+        </div>
+
+        {{-- CONTENT SECTION IMAGE (separate) --}}
+        <div class="admin-card" style="border:1px solid rgba(255,107,53,0.35)">
+            <h3 class="admin-card-title" style="margin-bottom:8px">Content Section Image</h3>
+            <p style="font-size:0.82rem;color:var(--muted);margin-bottom:14px">
+                Shown <strong>inside the body</strong> of the service page — completely separate from the hero above.
+            </p>
+            @if(isset($service) && $service && $service->content_image)
+            <div style="margin-bottom:12px">
+                @if(str_starts_with($service->content_image,'assets/'))
+                <img src="{{ asset($service->content_image) }}"
+                    style="width:100%;border-radius:8px;object-fit:cover;max-height:150px" />
+                @else
+                <img src="{{ asset('storage/'.$service->content_image) }}"
+                    style="width:100%;border-radius:8px;object-fit:cover;max-height:150px" />
+                @endif
+                <p style="font-size:0.75rem;color:var(--orange);margin-top:4px">Current content image</p>
+            </div>
+            @else
+            <div style="height:90px;border:2px dashed rgba(255,107,53,0.4);border-radius:8px;
+                    display:flex;align-items:center;justify-content:center;
+                    color:var(--muted);font-size:0.85rem;margin-bottom:12px">
+                No content image uploaded yet
+            </div>
+            @endif
+            <div class="form-field">
+                <label>{{ (isset($service) && $service->content_image) ? 'Replace Content Image' : 'Upload Content Image' }}</label>
+                <input type="file" name="content_image" accept="image/jpg,image/jpeg,image/png,image/webp,image/svg+xml"
+                    onchange="previewImg(this,'contentPreview')" />
+                <span class="hint">Leave blank to keep current. JPG, PNG, WebP. Max 2MB.</span>
+                <div id="contentPreview" style="display:none;margin-top:10px">
+                    <img
+                        style="width:100%;border-radius:8px;object-fit:cover;max-height:150px;border:2px solid var(--orange)" />
+                    <p style="font-size:0.75rem;color:var(--orange);margin-top:4px">✓ New content image preview</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+@push('scripts')
+<script>
+function previewImg(input, previewId) {
+    const preview = document.getElementById(previewId);
+    if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = e => {
+            preview.style.display = 'block';
+            preview.querySelector('img').src = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+</script>
+@endpush
