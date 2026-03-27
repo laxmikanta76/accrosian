@@ -81,6 +81,7 @@ class ServiceController extends Controller
         }
         if ($request->hasFile('content_image')) {
             $data['content_image'] = $request->file('content_image')->store('services', 'public');
+            dd($data['content_image']);
         } else {
             unset($data['content_image']);
         }
