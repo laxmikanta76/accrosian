@@ -122,7 +122,7 @@
 
         {{-- CONTENT SECTION IMAGE (separate) --}}
         <div class="admin-card" style="border:1px solid rgba(255,107,53,0.35)">
-            <h3 class="admin-card-title" style="margin-bottom:8px">Content Section Image</h3>
+            <h3 class="admin-card-title" style="margin-bottom:8px">Content Image</h3>
             <p style="font-size:0.82rem;color:var(--muted);margin-bottom:14px">
                 Shown <strong>inside the body</strong> of the service page — completely separate from the hero above.
             </p>
