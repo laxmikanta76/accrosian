@@ -97,7 +97,7 @@
             </p>
             @if(isset($service) && $service && $service->image)
             <div style="margin-bottom:12px">
-                <img src="{{ asset('storage/'.$service->image) }}"
+                <img src="{{ $service->image_url }}"
                     style="width:100%;border-radius:8px;object-fit:cover;max-height:150px" />
                 <p style="font-size:0.75rem;color:var(--muted);margin-top:4px">Current hero image</p>
             </div>
@@ -123,7 +123,7 @@
             </p>
             @if(isset($service) && $service && $service->content_image)
             <div style="margin-bottom:12px">
-                <img src="{{ asset('storage/'.$service->content_image) }}"
+                <img src="{{ $service->content_image_url }}"
                     style="width:100%;border-radius:8px;object-fit:cover;max-height:150px" />
                 <p style="font-size:0.75rem;color:var(--orange);margin-top:4px">Current content image</p>
             </div>

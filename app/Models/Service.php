@@ -27,4 +27,17 @@ class Service extends Model
         }
         return asset('assets/images/web-dev-img.png');
     }
+    
+    public function getContentImageUrlAttribute(): ?string
+{
+    if (!$this->content_image) return null;
+
+    // Seeded images from public/assets folder
+    if (str_starts_with($this->content_image, 'assets/')) {
+        return asset($this->content_image);
+    }
+
+    // Uploaded images stored via storage
+    return asset('storage/' . $this->content_image);
+}
 }
