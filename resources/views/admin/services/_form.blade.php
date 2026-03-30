@@ -92,7 +92,8 @@
         {{-- HERO / BANNER IMAGE --}}
         <div class="admin-card">
             <h3 class="admin-card-title" style="margin-bottom:16px">Hero Background Image</h3>
-            @if(isset($service) && $service && $service->hero_image)
+            @if(isset($service) && $service && $service->hero_image && str_starts_with($service->hero_image,
+            'services/'))
             <div style="margin-bottom:12px">
                 <img src="{{ asset('storage/'.$service->hero_image) }}"
                     style="width:100%;border-radius:8px;object-fit:cover;max-height:160px" />
