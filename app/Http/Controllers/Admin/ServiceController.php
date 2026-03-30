@@ -79,10 +79,12 @@ class ServiceController extends Controller
         if ($request->hasFile('image')) {
             $data['image'] = $request->file('image')->store('services', 'public');
         }
-        if ($request->hasFile('hero_image') && $service->hero_image) {
-            Storage::disk('public')->delete($service->hero_image);
+        if ($request->hasFile('hero_image')) {
+            if ($service->hero_image) {
+                Storage::disk('public')->delete($service->hero_image);
+            }
+          $data['hero_image'] = $request->file('hero_image')->store('services', 'public');
         }
-        $data['hero_image'] = $request->file('hero_image')->store('services', 'public');
         
         $service->update($data);
         return redirect()->route('admin.services.index')->with('success', 'Service updated successfully.');
