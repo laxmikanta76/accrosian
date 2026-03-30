@@ -10,7 +10,7 @@ class Service extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title','slug','short_description','full_description','image','content_image','icon',
+        'title','slug','short_description','full_description','image','hero_image','icon',
         'meta_title','meta_description','meta_keywords','og_image','status','sort_order',
     ];
 
@@ -28,16 +28,14 @@ class Service extends Model
         return asset('assets/images/web-dev-img.png');
     }
     
-    public function getContentImageUrlAttribute(): ?string
+    public function getHeroImageUrlAttribute(): string
 {
-    if (!$this->content_image) return null;
-
-    // Seeded images from public/assets folder
-    if (str_starts_with($this->content_image, 'assets/')) {
-        return asset($this->content_image);
+    if ($this->hero_image && file_exists(public_path('storage/' . $this->hero_image))) {
+        return asset('storage/' . $this->hero_image);
     }
-
-    // Uploaded images stored via storage
-    return asset('storage/' . $this->content_image);
+    // fallback: use same image as content, or a default hero
+    return $this->image 
+        ? asset('storage/' . $this->image) 
+        : asset('assets/images/web-dev-img.png');
 }
 }

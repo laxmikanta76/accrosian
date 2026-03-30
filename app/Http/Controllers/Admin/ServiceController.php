@@ -29,7 +29,7 @@ class ServiceController extends Controller
             'full_description'  => 'nullable|string',
             'icon'              => 'nullable|string|max:10',
             'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:2048',
-            'content_image'     => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:2048',
+            'hero_image'        => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:2048',
             'meta_title'        => 'nullable|string|max:255',
             'meta_description'  => 'nullable|string',
             'meta_keywords'     => 'nullable|string',
@@ -43,8 +43,8 @@ class ServiceController extends Controller
         if ($request->hasFile('image')) {
             $data['image'] = $request->file('image')->store('services', 'public');
         }
-        if ($request->hasFile('content_image')) {
-            $data['content_image'] = $request->file('content_image')->store('services', 'public');
+        if ($request->hasFile('hero_image')) {
+            $data['hero_image'] = $request->file('hero_image')->store('services', 'public');
         }
 
         Service::create($data);
@@ -65,7 +65,7 @@ class ServiceController extends Controller
             'full_description'  => 'nullable|string',
             'icon'              => 'nullable|string|max:10',
             'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:2048',
-            'content_image'     => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:2048',
+            'hero_image'        => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:2048',
             'meta_title'        => 'nullable|string|max:255',
             'meta_description'  => 'nullable|string',
             'meta_keywords'     => 'nullable|string',
@@ -79,10 +79,8 @@ class ServiceController extends Controller
         if ($request->hasFile('image')) {
             $data['image'] = $request->file('image')->store('services', 'public');
         }
-        if ($request->hasFile('content_image')) {
-            $data['content_image'] = $request->file('content_image')->store('services', 'public');
-        } else {
-            unset($data['content_image']);
+        if ($request->hasFile('hero_image') && $service->hero_image) {
+            Storage::disk('public')->delete($service->hero_image);
         }
 
         $service->update($data);
