@@ -7,7 +7,9 @@
 <?php $__env->startSection('content'); ?>
 
 <section class="page-hero">
-    <?php if($service->image && !str_starts_with($service->image,'assets/')): ?>
+    <?php if($service->hero_image): ?>
+    <img src="<?php echo e(asset('storage/'.$service->hero_image)); ?>" alt="<?php echo e($service->title); ?>" class="page-hero-image" />
+    <?php elseif($service->image && !str_starts_with($service->image,'assets/')): ?>
     <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>" class="page-hero-image" />
     <?php elseif($service->image): ?>
     <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>" class="page-hero-image" />
@@ -46,6 +48,9 @@
                     style="width:100%;border-radius:16px;object-fit:cover" />
                 <?php elseif($service->image): ?>
                 <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>"
+                    style="width:100%;border-radius:16px;object-fit:cover" />
+                <?php else: ?>
+                <img src="<?php echo e(asset('assets/images/web-dev-img.png')); ?>" alt="<?php echo e($service->title); ?>"
                     style="width:100%;border-radius:16px;object-fit:cover" />
                 <?php endif; ?>
             </div>
