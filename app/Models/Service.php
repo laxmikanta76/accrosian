@@ -28,8 +28,7 @@ class Service extends Model
         return asset('assets/images/web-dev-img.png');
     }
     
-    public function getHeroImageUrlAttribute(): string
-{
+    public function getHeroImageUrlAttribute(): string{
     if ($this->hero_image && file_exists(public_path('storage/' . $this->hero_image))) {
         return asset('storage/' . $this->hero_image);
     }
