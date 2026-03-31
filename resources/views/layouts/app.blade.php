@@ -85,15 +85,6 @@
 
     <script src="{{ asset('assets/js/script.js') }}?v={{ time() }}"></script>
     @stack('scripts')
-
-    <script>
-    setTimeout(() => {
-        document.querySelectorAll('.toast-success, .toast-error').forEach(el => {
-            el.style.opacity = '0';
-            setTimeout(() => el.remove(), 500);
-        });
-    }, 3000);
-    </script>
 </body>
 
 </html>
