@@ -7,7 +7,9 @@
 @section('content')
 
 <section class="page-hero">
-    @if($service->image && !str_starts_with($service->image,'assets/'))
+    @if($service->hero_image)
+    <img src="{{ asset('storage/'.$service->hero_image) }}" alt="{{ $service->title }}" class="page-hero-image" />
+    @elseif($service->image && !str_starts_with($service->image,'assets/'))
     <img src="{{ asset('storage/'.$service->image) }}" alt="{{ $service->title }}" class="page-hero-image" />
     @elseif($service->image)
     <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" class="page-hero-image" />
@@ -45,6 +47,9 @@
                     style="width:100%;border-radius:16px;object-fit:cover" />
                 @elseif($service->image)
                 <img src="{{ asset($service->image) }}" alt="{{ $service->title }}"
+                    style="width:100%;border-radius:16px;object-fit:cover" />
+                @else
+                <img src="{{ asset('assets/images/web-dev-img.png') }}" alt="{{ $service->title }}"
                     style="width:100%;border-radius:16px;object-fit:cover" />
                 @endif
             </div>
