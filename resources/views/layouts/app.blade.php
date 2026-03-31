@@ -69,16 +69,16 @@
 
     <main>
         @if(session('success'))
-        <div class="toast-success">
+        <div style="background:#10b981;color:#fff;padding:14px 24px;text-align:center;font-weight:600;">
             {{ session('success') }}
         </div>
         @endif
-
         @if(session('error'))
-        <div class="toast-error">
+        <div style="background:#ef4444;color:#fff;padding:14px 24px;text-align:center;font-weight:600;">
             {{ session('error') }}
         </div>
         @endif
+        @yield('content')
     </main>
 
     @include('partials.footer')
