@@ -69,16 +69,16 @@
 
     <main>
         @if(session('success'))
-        <div style="background:#10b981;color:#fff;padding:14px 24px;text-align:center;font-weight:600;">
+        <div class="toast-success">
             {{ session('success') }}
         </div>
         @endif
+
         @if(session('error'))
-        <div style="background:#ef4444;color:#fff;padding:14px 24px;text-align:center;font-weight:600;">
+        <div class="toast-error">
             {{ session('error') }}
         </div>
         @endif
-        @yield('content')
     </main>
 
     @include('partials.footer')
@@ -86,5 +86,15 @@
     <script src="{{ asset('assets/js/script.js') }}?v={{ time() }}"></script>
     @stack('scripts')
 </body>
+
+
+<script>
+setTimeout(() => {
+    document.querySelectorAll('.toast-success, .toast-error').forEach(el => {
+        el.style.opacity = '0';
+        setTimeout(() => el.remove(), 500);
+    });
+}, 3000);
+</script>
 
 </html>
