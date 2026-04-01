@@ -125,13 +125,18 @@ function getTotalSlides() {
 
 function goToSlide(index) {
   if (!track) return;
+
   const cards = document.querySelectorAll(".testimonial-card");
-  if (!cards.length) return;
   const visible = getVisibleCount();
   const total = Math.ceil(cards.length / visible);
+
   currentSlide = ((index % total) + total) % total;
-  const cardWidth = cards[0].offsetWidth + 24;
-  track.style.transform = `translateX(-${currentSlide * visible * cardWidth}px)`;
+
+  // ✅ MOVE BY PERCENT INSTEAD OF PX (BEST PRACTICE)
+  const movePercent = 100 / visible;
+
+  track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
   dots.forEach((d, i) => d.classList.toggle("active", i === currentSlide));
 }
 
