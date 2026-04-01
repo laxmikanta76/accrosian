@@ -1262,7 +1262,7 @@ body {
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-lg);
   padding: 40px;
-  flex: 0 0 calc(50% - 12px);
+  flex: 0 0 100%;
   flex-shrink: 0;
 }
 
