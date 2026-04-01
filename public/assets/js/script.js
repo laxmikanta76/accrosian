@@ -130,8 +130,7 @@ function goToSlide(index) {
   const visible = getVisibleCount();
   const total = Math.ceil(cards.length / visible);
   currentSlide = ((index % total) + total) % total;
-  // ✅ MOVE BY PERCENT INSTEAD OF PX (BEST PRACTICE)
-  const movePercent = 100 / visible;
+  const cardWidth = cards[0].offsetWidth + 24;
   track.style.transform = `translateX(-${currentSlide * visible * cardWidth}px)`;
   dots.forEach((d, i) => d.classList.toggle("active", i === currentSlide));
 }
