@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\{HomeController, AboutController, ServiceController, PortfolioController, BlogController, ContactController};
 use App\Http\Controllers\Auth\{LoginController, RegisterController, ForgotPasswordController};
 use App\Http\Controllers\Admin\{DashboardController, ServiceController as AdminServiceController, PortfolioController as AdminPortfolioController, BlogPostController, ContactSubmissionController, SettingsController, UserController, PageController};
-
+use App\Http\Controllers\Auth\ResetPasswordController;
 /*
 |--------------------------------------------------------------------------
 | Frontend Routes
@@ -33,8 +33,9 @@ Route::middleware('guest')->group(function () {
     Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
     Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
 
-    Route::get('/reset-password/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-    Route::post('/reset-password', 'Auth\ResetPasswordController@reset')->name('password.update');
+    Route::get('/reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');
+
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth')->name('logout');
