@@ -17,7 +17,6 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-        dd('reached store', $request->all());
         $validated = $request->validate([
             'name'    => 'required|string|max:255',
             'email'   => 'required|email|max:255',
