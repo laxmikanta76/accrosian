@@ -19,11 +19,14 @@ class ContactSubmission extends Model
 
     public function getStatusBadgeAttribute(): string
     {
-        return match ($this->status) {
-            'new'     => '<span class="badge badge-new">New</span>',
-            'read'    => '<span class="badge badge-read">Read</span>',
-            'replied' => '<span class="badge badge-replied">Replied</span>',
-            default   => '<span class="badge">Unknown</span>',
-        };
+        if ($this->status === 'new') {
+        return '<span class="badge badge-new">New</span>';
+    } elseif ($this->status === 'read') {
+        return '<span class="badge badge-read">Read</span>';
+    } elseif ($this->status === 'replied') {
+        return '<span class="badge badge-replied">Replied</span>';
+    }
+
+    return '<span class="badge">Unknown</span>';
     }
 }
