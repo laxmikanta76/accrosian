@@ -597,10 +597,6 @@
                 <span class="sidebar-badge">{{ $newCount }}</span>
                 @endif
             </a>
-            <a href="{{ route('admin.students.index') }}"
-                class="sidebar-link {{ request()->routeIs('admin.students*') ? 'active' : '' }}">
-                <i class="fas fa-user-graduate"></i> Student Registrations
-            </a>
 
             <div class="sidebar-section">System</div>
             <a href="{{ route('admin.users.index') }}"

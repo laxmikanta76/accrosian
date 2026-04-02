@@ -5,8 +5,7 @@ use App\Http\Controllers\Frontend\{HomeController, AboutController, ServiceContr
 use App\Http\Controllers\Auth\{LoginController, RegisterController, ForgotPasswordController};
 use App\Http\Controllers\Admin\{DashboardController, ServiceController as AdminServiceController, PortfolioController as AdminPortfolioController, BlogPostController, ContactSubmissionController, SettingsController, UserController, PageController};
 use App\Http\Controllers\Auth\ResetPasswordController;
-use App\Http\Controllers\Frontend\StudentController;
-use App\Http\Controllers\Admin\StudentRegistrationController;
+
 /*
 |--------------------------------------------------------------------------
 | Frontend Routes
@@ -21,9 +20,7 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/{post:slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
-// Frontend
-Route::get('/student-registration', [StudentController::class, 'index'])->name('student.register');
-Route::post('/student-registration', [StudentController::class, 'store'])->name('student.register.store');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -89,9 +86,5 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
     Route::get('pages/{page}/edit', [PageController::class, 'edit'])->name('pages.edit');
     Route::put('pages/{page}', [PageController::class, 'update'])->name('pages.update');
 
-    // Student Registrations
-Route::get('students', [StudentRegistrationController::class, 'index'])->name('students.index');
-Route::get('students/{student}', [StudentRegistrationController::class, 'show'])->name('students.show');
-Route::patch('students/{student}/status', [StudentRegistrationController::class, 'updateStatus'])->name('students.status');
-Route::delete('students/{student}', [StudentRegistrationController::class, 'destroy'])->name('students.destroy');
+    
 });
