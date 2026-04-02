@@ -179,7 +179,7 @@ filterBtns.forEach((btn) => {
 // ============ CONTACT FORM ============
 const contactForm = document.querySelector("#contact-form");
 contactForm?.addEventListener("submit", (e) => {
-  e.preventDefault();
+  //e.preventDefault();
   const btn = contactForm.querySelector('[type="submit"]');
   const original = btn.innerHTML;
   btn.innerHTML = "✓ Message Sent!";
