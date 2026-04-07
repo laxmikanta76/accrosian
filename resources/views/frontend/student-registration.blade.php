@@ -5,14 +5,9 @@
 
 @section('content')
 
-<section class="page-hero" style="position:relative;min-height:320px;display:flex;align-items:center;
-    background:
-    linear-gradient(135deg, rgba(10,15,30,0.6), rgba(10,15,30,0.6)),
-    url('{{ asset('assets/images/std-reg.png') }}');
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;">
+<section class="page-hero"
+    style="position:relative;min-height:320px;display:flex;align-items:center;
+    background:url('{{ asset('assets/images/std-reg.png') }}');background-size: cover;background-position: center;background-repeat: no-repeat;">
 
     {{-- Background image --}}
     <div style="position:absolute;inset:0;z-index:0">
