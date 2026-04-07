@@ -474,7 +474,7 @@ body {
 }
 .hero-stat-label {
   font-size: 0.85rem;
-  color: var(--text-light);
+  color: var(--white);
   margin-top: 4px;
 }
 
