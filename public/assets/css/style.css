@@ -2692,7 +2692,7 @@ select option {
   margin-bottom: 10px;
 }
 .feature-text {
-  color: var(--text-light);
+  color: var(--white);
   font-size: 0.9rem;
   line-height: 1.6;
 }
