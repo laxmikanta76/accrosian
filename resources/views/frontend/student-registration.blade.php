@@ -5,14 +5,6 @@
 
 @section('content')
 
-@if(session('success'))
-<div style="background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.4);
-            border-radius:8px;padding:16px;margin:20px auto;max-width:1200px;
-            color:#22c55e;text-align:center;font-weight:600">
-    ✅ {{ session('success') }}
-</div>
-@endif
-
 <section class="page-hero" style="position:relative;overflow:hidden;min-height:320px;display:flex;align-items:center">
 
     {{-- Background image --}}
