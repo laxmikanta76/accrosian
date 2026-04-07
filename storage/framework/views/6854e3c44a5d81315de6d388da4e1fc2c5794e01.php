@@ -9,9 +9,9 @@
 
     
     <div style="position:absolute;inset:0;z-index:0">
-        <img src="<?php echo e(asset('assets/images/student-reg-img.png')); ?>" alt="Student Registration"
-            style="width:100%;height:100%;object-fit:cover;opacity:0.15;display:block">
-        <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--navy) 30%,rgba(10,15,30,0.85))">
+        <img src="<?php echo e(asset('assets/images/st-reg.png')); ?>" alt="Student Registration"
+            style="width:100%;height:100%;object-fit:cover;opacity:0.5;display:block">
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--navy) 20%,rgba(10,15,30,0.5))">
         </div>
     </div>
 
