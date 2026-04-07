@@ -16,12 +16,6 @@
     </div>
 
     <div class="container page-hero-inner" style="position:relative;z-index:2">
-        <div class="breadcrumb">
-            <a href="<?php echo e(route('home')); ?>">Home</a>
-            <span class="breadcrumb-sep">/</span>
-            <span>Student Registration</span>
-        </div>
-        <div style="font-size:3rem;margin-bottom:12px">🎓</div>
         <h1 class="page-hero-title">
             Student <span class="text-gradient">Registration</span>
         </h1>
@@ -29,7 +23,7 @@
             Join Accrosian's internship and training programs. Kickstart your tech career with us.
         </p>
         <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
-            <?php $__currentLoopData = ['Real Projects','Expert Mentors','Certificate','Job Opportunities','Flexible']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php $__currentLoopData = ['Real Projects','Expert Mentors','Certificate','Job Opportunities','Flexible Duration']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <span style="background:rgba(255,107,53,0.15);border:1px solid rgba(255,107,53,0.3);
                          color:var(--orange);padding:5px 14px;border-radius:20px;
                          font-size:0.82rem;font-weight:600">✓ <?php echo e($tag); ?></span>

@@ -5,10 +5,15 @@
 
 @section('content')
 
-<section class="page-hero" style="position:relative;min-height:320px;display:flex;align-items:center;
-    background:
-    linear-gradient(135deg, rgba(10,15,30,0.25), rgba(10,15,30,0.35)),
-    url('{{ asset('assets/images/std-reg.png') }}') center/cover no-repeat;">
+<section class="page-hero" style="position:relative;overflow:hidden;min-height:320px;display:flex;align-items:center">
+
+    {{-- Background image --}}
+    <div style="position:absolute;inset:0;z-index:0">
+        <img src="{{ asset('assets/images/std-reg.png') }}" alt="Student Registration"
+            style="width:100%;height:100%;object-fit:cover;opacity:0.15;display:block">
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--navy) 30%,rgba(10,15,30,0.85))">
+        </div>
+    </div>
 
     <div class="hero-bg-effects" style="position:relative;z-index:1">
         <div class="hero-orb hero-orb-1" style="opacity:0.08"></div>
@@ -16,6 +21,12 @@
     </div>
 
     <div class="container page-hero-inner" style="position:relative;z-index:2">
+        <div class="breadcrumb">
+            <a href="{{ route('home') }}">Home</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>Student Registration</span>
+        </div>
+        <div style="font-size:3rem;margin-bottom:12px">🎓</div>
         <h1 class="page-hero-title">
             Student <span class="text-gradient">Registration</span>
         </h1>
@@ -23,7 +34,7 @@
             Join Accrosian's internship and training programs. Kickstart your tech career with us.
         </p>
         <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
-            @foreach(['Real Projects','Expert Mentors','Certificate','Job Opportunities','Flexible Duration'] as $tag)
+            @foreach(['Real Projects','Expert Mentors','Certificate','Job Opportunities'] as $tag)
             <span style="background:rgba(255,107,53,0.15);border:1px solid rgba(255,107,53,0.3);
                          color:var(--orange);padding:5px 14px;border-radius:20px;
                          font-size:0.82rem;font-weight:600">✓ {{ $tag }}</span>
