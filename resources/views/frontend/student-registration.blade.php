@@ -53,7 +53,7 @@
 
 <section style="padding:80px 0">
     <div class="container">
-        <div class="student-reg-grid">
+        <div style="display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:start">
 
             {{-- ═══ LEFT: REGISTRATION FORM ═══ --}}
             <div>
@@ -79,89 +79,115 @@
                     <form action="{{ route('student.register.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="student-form-fields">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
 
                             {{-- Name --}}
-                            <div class="form-row-2">
-                                <div class="form-group">
-                                    <label>Full Name *</label>
-                                    <input type="text" name="name" placeholder="Your full name"
-                                        value="{{ old('name') }}" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Mobile Number *</label>
-                                    <input type="tel" name="mobile" placeholder="+91 98XXXXXXXX"
-                                        value="{{ old('mobile') }}" required />
-                                </div>
+                            <div class="form-group">
+                                <label for="name"
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    Full Name *
+                                </label>
+                                <input type="text" id="name" name="name" placeholder="Your full name"
+                                    value="{{ old('name') }}" required style="width:100%;box-sizing:border-box" />
+                            </div>
+
+                            {{-- Mobile --}}
+                            <div class="form-group">
+                                <label for="mobile"
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    Mobile Number *
+                                </label>
+                                <input type="tel" id="mobile" name="mobile" placeholder="+91 98XXXXXXXX"
+                                    value="{{ old('mobile') }}" required style="width:100%;box-sizing:border-box" />
                             </div>
 
                             {{-- Email --}}
-                            <div class="form-row-2">
-                                <div class="form-group">
-                                    <label>Email Address *</label>
-                                    <input type="email" name="email" placeholder="you@email.com"
-                                        value="{{ old('email') }}" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>College Name *</label>
-                                    <input type="text" name="college_name" placeholder="Your college/university"
-                                        value="{{ old('college_name') }}" required />
-                                </div>
+                            <div class="form-group">
+                                <label for="email"
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    Email Address *
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="you@email.com"
+                                    value="{{ old('email') }}" required style="width:100%;box-sizing:border-box" />
+                            </div>
+
+                            {{-- College --}}
+                            <div class="form-group">
+                                <label for="college_name"
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    College Name *
+                                </label>
+                                <input type="text" id="college_name" name="college_name"
+                                    placeholder="Your college/university" value="{{ old('college_name') }}" required
+                                    style="width:100%;box-sizing:border-box" />
                             </div>
 
                             {{-- Course --}}
-                            <div class="form-row-2">
-                                <div class="form-group">
-                                    <label>Course *</label>
-                                    <select name="course" required>
-                                        <option value="">Select Course</option>
-                                        @foreach(['B.Tech / B.E.','M.Tech / M.E.','BCA','MCA','B.Sc (CS/IT)','M.Sc
-                                        (CS/IT)','MBA (IT)','Diploma','Other'] as $c)
-                                        <option value="{{ $c }}" {{ old('course') === $c ? 'selected' : '' }}>{{ $c }}
-                                        </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Current Year *</label>
-                                    <select name="year" required>
-                                        <option value="">Select Year</option>
-                                        @foreach(['1st Year','2nd Year','3rd Year','4th Year','Final Year','Passed Out /
-                                        Graduate'] as $y)
-                                        <option value="{{ $y }}" {{ old('year') === $y ? 'selected' : '' }}>{{ $y }}
-                                        </option>
-                                        @endforeach
-                                    </select>
-                                </div>
+                            <div class="form-group">
+                                <label for="course"
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    Course *
+                                </label>
+                                <select id="course" name="course" required style="width:100%;box-sizing:border-box">
+                                    <option value="">Select Course</option>
+                                    @foreach(['B.Tech / B.E.','M.Tech / M.E.','BCA','MCA','B.Sc (CS/IT)','M.Sc
+                                    (CS/IT)','MBA (IT)','Diploma','Other'] as $c)
+                                    <option value="{{ $c }}" {{ old('course') === $c ? 'selected' : '' }}>
+                                        {{ $c }}
+                                    </option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            {{-- Year --}}
+                            <div class="form-group">
+                                <label for="year"
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    Current Year *
+                                </label>
+                                <select id="year" name="year" required style="width:100%;box-sizing:border-box">
+                                    <option value="">Select Year</option>
+                                    @foreach(['1st Year','2nd Year','3rd Year','4th Year','Final Year','Passed Out /
+                                    Graduate'] as $y)
+                                    <option value="{{ $y }}" {{ old('year') === $y ? 'selected' : '' }}>
+                                        {{ $y }}
+                                    </option>
+                                    @endforeach
+                                </select>
                             </div>
 
                             {{-- Specialization --}}
-                            <div class="form-group">
-                                <label>Specialization <span
-                                        style="color:var(--text-muted);font-weight:400;font-size:0.82rem">(optional)</span></label>
-                                <input type="text" name="specialization"
-                                    placeholder="e.g. Web Development, AI/ML, Mobile Apps..."
-                                    value="{{ old('specialization') }}" />
+                            <div class="form-group" style="grid-column:span 2">
+                                <label for="specialization"
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    Specialization <span
+                                        style="color:var(--text-muted);font-weight:400">(optional)</span>
+                                </label>
+                                <input type="text" id="specialization" name="specialization"
+                                    placeholder="e.g. Web Development, AI/ML, Mobile Apps, Cloud..."
+                                    value="{{ old('specialization') }}" style="width:100%;box-sizing:border-box" />
                             </div>
 
                             {{-- Resume Upload --}}
-                            <div class="form-group">
-                                <label>Upload Resume <span
-                                        style="color:var(--text-muted);font-weight:400;font-size:0.82rem">(PDF only, max
-                                        2MB)</span></label>
-                                <div id="dropZone" onclick="document.getElementById('resume').click()"
+                            <div class="form-group" style="grid-column:span 2">
+                                <label for="resume"
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    Upload Resume <span style="color:var(--text-muted);font-weight:400">(PDF only, max
+                                        2MB)</span>
+                                </label>
+                                <div style="border:2px dashed var(--border);border-radius:12px;padding:24px;
+                                            text-align:center;cursor:pointer;transition:border-color 0.2s;
+                                            background:var(--navy-light)" id="dropZone"
+                                    onclick="document.getElementById('resume').click()"
                                     ondragover="event.preventDefault();this.style.borderColor='var(--orange)'"
-                                    ondragleave="this.style.borderColor='var(--border)'" ondrop="handleDrop(event)"
-                                    style="border:2px dashed var(--border);border-radius:12px;padding:32px 20px;
-                text-align:center;cursor:pointer;transition:all 0.2s">
-                                    <div style="font-size:2.5rem;margin-bottom:10px">📄</div>
+                                    ondragleave="this.style.borderColor='var(--border)'" ondrop="handleDrop(event)">
+                                    <div style="font-size:2rem;margin-bottom:8px">📄</div>
                                     <p style="color:var(--text-light);font-size:0.9rem;margin-bottom:4px">
-                                        <strong style="color:var(--orange)">Click to upload</strong> or drag &amp; drop
+                                        <strong style="color:var(--orange)">Click to upload</strong> or drag & drop
                                     </p>
                                     <p style="color:var(--text-muted);font-size:0.8rem">PDF files only — max 2MB</p>
-                                    <div id="fileName"
-                                        style="display:none;margin-top:10px;color:var(--orange);font-size:0.88rem;font-weight:600">
-                                    </div>
+                                    <div id="fileName" style="display:none;margin-top:10px;color:var(--orange);
+                                                font-size:0.88rem;font-weight:600"></div>
                                 </div>
                                 <input type="file" id="resume" name="resume" accept=".pdf" style="display:none"
                                     onchange="showFileName(this)" />
@@ -259,67 +285,6 @@
 
     </div>
 </section>
-
-
-@push('styles')
-<style>
-.student-reg-grid {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 36px;
-    align-items: start;
-}
-
-.student-reg-sidebar {
-    position: sticky;
-    top: 100px;
-}
-
-.student-form-fields {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-row-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    font-size: 0.88rem;
-    color: var(--text-light);
-}
-
-.form-group input,
-.form-group select {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-@media (max-width: 900px) {
-    .student-reg-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .student-reg-sidebar {
-        position: static;
-        order: -1;
-    }
-
-    .form-row-2 {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
-@endpush
 
 @endsection
 
