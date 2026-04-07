@@ -680,7 +680,7 @@ body {
 /* ---- Card Shell ---- */
 .service-card {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   height: 400px; /* visually balanced height */
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--glass-border);
