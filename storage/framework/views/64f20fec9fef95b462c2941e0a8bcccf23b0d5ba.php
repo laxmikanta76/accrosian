@@ -8,7 +8,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
 
 
 <section class="hero">
-    <img src="<?php echo e(asset('assets/images/hero-bg.png')); ?>" alt="Hero Background" class="hero-bg-img" />
+    <img src="<?php echo e(asset('assets/images/hero-img.png')); ?>" alt="Hero Background" class="hero-bg-img" />
     <div class="hero-bg-effects">
         <div class="hero-orb hero-orb-1"></div>
         <div class="hero-orb hero-orb-2"></div>
