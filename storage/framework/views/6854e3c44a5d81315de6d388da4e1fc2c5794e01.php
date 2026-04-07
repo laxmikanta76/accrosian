@@ -5,7 +5,14 @@
 
 <?php $__env->startSection('content'); ?>
 
-<section class="page-hero" style="position:relative;overflow:hidden;min-height:320px;display:flex;align-items:center">
+<section class="page-hero" style="position:relative;min-height:320px;display:flex;align-items:center;
+    background:
+    linear-gradient(135deg, rgba(10,15,30,0.6), rgba(10,15,30,0.6)),
+    url('<?php echo e(asset('assets/images/st-reg.png')); ?>');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;">
 
     
     <div style="position:absolute;inset:0;z-index:0">
