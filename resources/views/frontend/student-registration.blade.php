@@ -29,7 +29,7 @@
             Join Accrosian's internship and training programs. Kickstart your tech career with us.
         </p>
         <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
-            @foreach(['Real Projects','Expert Mentors','Certificate','Job Opportunities'] as $tag)
+            @foreach(['Real Projects','Expert Mentors','Certificate','Job Opportunities','Flexible'] as $tag)
             <span style="background:rgba(255,107,53,0.15);border:1px solid rgba(255,107,53,0.3);
                          color:var(--orange);padding:5px 14px;border-radius:20px;
                          font-size:0.82rem;font-weight:600">✓ {{ $tag }}</span>
