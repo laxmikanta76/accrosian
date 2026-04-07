@@ -2671,7 +2671,7 @@ select option {
   gap: 24px;
 }
 .feature-card {
-  background: var(--orange-light);
+  background: var(--orange);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius);
   padding: 32px 24px;
