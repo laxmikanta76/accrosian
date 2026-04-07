@@ -10,14 +10,6 @@
     linear-gradient(135deg, rgba(10,15,30,0.25), rgba(10,15,30,0.35)),
     url('{{ asset('assets/images/std-reg.png') }}') center/cover no-repeat;">
 
-    {{-- Background image --}}
-    <div style="position:absolute;inset:0;z-index:0">
-        <img src="{{ asset('assets/images/st-reg.png') }}" alt="Student Registration"
-            style="width:100%;height:100%;object-fit:cover;opacity:0.5;display:block">
-        <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--navy) 20%,rgba(10,15,30,0.5))">
-        </div>
-    </div>
-
     <div class="hero-bg-effects" style="position:relative;z-index:1">
         <div class="hero-orb hero-orb-1" style="opacity:0.08"></div>
         <div class="hero-grid"></div>
