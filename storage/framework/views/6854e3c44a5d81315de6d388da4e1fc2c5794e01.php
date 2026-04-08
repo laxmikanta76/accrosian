@@ -6,15 +6,16 @@
 <?php $__env->startSection('content'); ?>
 
 
-<section class="page-hero" style="position:relative;overflow:hidden;min-height:320px;display:flex;align-items:center">
+<section class="page-hero" style="
+    position:relative;
+    min-height:320px;
+    display:flex;
+    align-items:center;
 
-    
-    <div style="position:absolute;inset:0;z-index:0">
-        <img src="<?php echo e(asset('assets/images/student-reg-img.png')); ?>" alt="Student Registration"
-            style="width:100%;height:100%;object-fit:cover;opacity:0.15;display:block">
-        <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--navy) 30%,rgba(10,15,30,0.85))">
-        </div>
-    </div>
+    background:
+    linear-gradient(135deg, rgba(10,15,30,0.25), rgba(10,15,30,0.35)),
+    url('<?php echo e(asset('assets/images/student-reg-img.png')); ?>') center/cover no-repeat;">
+
 
     <div class="hero-bg-effects" style="position:relative;z-index:1">
         <div class="hero-orb hero-orb-1" style="opacity:0.08"></div>

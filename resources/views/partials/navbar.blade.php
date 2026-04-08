@@ -10,7 +10,6 @@
         </a>
         <ul class="nav-menu">
             <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
-            <li><a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">About</a></li>
             <li class="nav-dropdown">
                 <a href="{{ route('services') }}"
                     class="{{ request()->routeIs('services*') ? 'active' : '' }}">Services</a>
@@ -21,11 +20,21 @@
                     @endforeach
                 </div>
             </li>
-            <li><a href="{{ route('portfolio') }}"
-                    class="{{ request()->routeIs('portfolio') ? 'active' : '' }}">Portfolio</a></li>
             <li><a href="{{ route('blog') }}" class="{{ request()->routeIs('blog*') ? 'active' : '' }}">Blog</a></li>
-            <li><a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
+            {{-- Our Company Dropdown --}}
+            <li class="nav-dropdown">
+                <a href="#"
+                    class="{{ request()->routeIs('about') || request()->routeIs('portfolio') || request()->routeIs('contact') ? 'active' : '' }}">
+                    Our Company
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="{{ route('about') }}">About</a>
+                    <a href="{{ route('portfolio') }}">Portfolio</a>
+                    <a href="{{ route('contact') }}">Contact</a>
+                </div>
             </li>
+
         </ul>
         <a href="{{ route('contact') }}" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
         @auth
