@@ -22,11 +22,6 @@
     </div>
 
     <div class="container page-hero-inner" style="position:relative;z-index:2">
-        <div class="breadcrumb">
-            <a href="<?php echo e(route('home')); ?>">Home</a>
-            <span class="breadcrumb-sep">/</span>
-            <span>Student Registration</span>
-        </div>
         <div style="font-size:3rem;margin-bottom:12px">🎓</div>
         <h1 class="page-hero-title">
             Student <span class="text-gradient">Registration</span>
@@ -50,7 +45,7 @@
 
             
             <div>
-                <div class="service-card" style="padding:40px">
+                <div class="service-card2" style="padding:40px">
                     <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;margin-bottom:8px">
                         Apply Now
                     </h3>
