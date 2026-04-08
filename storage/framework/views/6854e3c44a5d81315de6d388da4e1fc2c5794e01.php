@@ -1,16 +1,16 @@
-@extends('layouts.app')
 
-@section('meta_title', 'Student Registration – Accrosian')
-@section('meta_description', 'Register as a student at Accrosian. Join our internship and training programs.')
 
-@section('content')
+<?php $__env->startSection('meta_title', 'Student Registration – Accrosian'); ?>
+<?php $__env->startSection('meta_description', 'Register as a student at Accrosian. Join our internship and training programs.'); ?>
+
+<?php $__env->startSection('content'); ?>
 
 
 <section class="page-hero" style="position:relative;overflow:hidden;min-height:320px;display:flex;align-items:center">
 
-    {{-- Background image --}}
+    
     <div style="position:absolute;inset:0;z-index:0">
-        <img src="{{ asset('assets/images/student-reg-img.png') }}" alt="Student Registration"
+        <img src="<?php echo e(asset('assets/images/student-reg-img.png')); ?>" alt="Student Registration"
             style="width:100%;height:100%;object-fit:cover;opacity:0.15;display:block">
         <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--navy) 30%,rgba(10,15,30,0.85))">
         </div>
@@ -22,6 +22,11 @@
     </div>
 
     <div class="container page-hero-inner" style="position:relative;z-index:2">
+        <div class="breadcrumb">
+            <a href="<?php echo e(route('home')); ?>">Home</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>Student Registration</span>
+        </div>
         <div style="font-size:3rem;margin-bottom:12px">🎓</div>
         <h1 class="page-hero-title">
             Student <span class="text-gradient">Registration</span>
@@ -30,11 +35,11 @@
             Join Accrosian's internship and training programs. Kickstart your tech career with us.
         </p>
         <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
-            @foreach(['Real Projects','Expert Mentors','Certificate','Job Opportunities'] as $tag)
+            <?php $__currentLoopData = ['Real Projects','Expert Mentors','Certificate','Job Opportunities']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <span style="background:rgba(255,107,53,0.15);border:1px solid rgba(255,107,53,0.3);
                          color:var(--orange);padding:5px 14px;border-radius:20px;
-                         font-size:0.82rem;font-weight:600">✓ {{ $tag }}</span>
-            @endforeach
+                         font-size:0.82rem;font-weight:600">✓ <?php echo e($tag); ?></span>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </div>
 </section>
@@ -43,9 +48,9 @@
     <div class="container">
         <div style="display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:start">
 
-            {{-- ═══ LEFT: REGISTRATION FORM ═══ --}}
+            
             <div>
-                <div class="service-card2" style="padding:40px">
+                <div class="service-card" style="padding:40px">
                     <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;margin-bottom:8px">
                         Apply Now
                     </h3>
@@ -53,64 +58,64 @@
                         Fill in your details below and upload your resume to apply for our programs.
                     </p>
 
-                    @if($errors->any())
+                    <?php if($errors->any()): ?>
                     <div style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);
                                 border-radius:8px;padding:16px;margin-bottom:24px">
                         <ul style="list-style:none;margin:0;padding:0">
-                            @foreach($errors->all() as $error)
-                            <li style="color:#ef4444;font-size:0.9rem;margin-bottom:4px">• {{ $error }}</li>
-                            @endforeach
+                            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <li style="color:#ef4444;font-size:0.9rem;margin-bottom:4px">• <?php echo e($error); ?></li>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </ul>
                     </div>
-                    @endif
+                    <?php endif; ?>
 
-                    <form action="{{ route('student.register.store') }}" method="POST" enctype="multipart/form-data">
-                        @csrf
+                    <form action="<?php echo e(route('student.register.store')); ?>" method="POST" enctype="multipart/form-data">
+                        <?php echo csrf_field(); ?>
 
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
 
-                            {{-- Name --}}
+                            
                             <div class="form-group">
                                 <label for="name"
                                     style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
                                     Full Name *
                                 </label>
                                 <input type="text" id="name" name="name" placeholder="Your full name"
-                                    value="{{ old('name') }}" required style="width:100%;box-sizing:border-box" />
+                                    value="<?php echo e(old('name')); ?>" required style="width:100%;box-sizing:border-box" />
                             </div>
 
-                            {{-- Mobile --}}
+                            
                             <div class="form-group">
                                 <label for="mobile"
                                     style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
                                     Mobile Number *
                                 </label>
                                 <input type="tel" id="mobile" name="mobile" placeholder="+91 98XXXXXXXX"
-                                    value="{{ old('mobile') }}" required style="width:100%;box-sizing:border-box" />
+                                    value="<?php echo e(old('mobile')); ?>" required style="width:100%;box-sizing:border-box" />
                             </div>
 
-                            {{-- Email --}}
+                            
                             <div class="form-group">
                                 <label for="email"
                                     style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
                                     Email Address *
                                 </label>
                                 <input type="email" id="email" name="email" placeholder="you@email.com"
-                                    value="{{ old('email') }}" required style="width:100%;box-sizing:border-box" />
+                                    value="<?php echo e(old('email')); ?>" required style="width:100%;box-sizing:border-box" />
                             </div>
 
-                            {{-- College --}}
+                            
                             <div class="form-group">
                                 <label for="college_name"
                                     style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
                                     College Name *
                                 </label>
                                 <input type="text" id="college_name" name="college_name"
-                                    placeholder="Your college/university" value="{{ old('college_name') }}" required
+                                    placeholder="Your college/university" value="<?php echo e(old('college_name')); ?>" required
                                     style="width:100%;box-sizing:border-box" />
                             </div>
 
-                            {{-- Course --}}
+                            
                             <div class="form-group">
                                 <label for="course"
                                     style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
@@ -118,16 +123,17 @@
                                 </label>
                                 <select id="course" name="course" required style="width:100%;box-sizing:border-box">
                                     <option value="">Select Course</option>
-                                    @foreach(['B.Tech / B.E.','M.Tech / M.E.','BCA','MCA','B.Sc (CS/IT)','M.Sc
-                                    (CS/IT)','MBA (IT)','Diploma','Other'] as $c)
-                                    <option value="{{ $c }}" {{ old('course') === $c ? 'selected' : '' }}>
-                                        {{ $c }}
+                                    <?php $__currentLoopData = ['B.Tech / B.E.','M.Tech / M.E.','BCA','MCA','B.Sc (CS/IT)','M.Sc
+                                    (CS/IT)','MBA (IT)','Diploma','Other']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <option value="<?php echo e($c); ?>" <?php echo e(old('course') === $c ? 'selected' : ''); ?>>
+                                        <?php echo e($c); ?>
+
                                     </option>
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </select>
                             </div>
 
-                            {{-- Year --}}
+                            
                             <div class="form-group">
                                 <label for="year"
                                     style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
@@ -135,16 +141,17 @@
                                 </label>
                                 <select id="year" name="year" required style="width:100%;box-sizing:border-box">
                                     <option value="">Select Year</option>
-                                    @foreach(['1st Year','2nd Year','3rd Year','4th Year','Final Year','Passed Out /
-                                    Graduate'] as $y)
-                                    <option value="{{ $y }}" {{ old('year') === $y ? 'selected' : '' }}>
-                                        {{ $y }}
+                                    <?php $__currentLoopData = ['1st Year','2nd Year','3rd Year','4th Year','Final Year','Passed Out /
+                                    Graduate']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $y): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <option value="<?php echo e($y); ?>" <?php echo e(old('year') === $y ? 'selected' : ''); ?>>
+                                        <?php echo e($y); ?>
+
                                     </option>
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </select>
                             </div>
 
-                            {{-- Specialization --}}
+                            
                             <div class="form-group" style="grid-column:span 2">
                                 <label for="specialization"
                                     style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
@@ -153,10 +160,10 @@
                                 </label>
                                 <input type="text" id="specialization" name="specialization"
                                     placeholder="e.g. Web Development, AI/ML, Mobile Apps, Cloud..."
-                                    value="{{ old('specialization') }}" style="width:100%;box-sizing:border-box" />
+                                    value="<?php echo e(old('specialization')); ?>" style="width:100%;box-sizing:border-box" />
                             </div>
 
-                            {{-- Resume Upload --}}
+                            
                             <div class="form-group" style="grid-column:span 2">
                                 <label for="resume"
                                     style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
@@ -195,12 +202,12 @@
                 </div>
             </div>
 
-            {{-- ═══ RIGHT: COMPANY BROCHURE PREVIEW ═══ --}}
+            
             <div style="position:sticky;top:100px">
 
-                {{-- Preview Button --}}
+                
                 <a href="#pdfPreview" onclick="document.getElementById('pdfPreview').scrollIntoView({behavior:'smooth'});
-                            document.getElementById('pdfFrame').src='{{ asset($brochurePdf) }}';
+                            document.getElementById('pdfFrame').src='<?php echo e(asset($brochurePdf)); ?>';
                             document.getElementById('pdfPreview').style.display='block';
                             return false;" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;margin-bottom:20px;
                           display:flex;align-items:center;gap:10px;text-decoration:none">
@@ -208,30 +215,30 @@
                     Preview Company Brochure
                 </a>
 
-                {{-- Info Card --}}
+                
                 <div class="service-card" style="padding:28px;margin-bottom:20px">
                     <h4 style="font-family:var(--font-display);font-weight:800;font-size:1.1rem;margin-bottom:16px">
                         Why Join Accrosian?
                     </h4>
-                    @foreach([
+                    <?php $__currentLoopData = [
                     ['🚀', 'Real Project Experience', 'Work on live client projects from day one.'],
                     ['👨‍💻', 'Expert Mentorship', 'Learn from senior developers and architects.'],
                     ['📜', 'Internship Certificate', 'Get an industry-recognized certificate.'],
                     ['💼', 'Job Opportunities', 'Top performers get full-time job offers.'],
                     ['🕐', 'Flexible Duration', '1 to 6 month programs available.'],
-                    ] as [$icon, $title, $desc])
+                    ]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as [$icon, $title, $desc]): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div style="display:flex;gap:14px;margin-bottom:18px;align-items:flex-start">
-                        <div style="font-size:1.4rem;margin-top:2px">{{ $icon }}</div>
+                        <div style="font-size:1.4rem;margin-top:2px"><?php echo e($icon); ?></div>
                         <div>
                             <div style="font-weight:700;color:var(--white);font-size:0.92rem;margin-bottom:3px">
-                                {{ $title }}</div>
-                            <div style="color:var(--text-muted);font-size:0.82rem">{{ $desc }}</div>
+                                <?php echo e($title); ?></div>
+                            <div style="color:var(--text-muted);font-size:0.82rem"><?php echo e($desc); ?></div>
                         </div>
                     </div>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
 
-                {{-- Contact quick info --}}
+                
                 <div class="service-card" style="padding:20px;text-align:center">
                     <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:12px">
                         Questions? Reach us at
@@ -244,7 +251,7 @@
             </div>
         </div>
 
-        {{-- PDF PREVIEW MODAL SECTION --}}
+        
         <div id="pdfPreview" style="display:none;margin-top:48px">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
                 <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.2rem">
@@ -264,7 +271,7 @@
                 </iframe>
             </div>
             <div style="text-align:center;margin-top:16px">
-                <a href="{{ asset($brochurePdf) }}" download class="btn btn-outline"
+                <a href="<?php echo e(asset($brochurePdf)); ?>" download class="btn btn-outline"
                     style="display:inline-flex;align-items:center;gap:8px">
                     ⬇ Download Brochure
                 </a>
@@ -274,9 +281,9 @@
     </div>
 </section>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@push('scripts')
+<?php $__env->startPush('scripts'); ?>
 <script>
 function showFileName(input) {
     const fileNameDiv = document.getElementById('fileName');
@@ -300,4 +307,5 @@ function handleDrop(event) {
     document.getElementById('dropZone').style.borderColor = 'var(--border)';
 }
 </script>
-@endpush
+<?php $__env->stopPush(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xamppNew\htdocs\accroNew\resources\views/frontend/student-registration.blade.php ENDPATH**/ ?>

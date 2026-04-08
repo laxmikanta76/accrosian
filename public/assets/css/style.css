@@ -861,6 +861,27 @@ body {
   }
 }
 
+.service-card2 {
+  position: relative;
+  overflow: visible;
+  height: auto; /* visually balanced height */
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+
+  /* lift + border glow on hover */
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.service-card2:hover {
+  transform: translateY(-10px);
+  border-color: rgba(232, 117, 10, 0.5);
+  box-shadow: 0 20px 60px rgba(232, 117, 10, 0.2);
+}
+
 /* =============================================
    OUR PROCESS SECTION — Premium Image Cards
    Add/replace in your style.css.
