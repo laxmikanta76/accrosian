@@ -397,9 +397,9 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
             AI-based solutions.'
             ],
             [
-            'q' => 'Do you provide internships?',
-            'a' => 'Yes, we offer internships with real-world projects in web development, software engineering, and
-            digital marketing.'
+            'q' => ' Do you provide an internship in Hyderabad?',
+            'a' => 'es, we offer internship programs in Hyderabad with live projects in web development,
+            software development, and digital marketing.'
             ],
             [
             'q' => 'Who can apply for internships?',
