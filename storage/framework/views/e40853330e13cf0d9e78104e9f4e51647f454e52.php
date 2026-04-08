@@ -120,6 +120,21 @@
         }
     });
     </script>
+
+
+    <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.parentElement;
+
+            document.querySelectorAll('.faq-item').forEach(i => {
+                if (i !== item) i.classList.remove('active');
+            });
+
+            item.classList.toggle('active');
+        });
+    });
+    </script>
 </body>
 
 </html><?php /**PATH C:\xamppNew\htdocs\accroNew\resources\views/layouts/app.blade.php ENDPATH**/ ?>
