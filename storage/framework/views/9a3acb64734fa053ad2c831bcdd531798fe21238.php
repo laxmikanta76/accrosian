@@ -62,7 +62,7 @@
                     <li><a href="<?php echo e(route('portfolio')); ?>">Portfolio</a></li>
                     <li><a href="<?php echo e(route('blog')); ?>">Blog</a></li>
                     <li><a href="<?php echo e(route('contact')); ?>">Contact</a></li>
-                    <li><a href="<?php echo e(route('login')); ?>">Client Login</a></li>
+                    <!-- <li><a href="<?php echo e(route('login')); ?>">Client Login</a></li> -->
                     <li><a href="<?php echo e(route('student.register')); ?>" style="color:var(--orange);font-weight:600">🎓
                             StudentRegistration</a></li>
                 </ul>
