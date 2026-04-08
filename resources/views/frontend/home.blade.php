@@ -376,4 +376,67 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
     </div>
 </section>
 
+{{-- FAQ SECTION --}}
+<section class="faq-section">
+    <div class="container">
+        <div class="faq-header reveal">
+            <span class="section-tag">FAQ</span>
+            <h2 class="section-title">
+                Frequently Asked <span class="text-gradient">Questions</span>
+            </h2>
+            <p class="faq-subtitle">
+                Everything you need to know about our services and process.
+            </p>
+        </div>
+
+        <div class="faq-container">
+
+            @php
+            $faqs = [
+            [
+            'q' => 'What services do you offer?',
+            'a' => 'We provide custom software development, web development, mobile apps, digital marketing, and
+            AI-based solutions.'
+            ],
+            [
+            'q' => 'Do you provide internships?',
+            'a' => 'Yes, we offer internships with real-world projects in web development, software engineering, and
+            digital marketing.'
+            ],
+            [
+            'q' => 'Who can apply for internships?',
+            'a' => 'Students, freshers, and graduates who want practical industry experience can apply.'
+            ],
+            [
+            'q' => 'Do you provide custom solutions?',
+            'a' => 'Yes, we build tailored software solutions based on your business requirements.'
+            ],
+            [
+            'q' => 'How can I contact your team?',
+            'a' => 'You can contact us through our website or fill out the inquiry form.'
+            ],
+            [
+            'q' => 'Do you offer digital marketing?',
+            'a' => 'Yes, including SEO, Google Ads, and social media marketing.'
+            ],
+            ];
+            @endphp
+
+            @foreach($faqs as $index => $faq)
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>{{ $faq['q'] }}</span>
+                    <span class="faq-icon">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>{{ $faq['a'] }}</p>
+                </div>
+            </div>
+            @endforeach
+
+        </div>
+    </div>
+</section>
+
 @endsection

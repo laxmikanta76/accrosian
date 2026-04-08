@@ -10,7 +10,6 @@
         </a>
         <ul class="nav-menu">
             <li><a href="<?php echo e(route('home')); ?>" class="<?php echo e(request()->routeIs('home') ? 'active' : ''); ?>">Home</a></li>
-            <li><a href="<?php echo e(route('about')); ?>" class="<?php echo e(request()->routeIs('about') ? 'active' : ''); ?>">About</a></li>
             <li class="nav-dropdown">
                 <a href="<?php echo e(route('services')); ?>"
                     class="<?php echo e(request()->routeIs('services*') ? 'active' : ''); ?>">Services</a>
@@ -21,11 +20,21 @@
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </li>
-            <li><a href="<?php echo e(route('portfolio')); ?>"
-                    class="<?php echo e(request()->routeIs('portfolio') ? 'active' : ''); ?>">Portfolio</a></li>
             <li><a href="<?php echo e(route('blog')); ?>" class="<?php echo e(request()->routeIs('blog*') ? 'active' : ''); ?>">Blog</a></li>
-            <li><a href="<?php echo e(route('contact')); ?>" class="<?php echo e(request()->routeIs('contact') ? 'active' : ''); ?>">Contact</a>
+            
+            <li class="nav-dropdown">
+                <a href="#"
+                    class="<?php echo e(request()->routeIs('about') || request()->routeIs('portfolio') || request()->routeIs('contact') ? 'active' : ''); ?>">
+                    Our Company
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="<?php echo e(route('about')); ?>">About</a>
+                    <a href="<?php echo e(route('portfolio')); ?>">Portfolio</a>
+                    <a href="<?php echo e(route('contact')); ?>">Contact</a>
+                </div>
             </li>
+
         </ul>
         <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
         <?php if(auth()->guard()->check()): ?>
