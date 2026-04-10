@@ -2937,3 +2937,26 @@ select option {
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
 }
+
+/* ===== FIX FORM MOBILE ISSUE ===== */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+}
