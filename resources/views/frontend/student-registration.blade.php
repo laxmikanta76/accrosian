@@ -68,7 +68,7 @@
                     <form action="{{ route('student.register.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="form-grid">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
 
                             {{-- Name --}}
                             <div class="form-group">
@@ -146,7 +146,7 @@
                             </div>
 
                             {{-- Specialization --}}
-                            <div class="form-group full-width">
+                            <div class="form-group" style="grid-column:span 2">
                                 <label for="specialization"
                                     style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
                                     Specialization <span
@@ -158,7 +158,7 @@
                             </div>
 
                             {{-- Resume Upload --}}
-                            <div class="form-group full-width">
+                            <div class="form-group" style="grid-column:span 2">
                                 <label for="resume"
                                     style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
                                     Upload Resume <span style="color:var(--text-muted);font-weight:400">(PDF only, max
