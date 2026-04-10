@@ -34,22 +34,27 @@ window.addEventListener("scroll", () => {
 });
 
 // ============ MOBILE NAV ============
+// ============ MOBILE NAV ============
 const hamburger = document.querySelector(".hamburger");
 const mobileNav = document.querySelector(".mobile-nav");
 const mobileClose = document.querySelector(".mobile-close");
+const mobileOverlay = document.querySelector(".mobile-overlay");
 
 hamburger?.addEventListener("click", () => {
   mobileNav?.classList.add("open");
-  document.body.style.overflow = "hidden";
+  document.body.classList.add("no-scroll");
 });
+
 mobileClose?.addEventListener("click", closeMobileNav);
+mobileOverlay?.addEventListener("click", closeMobileNav);
+
 mobileNav
   ?.querySelectorAll("a")
   .forEach((a) => a.addEventListener("click", closeMobileNav));
 
 function closeMobileNav() {
   mobileNav?.classList.remove("open");
-  document.body.style.overflow = "";
+  document.body.classList.remove("no-scroll");
 }
 
 // ============ BACK TO TOP ============
