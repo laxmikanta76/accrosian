@@ -47,14 +47,17 @@ team behind our innovative software solutions.')
                 <span class="section-tag">Our Story</span>
                 <h2 class="section-title">Who We <span class="text-gradient">Are</span></h2>
                 <p style="color:var(--text-light);line-height:1.8;margin-bottom:24px">
-                    Founded in Bhubaneswar, Odisha, Accrosian emerged from a simple belief: every great idea deserves
-                    extraordinary execution. Since 2016, we've been partnering with startups and enterprises alike to
-                    deliver software solutions that don't just meet expectations — they redefine them.
+                    Accrosian is a fast-growing software company in Bhubaneswar providing innovative and
+                    affordable IT solutions for businesses and startups.As a trusted IT company in Bhubaneswar, we
+                    specialize in custom software development, web development, and digital marketing services to help
+                    businesses grow in the digital world.
+
                 </p>
                 <p style="color:var(--text-light);line-height:1.8;margin-bottom:36px">
-                    Our multidisciplinary team of developers, designers, data scientists, and strategists brings
-                    together decades of combined expertise across web, mobile, cloud, and AI technologies. We don't just
-                    write code — we craft experiences that drive measurable business outcomes.
+                    With years of experience, we have successfully delivered multiple projects and helped
+                    businesses improve their online presence and performance.We also offer internship programs in
+                    Bhubaneswar for students, where they can work on live projects, gain practical knowledge, and build
+                    industry-ready skills.
                 </p>
                 <a href="{{ route('contact') }}" class="btn btn-primary">Work With Us</a>
             </div>
@@ -100,31 +103,46 @@ team behind our innovative software solutions.')
             <div class="mv-card reveal">
                 <div class="mv-icon">🎯</div>
                 <h3 class="mv-title">Our Mission</h3>
-                <p class="mv-text">To empower businesses of all sizes with transformative technology solutions that are
-                    powerful, scalable, and built to last. We are committed to delivering software that solves real
-                    problems, creates real value, and enables our clients to compete boldly in the digital economy.</p>
+                <p class="mv-text">Our mission is to empower businesses with high-quality and scalable IT solutions in
+                    Bhubaneswar that solve real problems and drive real growth.As a leading software company in
+                    Bhubaneswar, we aim to deliver innovative software, web development, and digital marketing services
+                    that help businesses succeed in the digital world.We are also committed to providing internship
+                    programs in Bhubaneswar that give students real-time experience and industry-ready skills. </p>
                 <ul style="margin-top:24px;list-style:none;display:flex;flex-direction:column;gap:10px">
                     <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
-                            style="color:var(--orange)">✓</span> Deliver world-class software solutions</li>
+                            style="color:var(--orange)">✓</span> Deliver high-quality and reliable software solutions
+                    </li>
                     <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
-                            style="color:var(--orange)">✓</span> Foster long-term client partnerships</li>
+                            style="color:var(--orange)">✓</span> Build long-term partnerships with clients </li>
                     <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
-                            style="color:var(--orange)">✓</span> Drive measurable business impact</li>
+                            style="color:var(--orange)">✓</span> Help businesses achieve measurable growth </li>
+                    <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
+                            style="color:var(--orange)">✓</span> Provide real-time internship opportunities for students
+                    </li>
                 </ul>
             </div>
             <div class="mv-card reveal reveal-delay-2">
                 <div class="mv-icon">🔭</div>
                 <h3 class="mv-title">Our Vision</h3>
-                <p class="mv-text">To become South Asia's most trusted technology partner — recognized globally for our
-                    innovation, integrity, and the extraordinary outcomes we create for our clients. We envision a
-                    future where technology bridges every gap between great ideas and their fullest potential.</p>
+                <p class="mv-text">Our vision is to become a leading software company in Bhubaneswar and a trusted IT
+                    partner for businesses across India and beyond. We aim to deliver innovative and scalable IT
+                    solutions in Bhubaneswar, helping businesses grow with the power of technology and digital
+                    transformation.We also envision creating more opportunities through internship programs in
+                    Bhubaneswar,helping students gain real-world experience and build successful careers in the IT
+                    industry.</p>
                 <ul style="margin-top:24px;list-style:none;display:flex;flex-direction:column;gap:10px">
                     <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
-                            style="color:var(--orange)">✓</span> Lead in AI and emerging tech innovation</li>
+                            style="color:var(--orange)">✓</span> Lead innovation in software and digital technologies
+                    </li>
                     <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
-                            style="color:var(--orange)">✓</span> Expand globally while staying rooted locally</li>
+                            style="color:var(--orange)">✓</span> Expand our services across India and global markets
+                    </li>
                     <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
-                            style="color:var(--orange)">✓</span> Champion digital inclusion across industries</li>
+                            style="color:var(--orange)">✓</span> Support businesses with modern and scalable IT
+                        solutions</li>
+                    <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
+                            style="color:var(--orange)">✓</span> Empower students through real-time internship
+                        opportunities </li>
                 </ul>
             </div>
         </div>

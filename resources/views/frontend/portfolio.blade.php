@@ -1,15 +1,16 @@
 @extends('layouts.app')
 
 @section('meta_title', $page->meta_title ?? 'Portfolio – Our Featured Projects')
-@section('meta_description', $page->meta_description ?? 'Browse our portfolio of successful projects across web, mobile, cloud, and AI domains.')
+@section('meta_description', $page->meta_description ?? 'Browse our portfolio of successful projects across web, mobile,
+cloud, and AI domains.')
 
 @section('content')
 
 <section class="page-hero">
     @if($page && $page->banner_image)
-        <img src="{{ asset('storage/'.$page->banner_image) }}" alt="Portfolio" class="page-hero-image" />
+    <img src="{{ asset('storage/'.$page->banner_image) }}" alt="Portfolio" class="page-hero-image" />
     @else
-        <img src="{{ asset('assets/images/hero-bg-img-2.png') }}" alt="Portfolio" class="page-hero-image" />
+    <img src="{{ asset('assets/images/hero-bg-img-2.png') }}" alt="Portfolio" class="page-hero-image" />
     @endif
     <div class="hero-bg-effects">
         <div class="hero-orb hero-orb-1" style="opacity:0.08"></div>
@@ -21,6 +22,18 @@
     </div>
 </section>
 
+{{-- 🔥 NEW INTRO PARAGRAPH SECTION --}}
+<section class="portfolio-intro">
+    <div class="container">
+        <p class="portfolio-intro-text">
+            At <strong>Accrosian</strong>, we explore our work and discover how we deliver high-quality software
+            solutions in Bhubaneswar for businesses and startups.We have successfully completed projects in web
+            development, custom software development,and digital solutions, helping clients improve efficiency and grow
+            their business.Each project reflects our commitment to quality, innovation, and real-world results.
+        </p>
+    </div>
+</section>
+
 <section style="padding:100px 0">
     <div class="container">
 
@@ -28,26 +41,28 @@
         <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:48px" class="reveal">
             <button class="portfolio-filter-btn active" data-filter="all">All Projects</button>
             @foreach($categories as $cat)
-                <button class="portfolio-filter-btn" data-filter="{{ Str::slug($cat) }}">{{ $cat }}</button>
+            <button class="portfolio-filter-btn" data-filter="{{ Str::slug($cat) }}">{{ $cat }}</button>
             @endforeach
         </div>
         @endif
 
         <div class="portfolio-grid" id="portfolioGrid">
             @forelse($items as $i => $item)
-            <div class="portfolio-card reveal reveal-delay-{{ ($i%3)+1 }}" data-category="{{ Str::slug($item->category) }}">
+            <div class="portfolio-card reveal reveal-delay-{{ ($i%3)+1 }}"
+                data-category="{{ Str::slug($item->category) }}">
                 @if($item->image && !str_starts_with($item->image,'assets/'))
-                    <img src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}" class="portfolio-img" />
+                <img src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}" class="portfolio-img" />
                 @else
-                    <img src="{{ asset('assets/images/about-us.jpg') }}" alt="{{ $item->title }}" class="portfolio-img" />
+                <img src="{{ asset('assets/images/about-us.jpg') }}" alt="{{ $item->title }}" class="portfolio-img" />
                 @endif
                 <div class="portfolio-overlay">
                     @if($item->category)
-                        <div class="portfolio-tag">{{ $item->category }}</div>
+                    <div class="portfolio-tag">{{ $item->category }}</div>
                     @endif
                     <h3 class="portfolio-title">{{ $item->title }}</h3>
                     @if($item->description)
-                        <p style="color:rgba(255,255,255,0.8);font-size:0.85rem;margin-top:8px;line-height:1.5">{{ Str::limit($item->description, 100) }}</p>
+                    <p style="color:rgba(255,255,255,0.8);font-size:0.85rem;margin-top:8px;line-height:1.5">
+                        {{ Str::limit($item->description, 100) }}</p>
                     @endif
                 </div>
             </div>
@@ -66,7 +81,8 @@
     <div class="container cta-inner">
         <span class="section-tag" style="margin-bottom:24px">Your Project Next?</span>
         <h2 class="cta-title">Let's Create Something <span class="text-gradient">Remarkable</span></h2>
-        <p class="cta-subtitle">Join 250+ satisfied clients who've trusted Accrosian to deliver exceptional digital products.</p>
+        <p class="cta-subtitle">Join 250+ satisfied clients who've trusted Accrosian to deliver exceptional digital
+            products.</p>
         <div class="cta-actions">
             <a href="{{ route('contact') }}" class="btn btn-primary btn-arrow">Start Your Project</a>
             <a href="{{ route('services') }}" class="btn btn-outline">Our Services</a>
@@ -104,11 +120,27 @@ document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
     font-size: 0.9rem;
     transition: all 0.3s;
 }
+
 .portfolio-filter-btn:hover,
 .portfolio-filter-btn.active {
     background: var(--orange);
     border-color: var(--orange);
     color: #fff;
+}
+
+
+.portfolio-intro {
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+.portfolio-intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    opacity: 0.9;
 }
 </style>
 @endpush
