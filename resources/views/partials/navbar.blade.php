@@ -18,29 +18,30 @@
                     What We Do
                 </a>
 
+            <li class="nav-dropdown">
+                <a href="#">What We Do</a>
+
                 <div class="dropdown-menu">
 
-                    {{-- First Level Services --}}
-                    @foreach($navServices->take(3) as $svc)
-                    <a href="{{ route('services.show', $svc->slug) }}">
-                        {{ $svc->icon }} {{ $svc->title }}
-                    </a>
-                    @endforeach
-
-                    {{-- Nested Dropdown --}}
+                    {{-- ONLY ONE ITEM --}}
                     <div class="dropdown-sub">
-                        <span class="submenu-title">Tech Solution</span>
+
+                        <span class="submenu-title">
+                            Tech Solution <span class="arrow">></span>
+                        </span>
 
                         <div class="dropdown-sub-menu">
-                            @foreach($navServices->skip(3) as $svc)
+                            @foreach($navServices as $svc)
                             <a href="{{ route('services.show', $svc->slug) }}">
                                 {{ $svc->icon }} {{ $svc->title }}
                             </a>
                             @endforeach
                         </div>
+
                     </div>
 
                 </div>
+            </li>
             </li>
             <li><a href="{{ route('blog') }}" class="{{ request()->routeIs('blog*') ? 'active' : '' }}">Blog</a></li>
             {{-- Our Company Dropdown --}}
