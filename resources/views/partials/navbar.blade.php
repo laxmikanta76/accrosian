@@ -18,9 +18,6 @@
                     What We Do
                 </a>
 
-            <li class="nav-dropdown">
-                <a href="#">What We Do</a>
-
                 <div class="dropdown-menu">
 
                     {{-- ONLY ONE ITEM --}}
@@ -41,7 +38,6 @@
                     </div>
 
                 </div>
-            </li>
             </li>
             <li><a href="{{ route('blog') }}" class="{{ request()->routeIs('blog*') ? 'active' : '' }}">Blog</a></li>
             {{-- Our Company Dropdown --}}
