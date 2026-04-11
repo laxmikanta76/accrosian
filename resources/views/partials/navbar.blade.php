@@ -11,13 +11,32 @@
         <ul class="nav-menu">
             <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
             <li class="nav-dropdown">
-                <a href="{{ route('services') }}"
-                    class="{{ request()->routeIs('services*') ? 'active' : '' }}">Services</a>
+                <a href="{{ route('services') }}" class="{{ request()->routeIs('services*') ? 'active' : '' }}">
+                    What We Do
+                </a>
+
                 <div class="dropdown-menu">
-                    @php $navServices = \App\Models\Service::active()->orderBy('sort_order')->get(); @endphp
-                    @foreach($navServices as $svc)
-                    <a href="{{ route('services.show', $svc->slug) }}">{{ $svc->icon }} {{ $svc->title }}</a>
+
+                    {{-- First Level Services --}}
+                    @foreach($navServices->take(3) as $svc)
+                    <a href="{{ route('services.show', $svc->slug) }}">
+                        {{ $svc->icon }} {{ $svc->title }}
+                    </a>
                     @endforeach
+
+                    {{-- Nested Dropdown --}}
+                    <div class="dropdown-sub">
+                        <span class="submenu-title">Tech Solution</span>
+
+                        <div class="dropdown-sub-menu">
+                            @foreach($navServices->skip(3) as $svc)
+                            <a href="{{ route('services.show', $svc->slug) }}">
+                                {{ $svc->icon }} {{ $svc->title }}
+                            </a>
+                            @endforeach
+                        </div>
+                    </div>
+
                 </div>
             </li>
             <li><a href="{{ route('blog') }}" class="{{ request()->routeIs('blog*') ? 'active' : '' }}">Blog</a></li>

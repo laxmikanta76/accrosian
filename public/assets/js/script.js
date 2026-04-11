@@ -244,3 +244,11 @@ console.log(
   "%c✨ Accrosian - Turning Ideas Into Reality",
   "color:#E8750A;font-size:16px;font-weight:bold;",
 );
+
+
+// ===== SUBMENU TOGGLE (MOBILE) =====
+document.querySelectorAll('.submenu-title').forEach(item => {
+  item.addEventListener('click', function() {
+    this.parentElement.classList.toggle('active');
+  });
+});

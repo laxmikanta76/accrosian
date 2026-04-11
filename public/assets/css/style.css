@@ -2937,3 +2937,60 @@ select option {
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
 }
+
+/* ===== SUB DROPDOWN ===== */
+
+.dropdown-sub {
+  position: relative;
+}
+
+/* Title */
+.submenu-title {
+  display: block;
+  padding: 10px 16px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Submenu */
+.dropdown-sub-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #0b0f2a;
+  border-radius: 10px;
+  min-width: 200px;
+  display: none;
+  padding: 10px 0;
+}
+
+/* Show on hover */
+.dropdown-sub:hover .dropdown-sub-menu {
+  display: block;
+}
+
+/* Links */
+.dropdown-sub-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.dropdown-sub-menu a:hover {
+  background: rgba(255,255,255,0.05);
+  color: #ff7a00;
+}
+
+@media (max-width: 768px) {
+  .dropdown-sub-menu {
+    position: static;
+    display: none;
+  }
+
+  .dropdown-sub.active .dropdown-sub-menu {
+    display: block;
+  }
+}
