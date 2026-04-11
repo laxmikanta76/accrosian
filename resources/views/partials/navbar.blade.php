@@ -42,10 +42,10 @@
                         </span>
 
                         <div class="dropdown-sub-menu">
-                            <a href="#">📈 SEO</a>
-                            <a href="#">📊 SMM</a>
-                            <a href="#">💰 Google Ads</a>
-                            <a href="#">📝 Content Marketing</a>
+                            <a href="{{ route('services.show', $svc->slug) }}">📈 SEO</a>
+                            <a href="{{ route('services.show', $svc->slug) }}">📊 SMM</a>
+                            <a href="{{ route('services.show', $svc->slug) }}">💰 Google Ads</a>
+                            <a href="{{ route('services.show', $svc->slug) }}">📝 Content Marketing</a>
                         </div>
                     </div>
 
