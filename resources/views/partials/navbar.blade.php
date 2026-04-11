@@ -8,48 +8,16 @@
             @endif
             <!-- <span class="nav-logo-text">Accr<span>o</span>sian</span> -->
         </a>
-        @php
-        $navServices = \App\Models\Service::active()->orderBy('sort_order')->get();
-        @endphp
         <ul class="nav-menu">
             <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
             <li class="nav-dropdown">
-                <a href="{{ route('services') }}" class="{{ request()->routeIs('services*') ? 'active' : '' }}">
-                    What We Do
-                </a>
-
+                <a href="{{ route('services') }}"
+                    class="{{ request()->routeIs('services*') ? 'active' : '' }}">Services</a>
                 <div class="dropdown-menu">
-
-                    {{-- TECH SOLUTION --}}
-                    <div class="dropdown-sub">
-                        <span class="submenu-title">
-                            Tech Solution <span class="arrow">›</span>
-                        </span>
-
-                        <div class="dropdown-sub-menu">
-                            @foreach($navServices as $svc)
-                            <a href="{{ route('services.show', $svc->slug) }}">
-                                {{ $svc->icon }} {{ $svc->title }}
-                            </a>
-                            @endforeach
-                        </div>
-                    </div>
-
-                    {{-- MARKET GROWTH --}}
-                    <div class="dropdown-sub">
-                        <span class="submenu-title">
-                            Market Growth <span class="arrow">›</span>
-                        </span>
-
-                        <div class="dropdown-sub-menu">
-                            <a href="{{ route('services.show', $svc->slug) }}">📈 SEO</a>
-                            <a href="{{ route('services.show', $svc->slug) }}">📊 SMM</a>
-                            <a href="{{ route('services.show', $svc->slug) }}">💰 Google Ads</a>
-                            <a href="{{ route('services.show', $svc->slug) }}">📝 Content Marketing</a>
-                        </div>
-                    </div>
-
-
+                    @php $navServices = \App\Models\Service::active()->orderBy('sort_order')->get(); @endphp
+                    @foreach($navServices as $svc)
+                    <a href="{{ route('services.show', $svc->slug) }}">{{ $svc->icon }} {{ $svc->title }}</a>
+                    @endforeach
                 </div>
             </li>
             <li><a href="{{ route('blog') }}" class="{{ request()->routeIs('blog*') ? 'active' : '' }}">Blog</a></li>

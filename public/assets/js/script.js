@@ -246,9 +246,3 @@ console.log(
 );
 
 
-// ===== SUBMENU TOGGLE (MOBILE) =====
-document.querySelectorAll('.submenu-title').forEach(item => {
-  item.addEventListener('click', function() {
-    this.parentElement.classList.toggle('active');
-  });
-});
