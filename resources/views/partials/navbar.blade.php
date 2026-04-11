@@ -20,34 +20,36 @@
 
                 <div class="dropdown-menu">
 
-                    {{-- TECH SOLUTION --}}
-                    <div class="dropdown-sub">
-                        <span class="submenu-title">
-                            Tech Solution <span class="arrow">›</span>
-                        </span>
 
-                        <div class="dropdown-sub-menu">
-                            @foreach($navServices as $svc)
-                            <a href="{{ route('services.show', $svc->slug) }}">
-                                {{ $svc->icon }} {{ $svc->title }}
-                            </a>
-                            @endforeach
-                        </div>
-                    </div>
+                    {{-- TECH SOLUTION --}}
+                    @foreach($navServices as $svc)
+                    @if(in_array($svc->title, [
+                    'Web Development',
+                    'Mobile App Development',
+                    'Cloud Solutions',
+                    'UI/UX Design',
+                    'AI & Machine Learning',
+                    'IT Consulting'
+                    ]))
+                    <a href="{{ route('services.show', $svc->slug) }}">
+                        {{ $svc->icon }} {{ $svc->title }}
+                    </a>
+                    @endif
+                    @endforeach
 
                     {{-- MARKET GROWTH --}}
-                    <div class="dropdown-sub">
-                        <span class="submenu-title">
-                            Market Growth <span class="arrow">›</span>
-                        </span>
-
-                        <div class="dropdown-sub-menu">
-                            <a href="#">📈 SEO</a>
-                            <a href="#">📊 SMM</a>
-                            <a href="#">💰 Google Ads</a>
-                            <a href="#">📝 Content Marketing</a>
-                        </div>
-                    </div>
+                    @foreach($navServices as $svc)
+                    @if(in_array($svc->title, [
+                    'SEO',
+                    'SMM',
+                    'Google Ads',
+                    'Content Marketing'
+                    ]))
+                    <a href="{{ route('services.show', $svc->slug) }}">
+                        {{ $svc->icon }} {{ $svc->title }}
+                    </a>
+                    @endif
+                    @endforeach
 
 
                 </div>
