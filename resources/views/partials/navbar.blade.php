@@ -11,8 +11,8 @@
         <ul class="nav-menu">
             <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
             <li class="nav-dropdown">
-                <a href="{{ route('services') }}"
-                    class="{{ request()->routeIs('services*') ? 'active' : '' }}">Services</a>
+                <a href="{{ route('services') }}" class="{{ request()->routeIs('services*') ? 'active' : '' }}">What We
+                    Do</a>
                 <div class="dropdown-menu">
                     @php $navServices = \App\Models\Service::active()->orderBy('sort_order')->get(); @endphp
                     @foreach($navServices as $svc)
