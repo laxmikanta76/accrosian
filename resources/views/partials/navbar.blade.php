@@ -20,11 +20,10 @@
 
                 <div class="dropdown-menu">
 
-                    {{-- ONLY ONE ITEM --}}
+                    {{-- TECH SOLUTION --}}
                     <div class="dropdown-sub">
-
                         <span class="submenu-title">
-                            Tech Solution <span class="arrow">></span>
+                            Tech Solution <span class="arrow">›</span>
                         </span>
 
                         <div class="dropdown-sub-menu">
@@ -34,8 +33,22 @@
                             </a>
                             @endforeach
                         </div>
-
                     </div>
+
+                    {{-- MARKET GROWTH --}}
+                    <div class="dropdown-sub">
+                        <span class="submenu-title">
+                            Market Growth <span class="arrow">›</span>
+                        </span>
+
+                        <div class="dropdown-sub-menu">
+                            <a href="#">📈 SEO</a>
+                            <a href="#">📊 SMM</a>
+                            <a href="#">💰 Google Ads</a>
+                            <a href="#">📝 Content Marketing</a>
+                        </div>
+                    </div>
+
 
                 </div>
             </li>
