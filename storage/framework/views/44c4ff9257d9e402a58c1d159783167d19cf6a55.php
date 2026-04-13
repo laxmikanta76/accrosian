@@ -460,7 +460,7 @@
 </section>
 
 
-<section style="padding:90px 0;background:var(--navy-mid)">
+<section class="cta-section style=" padding:90px 0;background:var(--navy-mid)">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">How It Works</span>
