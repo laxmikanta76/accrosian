@@ -7,7 +7,7 @@
 
 
 <section
-    style="position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;background:var(--white)">
+    style="position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;background:url('<?php echo e(asset('assets/images/student-reg-img.png')); ?>') center/cover no-repeat;">
 
     
     <div style="position:absolute;inset:0;z-index:0">
