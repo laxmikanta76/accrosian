@@ -36,6 +36,18 @@
                     <a href="<?php echo e(route('airs')); ?>">🌉 AIRS Program</a>
                 </div>
             </li>
+            
+            <li class="nav-dropdown">
+                <a href="#"
+                    class="<?php echo e(request()->routeIs('about') || request()->routeIs('portfolio') || request()->routeIs('contact') ? 'active' : ''); ?>">
+                    Our Initiatives
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="<?php echo e(route('student.register')); ?>">🎓 Student Registration</a>
+                    <a href="<?php echo e(route('airs')); ?>">🌉 AIRS Program</a>
+                </div>
+            </li>
 
         </ul>
         <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
