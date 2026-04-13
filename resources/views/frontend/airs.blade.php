@@ -176,7 +176,7 @@
 </section>
 
 {{-- ═══════════ WHAT IS AIRS ═══════════ --}}
-<section style="padding:90px 0;background:var(--navy-mid)">
+<section class="cta-section style=" padding:90px 0;background:var(--navy-mid)">
     <div class="container">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center">
 
