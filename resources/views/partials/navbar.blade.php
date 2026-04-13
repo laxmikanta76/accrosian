@@ -29,9 +29,11 @@
                 </a>
 
                 <div class="dropdown-menu">
-                    <a href="{{ route('about') }}">About</a>
-                    <a href="{{ route('portfolio') }}">Portfolio</a>
-                    <a href="{{ route('contact') }}">Contact</a>
+                    <a href="{{ route('about') }}">🏢 About Us</a>
+                    <a href="{{ route('portfolio') }}">💼 Portfolio</a>
+                    <a href="{{ route('contact') }}">📞 Contact</a>
+                    <a href="{{ route('student.register') }}">🎓 Student Registration</a>
+                    <a href="{{ route('airs') }}">🌉 AIRS Program</a>
                 </div>
             </li>
 
