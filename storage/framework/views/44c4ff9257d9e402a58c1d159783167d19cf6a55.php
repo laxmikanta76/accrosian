@@ -7,7 +7,7 @@
 
 
 <section
-    style="position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;background:var(--navy)">
+    style="position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;background:var(--white)">
 
     
     <div style="position:absolute;inset:0;z-index:0">
