@@ -5,36 +5,34 @@
 
 @section('content')
 
-{{-- ================= HERO ================= --}}
-<section class="hero-section">
-    <div class="container">
-        <div data-aos="fade-up">
-            <h1>
-                India's First Structured Bridge Between
-                <span>Campus and Corporate</span>
-            </h1>
+{{-- HERO --}}
+<section class="hero">
+    <div class="wrapper" data-aos="fade-up">
+        <h1>
+            India's First Structured Bridge Between <br>
+            <span>Campus and Corporate</span>
+        </h1>
 
-            <p>
-                AIRS is an initiative by Accrosian designed to transform students into industry-ready
-                problem solvers through structured preparation, real-world understanding,
-                and effective use of AI.
-            </p>
+        <p>
+            AIRS is an initiative by Accrosian designed to transform students into industry-ready
+            problem solvers through structured preparation, real-world understanding,
+            and effective use of AI.
+        </p>
 
-            <div class="hero-btns">
-                <a href="{{ route('student.register') }}" class="btn btn-primary">🚀 Join AIRS</a>
-                <a href="#fellowship" class="btn btn-outline">🎯 Apply for Fellowship</a>
-            </div>
+        <div class="btn-group">
+            <a href="{{ route('student.register') }}" class="btn primary">🚀 Join AIRS</a>
+            <a href="#fellowship" class="btn outline">🎯 Apply for Fellowship</a>
         </div>
     </div>
 </section>
 
 
-{{-- ================= WHAT IS AIRS ================= --}}
-<section class="section-dark">
-    <div class="container">
+{{-- WHAT --}}
+<section class="section dark">
+    <div class="wrapper">
         <h2 data-aos="fade-up">What is AIRS?</h2>
 
-        <div class="content-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="content" data-aos="fade-up" data-aos-delay="100">
 
             <h4>1. Job Market Reality</h4>
             <ul>
@@ -69,281 +67,200 @@
 </section>
 
 
-{{-- ================= GAP ================= --}}
-<section class="section-black">
-    <div class="container text-center">
-
+{{-- GAP --}}
+<section class="section black">
+    <div class="wrapper center">
         <h2 data-aos="fade-up">The Gap is Real</h2>
 
-        <div class="row mt-5">
-
-            <div class="col-md-3 card-box" data-aos="zoom-in" data-aos-delay="100">
-                <h4>🧭 No Direction</h4>
-                <p>Students jump between courses without roadmap.</p>
-            </div>
-
-            <div class="col-md-3 card-box" data-aos="zoom-in" data-aos-delay="200">
-                <h4>📋 Weak Projects</h4>
-                <p>Projects lack depth and real-world context.</p>
-            </div>
-
-            <div class="col-md-3 card-box" data-aos="zoom-in" data-aos-delay="300">
-                <h4>🤖 Poor AI Use</h4>
-                <p>Dependency without understanding.</p>
-            </div>
-
-            <div class="col-md-3 card-box" data-aos="zoom-in" data-aos-delay="400">
-                <h4>🏭 No Exposure</h4>
-                <p>No real industry workflow experience.</p>
-            </div>
-
+        <div class="grid">
+            <div class="card" data-aos="zoom-in">🧭 No Direction</div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">📋 Weak Projects</div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">🤖 Poor AI Use</div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">🏭 No Exposure</div>
         </div>
     </div>
 </section>
 
 
-{{-- ================= WHY AIRS ================= --}}
-<section class="section-dark">
-    <div class="container text-center">
-
+{{-- WHY --}}
+<section class="section dark">
+    <div class="wrapper center">
         <h2 data-aos="fade-up">Why AIRS?</h2>
 
-        <div class="row mt-5">
-
-            <div class="col-md-3 card-box" data-aos="fade-up" data-aos-delay="100">
-                <h4>🏭 Industry Exposure</h4>
-            </div>
-
-            <div class="col-md-3 card-box" data-aos="fade-up" data-aos-delay="200">
-                <h4>📐 Structured Learning</h4>
-            </div>
-
-            <div class="col-md-3 card-box" data-aos="fade-up" data-aos-delay="300">
-                <h4>🤖 Smart AI Use</h4>
-            </div>
-
-            <div class="col-md-3 card-box" data-aos="fade-up" data-aos-delay="400">
-                <h4>💡 Project Ownership</h4>
-            </div>
-
+        <div class="grid">
+            <div class="card">🏭 Industry Exposure</div>
+            <div class="card">📐 Structured Learning</div>
+            <div class="card">🤖 Smart AI Use</div>
+            <div class="card">💡 Project Ownership</div>
         </div>
     </div>
 </section>
 
 
-{{-- ================= BEFORE AFTER ================= --}}
-<section class="section-black">
-    <div class="container">
-
-        <h2 class="text-center" data-aos="fade-up">Before vs After AIRS</h2>
-
-        <div class="row mt-5">
-
-            <div class="col-md-6 card-box" data-aos="fade-right">
-                <h4 class="text-danger">Before</h4>
-                <ul>
-                    <li>Projects without understanding</li>
-                    <li>Random learning</li>
-                    <li>No confidence</li>
-                </ul>
-            </div>
-
-            <div class="col-md-6 card-box" data-aos="fade-left">
-                <h4 class="text-success">After</h4>
-                <ul>
-                    <li>Explain projects clearly</li>
-                    <li>Structured roadmap</li>
-                    <li>Industry-ready mindset</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-{{-- ================= CTA ================= --}}
+{{-- CTA --}}
 <section class="cta">
     <h2 data-aos="zoom-in">Build Your Future with AIRS</h2>
-    <a href="{{ route('student.register') }}" class="btn btn-primary mt-3">🚀 Join Now</a>
+    <a href="{{ route('student.register') }}" class="btn primary">🚀 Join Now</a>
 </section>
 
 @endsection
 
 
-{{-- ================= CSS ================= --}}
+{{-- CSS --}}
 @push('styles')
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 <style>
-/* GLOBAL */
-/* ===== GLOBAL ===== */
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
 body {
     background: #020617;
     color: #fff;
     font-family: 'Segoe UI', sans-serif;
-    margin: 0;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-}
-
-/* FIX NAVBAR OVERLAP */
-.hero-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 120px;
-    /* 🔥 IMPORTANT FIX */
-    background: linear-gradient(135deg, #020617, #0f172a);
-}
-
-/* CONTAINER FIX */
-.container {
+/* WRAPPER */
+.wrapper {
     max-width: 1100px;
     margin: auto;
     padding: 0 20px;
 }
 
-/* ===== HERO ===== */
-.hero-section h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 900;
-    line-height: 1.2;
-    margin-bottom: 20px;
+/* HERO */
+.hero {
+    padding-top: 140px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.hero-section span {
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.hero span {
     color: #ff6b35;
 }
 
-.hero-section p {
-    max-width: 550px;
+.hero p {
+    margin: 20px 0;
     color: #cbd5e1;
-    line-height: 1.7;
-    margin-bottom: 30px;
+    max-width: 500px;
 }
 
-/* BUTTON GROUP */
-.hero-btns {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-/* ===== BUTTON ===== */
+/* BUTTON */
 .btn {
-    padding: 12px 28px;
-    border-radius: 10px;
+    padding: 12px 25px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-.btn-primary {
+.primary {
     background: #ff6b35;
     color: #fff;
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.5);
-}
-
-.btn-outline {
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.outline {
+    border: 1px solid #fff;
     color: #fff;
 }
 
-.btn-outline:hover {
-    border-color: #ff6b35;
-    color: #ff6b35;
+.btn:hover {
+    transform: translateY(-3px);
 }
 
-/* ===== SECTIONS ===== */
-section {
+/* BTN GROUP */
+.btn-group {
+    display: flex;
+    gap: 15px;
+}
+
+/* SECTION */
+.section {
     padding: 80px 0;
 }
 
-.section-dark {
+.dark {
     background: #0f172a;
 }
 
-.section-black {
+.black {
     background: #020617;
 }
 
-/* ===== CONTENT BOX ===== */
-.content-box {
-    max-width: 700px;
+/* CONTENT */
+.content {
+    margin-top: 30px;
 }
 
-/* ===== CARDS ===== */
-.card-box {
-    background: rgba(255, 255, 255, 0.03);
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255, 255, 255, 0.05);
     padding: 25px;
-    border-radius: 14px;
-    transition: all 0.3s ease;
-    height: 100%;
-}
-
-.card-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-}
-
-/* ===== LIST ===== */
-ul {
-    padding-left: 18px;
-}
-
-ul li {
-    margin-bottom: 8px;
+    border-radius: 10px;
+    text-align: center;
     transition: 0.3s;
 }
 
-ul li:hover {
-    transform: translateX(6px);
-    color: #ff6b35;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-/* ===== CTA ===== */
-.cta {
+/* CENTER */
+.center {
     text-align: center;
 }
 
-.cta h2 {
-    margin-bottom: 20px;
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 80px 0;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .hero-section {
-        text-align: center;
+/* RESPONSIVE */
+@media(max-width:768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:480px) {
+    .grid {
+        grid-template-columns: 1fr;
     }
 
-    .hero-btns {
-        justify-content: center;
+    .btn-group {
+        flex-direction: column;
     }
 }
 </style>
 @endpush
 
 
-{{-- ================= JS ================= --}}
+{{-- JS --}}
 @push('scripts')
-
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
 AOS.init({
     duration: 1000,
-    once: true,
-    offset: 80,
+    once: true
 });
 </script>
-
 @endpush
