@@ -10,14 +10,51 @@
         </a>
         <ul class="nav-menu">
             <li><a href="<?php echo e(route('home')); ?>" class="<?php echo e(request()->routeIs('home') ? 'active' : ''); ?>">Home</a></li>
-            <li class="nav-dropdown">
-                <a href="<?php echo e(route('services')); ?>" class="<?php echo e(request()->routeIs('services*') ? 'active' : ''); ?>">What We
-                    Do</a>
-                <div class="dropdown-menu">
-                    <?php $navServices = \App\Models\Service::active()->orderBy('sort_order')->get(); ?>
-                    <?php $__currentLoopData = $navServices; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $svc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <a href="<?php echo e(route('services.show', $svc->slug)); ?>"><?php echo e($svc->icon); ?> <?php echo e($svc->title); ?></a>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <li class="nav-dropdown mega-parent">
+                <a href="<?php echo e(route('services')); ?>">Services</a>
+
+                <div class="mega-menu">
+
+                    
+                    <div class="mega-column">
+                        <h4 class="mega-title">Tech Solution</h4>
+
+                        <?php $__currentLoopData = $navServices; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $svc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php if(in_array($svc->title, [
+                        'Web Development',
+                        'Mobile App Development',
+                        'Cloud Solutions',
+                        'UI/UX Design',
+                        'AI & Machine Learning',
+                        'IT Consulting'
+                        ])): ?>
+                        <a href="<?php echo e(route('services.show', $svc->slug)); ?>" class="mega-link">
+                            <?php echo e($svc->icon); ?> <?php echo e($svc->title); ?>
+
+                        </a>
+                        <?php endif; ?>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </div>
+
+                    
+                    <div class="mega-column">
+                        <h4 class="mega-title">Market Growth</h4>
+
+                        <?php $__currentLoopData = $navServices; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $svc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php if(in_array($svc->title, [
+                        'SEO',
+                        'SMM',
+                        'Google Ads',
+                        'Content Marketing'
+                        ])): ?>
+                        <a href="<?php echo e(route('services.show', $svc->slug)); ?>" class="mega-link">
+                            <?php echo e($svc->icon); ?> <?php echo e($svc->title); ?>
+
+                        </a>
+                        <?php endif; ?>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </div>
+
                 </div>
             </li>
             <li><a href="<?php echo e(route('blog')); ?>" class="<?php echo e(request()->routeIs('blog*') ? 'active' : ''); ?>">Blog</a></li>
