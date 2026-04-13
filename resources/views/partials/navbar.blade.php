@@ -8,55 +8,16 @@
             @endif
             <!-- <span class="nav-logo-text">Accr<span>o</span>sian</span> -->
         </a>
-        @php
-        $navServices = \App\Models\Service::active()->orderBy('sort_order')->get();
-        @endphp
         <ul class="nav-menu">
             <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
-            <li class="nav-dropdown mega-full">
-                <a href="{{ route('services') }}">Services</a>
-
-                <div class="mega-menu-full">
-
-                    {{-- ROW 1 --}}
-                    <div class="mega-row">
-
-                        <div class="mega-col">
-                            <h4>Tech Solution</h4>
-                            @foreach($navServices as $svc)
-                            @if(in_array($svc->title, [
-                            'Web Development',
-                            'Mobile App Development',
-                            'Cloud Solutions',
-                            'UI/UX Design',
-                            'AI & Machine Learning',
-                            'IT Consulting'
-                            ]))
-                            <a href="{{ route('services.show', $svc->slug) }}">
-                                {{ $svc->title }}
-                            </a>
-                            @endif
-                            @endforeach
-                        </div>
-
-                        <div class="mega-col">
-                            <h4>Market Growth</h4>
-                            @foreach($navServices as $svc)
-                            @if(in_array($svc->title, [
-                            'SEO',
-                            'SMM',
-                            'Google Ads',
-                            'Content Marketing'
-                            ]))
-                            <a href="{{ route('services.show', $svc->slug) }}">
-                                {{ $svc->title }}
-                            </a>
-                            @endif
-                            @endforeach
-                        </div>
-
-                    </div>
-
+            <li class="nav-dropdown">
+                <a href="{{ route('services') }}"
+                    class="{{ request()->routeIs('services*') ? 'active' : '' }}">Services</a>
+                <div class="dropdown-menu">
+                    @php $navServices = \App\Models\Service::active()->orderBy('sort_order')->get(); @endphp
+                    @foreach($navServices as $svc)
+                    <a href="{{ route('services.show', $svc->slug) }}">{{ $svc->icon }} {{ $svc->title }}</a>
+                    @endforeach
                 </div>
             </li>
             <li><a href="{{ route('blog') }}" class="{{ request()->routeIs('blog*') ? 'active' : '' }}">Blog</a></li>
@@ -71,17 +32,6 @@
                     <a href="{{ route('about') }}">🏢 About Us</a>
                     <a href="{{ route('portfolio') }}">💼 Portfolio</a>
                     <a href="{{ route('contact') }}">📞 Contact</a>
-                </div>
-            </li>
-
-            {{-- Our Initiatives Dropdown --}}
-            <li class="nav-dropdown">
-                <a href="#"
-                    class="{{ request()->routeIs('about') || request()->routeIs('portfolio') || request()->routeIs('contact') ? 'active' : '' }}">
-                    Our Initiatives
-                </a>
-
-                <div class="dropdown-menu">
                     <a href="{{ route('student.register') }}">🎓 Student Registration</a>
                     <a href="{{ route('airs') }}">🌉 AIRS Program</a>
                 </div>
