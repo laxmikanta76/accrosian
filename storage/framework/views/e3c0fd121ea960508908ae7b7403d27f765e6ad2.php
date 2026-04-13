@@ -8,6 +8,9 @@
             <?php endif; ?>
             <!-- <span class="nav-logo-text">Accr<span>o</span>sian</span> -->
         </a>
+        <?php
+        $navServices = \App\Models\Service::active()->orderBy('sort_order')->get();
+        ?>
         <ul class="nav-menu">
             <li><a href="<?php echo e(route('home')); ?>" class="<?php echo e(request()->routeIs('home') ? 'active' : ''); ?>">Home</a></li>
             <li class="nav-dropdown mega-full">
