@@ -32,6 +32,17 @@
                     <a href="{{ route('about') }}">🏢 About Us</a>
                     <a href="{{ route('portfolio') }}">💼 Portfolio</a>
                     <a href="{{ route('contact') }}">📞 Contact</a>
+                </div>
+            </li>
+
+            {{-- Our Initiatives Dropdown --}}
+            <li class="nav-dropdown">
+                <a href="#"
+                    class="{{ request()->routeIs('about') || request()->routeIs('portfolio') || request()->routeIs('contact') ? 'active' : '' }}">
+                    Our Initiatives
+                </a>
+
+                <div class="dropdown-menu">
                     <a href="{{ route('student.register') }}">🎓 Student Registration</a>
                     <a href="{{ route('airs') }}">🌉 AIRS Program</a>
                 </div>
