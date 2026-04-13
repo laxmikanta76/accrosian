@@ -10,7 +10,7 @@
     style="position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;background:var(--navy)">
 
     {{-- Animated background --}}
-    <div style="position:absolute;inset:0;z-index:0">
+    <div class="hover-card" style="position:absolute;inset:0;z-index:0">
         <div style="position:absolute;width:700px;height:700px;border-radius:50%;
                     background:radial-gradient(circle,rgba(255,107,53,0.12) 0%,transparent 70%);
                     top:-200px;left:-200px;animation:airsOrb1 8s ease-in-out infinite"></div>
@@ -56,20 +56,14 @@
                               background:var(--orange);color:#fff;padding:15px 34px;
                               border-radius:12px;font-weight:700;font-size:1rem;
                               text-decoration:none;transition:all 0.3s;
-                              box-shadow:0 8px 30px rgba(255,107,53,0.35)"
-                        onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 40px rgba(255,107,53,0.5)'"
-                        onmouseout="this.style.transform='';this.style.boxShadow='0 8px 30px rgba(255,107,53,0.35)'">
+                              box-shadow:0 8px 30px rgba(255,107,53,0.35)">
                         🚀 Join AIRS
                     </a>
                     <a href="#fellowship" style="display:inline-flex;align-items:center;gap:10px;
                               border:2px solid rgba(255,255,255,0.2);color:var(--white);
                               padding:13px 30px;border-radius:12px;font-weight:600;
                               font-size:1rem;text-decoration:none;transition:all 0.3s;
-                              background:rgba(255,255,255,0.04)"
-                        onmouseover="this.style.borderColor='var(--orange)';this.style.color='var(--orange)'"
-                        onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.color='var(--white)'">
-                        🎯 Apply for Fellowship
-                    </a>
+                              background:rgba(255,255,255,0.04)" 🎯 Apply for Fellowship </a>
                 </div>
 
                 {{-- Stats --}}
@@ -199,9 +193,7 @@
                 <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;
                             padding:16px 20px;background:rgba(255,255,255,0.03);
                             border:1px solid rgba(255,255,255,0.06);border-radius:12px;
-                            transition:all 0.3s"
-                    onmouseover="this.style.borderColor='rgba(255,107,53,0.3)';this.style.background='rgba(255,107,53,0.05)'"
-                    onmouseout="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+                            transition:all 0.3s">
                     <div style="width:36px;height:36px;border-radius:10px;
                                 background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);
                                 display:flex;align-items:center;justify-content:center;
@@ -214,8 +206,7 @@
                 <a href="{{ route('student.register') }}" style="display:inline-flex;align-items:center;gap:10px;
                           background:var(--orange);color:#fff;padding:14px 32px;
                           border-radius:12px;font-weight:700;text-decoration:none;
-                          margin-top:28px;transition:all 0.3s" onmouseover="this.style.transform='translateY(-2px)'"
-                    onmouseout="this.style.transform=''">
+                          margin-top:28px;transition:all 0.3s">
                     Join AIRS Now →
                 </a>
             </div>
@@ -284,7 +275,7 @@
 {{-- ═══════════ THE GAP IS REAL ═══════════ --}}
 <section style="padding:90px 0;background:var(--navy)">
     <div class="container">
-        <div style="text-align:center;margin-bottom:60px" class="reveal">
+        <div style="text-align:center;margin-bottom:60px" class="reveal hover-card">
             <span class="section-tag">The Problem</span>
             <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);
                        font-weight:900;color:var(--white);margin:16px 0">
@@ -309,9 +300,7 @@
             ] as [$icon,$title,$desc,$bg,$border])
             <div class="reveal" style="background:{{ $bg }};border:1px solid {{ $border }};
                         border-radius:20px;padding:32px 24px;text-align:center;
-                        transition:all 0.3s;cursor:default"
-                onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.3)'"
-                onmouseout="this.style.transform='';this.style.boxShadow=''">
+                        transition:all 0.3s;cursor:default">
                 <div style="font-size:2.8rem;margin-bottom:18px">{{ $icon }}</div>
                 <h4 style="font-family:var(--font-display);font-weight:800;color:var(--white);
                            font-size:0.95rem;margin-bottom:12px">{{ $title }}</h4>
@@ -325,7 +314,7 @@
 {{-- ═══════════ WHY AIRS ═══════════ --}}
 <section class="cta-section style=" padding:90px 0;background:var(--navy-mid)">
     <div class="container">
-        <div style="text-align:center;margin-bottom:60px" class="reveal">
+        <div style="text-align:center;margin-bottom:60px" class="reveal hover-card">
             <span class="section-tag">Our Solution</span>
             <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);
                        font-weight:900;color:var(--white);margin:16px 0">
@@ -347,8 +336,7 @@
             <div class="reveal" style="border-radius:20px;overflow:hidden;
                         border:1px solid rgba(255,255,255,0.06);
                         background:rgba(255,255,255,0.02);
-                        transition:transform 0.3s" onmouseover="this.style.transform='translateY(-8px)'"
-                onmouseout="this.style.transform=''">
+                        transition:transform 0.3s">
                 <div style="background:{{ $color }};padding:20px 22px;
                             display:flex;align-items:center;gap:12px">
                     <span style="font-size:1.5rem">{{ $icon }}</span>
@@ -461,7 +449,7 @@
 {{-- ═══════════ HOW AIRS OPERATES ═══════════ --}}
 <section class="cta-section style=" padding:90px 0;background:var(--navy-mid)">
     <div class="container">
-        <div style="text-align:center;margin-bottom:60px" class="reveal">
+        <div style="text-align:center;margin-bottom:60px" class="reveal hover-card">
             <span class="section-tag">How It Works</span>
             <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);
                        font-weight:900;color:var(--white);margin:16px 0">
@@ -489,8 +477,7 @@
             ] as $i => [$icon,$title,$desc,$bg,$border])
             <div class="reveal" style="background:{{ $bg }};border:1px solid {{ $border }};
                         border-radius:20px;padding:32px 26px;
-                        transition:all 0.3s;cursor:default" onmouseover="this.style.transform='translateY(-5px)'"
-                onmouseout="this.style.transform=''">
+                        transition:all 0.3s;cursor:default">
                 <div style="font-size:2.5rem;margin-bottom:18px">{{ $icon }}</div>
                 <h4 style="font-family:var(--font-display);font-weight:800;
                            color:var(--white);font-size:1rem;margin-bottom:10px">{{ $title }}</h4>
@@ -504,7 +491,7 @@
 {{-- ═══════════ FELLOWSHIP ═══════════ --}}
 <section style="padding:90px 0;background:var(--navy)" id="fellowship">
     <div class="container">
-        <div style="text-align:center;margin-bottom:60px" class="reveal">
+        <div style="text-align:center;margin-bottom:60px" class="hover-card">
             <span class="section-tag">Fellowship Program</span>
             <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);
                        font-weight:900;color:var(--white);margin:16px 0">
@@ -526,8 +513,7 @@
             ] as [$icon,$title,$desc,$bg,$border])
             <div style="background:{{ $bg }};border:1px solid {{ $border }};
                         border-radius:18px;padding:28px 20px;text-align:center;
-                        transition:all 0.3s" onmouseover="this.style.transform='translateY(-5px)'"
-                onmouseout="this.style.transform=''">
+                        transition:all 0.3s">
                 <div style="font-size:2.2rem;margin-bottom:14px">{{ $icon }}</div>
                 <div style="font-weight:800;color:var(--white);font-size:0.92rem;margin-bottom:6px">{{ $title }}</div>
                 <div style="color:var(--text-muted);font-size:0.8rem;line-height:1.5">{{ $desc }}</div>
@@ -540,9 +526,7 @@
                       background:var(--orange);color:#fff;padding:16px 52px;
                       border-radius:14px;font-weight:800;font-size:1.05rem;
                       text-decoration:none;transition:all 0.3s;
-                      box-shadow:0 10px 40px rgba(255,107,53,0.4)"
-                onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 16px 50px rgba(255,107,53,0.5)'"
-                onmouseout="this.style.transform='';this.style.boxShadow='0 10px 40px rgba(255,107,53,0.4)'">
+                      box-shadow:0 10px 40px rgba(255,107,53,0.4)">
                 🎯 Apply for Fellowship →
             </a>
             <p style="color:var(--text-muted);font-size:0.82rem;margin-top:14px">
@@ -670,6 +654,75 @@
     div[style*="grid-template-columns:repeat(2,1fr)"] {
         grid-template-columns: 1fr !important;
     }
+}
+
+
+/* ===== GLOBAL HOVER SYSTEM ===== */
+
+.hover-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+}
+
+/* Glow border effect */
+.hover-card::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(120deg, transparent, rgba(255, 107, 53, 0.6), transparent);
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 0;
+}
+
+.hover-card:hover::before {
+    opacity: 1;
+    animation: borderMove 2s linear infinite;
+}
+
+/* Light reflection effect */
+.hover-card::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15), transparent 60%);
+    top: -50%;
+    left: -50%;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.hover-card:hover::after {
+    opacity: 1;
+}
+
+/* Lift + depth */
+.hover-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Animation */
+@keyframes borderMove {
+    0% {
+        background-position: 0%
+    }
+
+    100% {
+        background-position: 300%
+    }
+}
+
+.hover-card {
+    perspective: 1000px;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px) rotateX(3deg) rotateY(-3deg) scale(1.02);
 }
 </style>
 @endpush
