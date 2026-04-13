@@ -10,14 +10,49 @@
         </a>
         <ul class="nav-menu">
             <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
-            <li class="nav-dropdown">
-                <a href="{{ route('services') }}" class="{{ request()->routeIs('services*') ? 'active' : '' }}">What We
-                    Do</a>
-                <div class="dropdown-menu">
-                    @php $navServices = \App\Models\Service::active()->orderBy('sort_order')->get(); @endphp
-                    @foreach($navServices as $svc)
-                    <a href="{{ route('services.show', $svc->slug) }}">{{ $svc->icon }} {{ $svc->title }}</a>
-                    @endforeach
+            <li class="nav-dropdown mega-parent">
+                <a href="{{ route('services') }}">Services</a>
+
+                <div class="mega-menu">
+
+                    {{-- COLUMN 1: TECH --}}
+                    <div class="mega-column">
+                        <h4 class="mega-title">Tech Solution</h4>
+
+                        @foreach($navServices as $svc)
+                        @if(in_array($svc->title, [
+                        'Web Development',
+                        'Mobile App Development',
+                        'Cloud Solutions',
+                        'UI/UX Design',
+                        'AI & Machine Learning',
+                        'IT Consulting'
+                        ]))
+                        <a href="{{ route('services.show', $svc->slug) }}" class="mega-link">
+                            {{ $svc->icon }} {{ $svc->title }}
+                        </a>
+                        @endif
+                        @endforeach
+                    </div>
+
+                    {{-- COLUMN 2: MARKETING --}}
+                    <div class="mega-column">
+                        <h4 class="mega-title">Market Growth</h4>
+
+                        @foreach($navServices as $svc)
+                        @if(in_array($svc->title, [
+                        'SEO',
+                        'SMM',
+                        'Google Ads',
+                        'Content Marketing'
+                        ]))
+                        <a href="{{ route('services.show', $svc->slug) }}" class="mega-link">
+                            {{ $svc->icon }} {{ $svc->title }}
+                        </a>
+                        @endif
+                        @endforeach
+                    </div>
+
                 </div>
             </li>
             <li><a href="{{ route('blog') }}" class="{{ request()->routeIs('blog*') ? 'active' : '' }}">Blog</a></li>

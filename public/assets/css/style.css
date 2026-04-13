@@ -2938,3 +2938,81 @@ select option {
     transform: rotate(45deg);
 }
 
+
+/* ===== MEGA MENU ===== */
+
+.mega-parent {
+  position: relative;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  background: rgba(10, 14, 46, 0.95);
+  backdrop-filter: blur(20px);
+
+  padding: 25px;
+  border-radius: 14px;
+  min-width: 420px;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  z-index: 999;
+}
+
+/* SHOW */
+.mega-parent:hover .mega-menu {
+  display: grid;
+}
+
+/* COLUMN */
+.mega-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* TITLE */
+.mega-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ff7a00;
+  margin-bottom: 12px;
+}
+
+/* LINKS */
+.mega-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+
+  transition: 0.3s;
+}
+
+.mega-link:hover {
+  color: #ff7a00;
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+
+  .mega-menu {
+    position: static;
+    display: none;
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .mega-parent.active .mega-menu {
+    display: grid;
+  }
+}
