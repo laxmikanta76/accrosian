@@ -2952,8 +2952,8 @@ select option {
   left: 50%;
   transform: translateX(-50%);
 
-  width: 100vw;
-  max-width: 1400px;
+ width: 100%;
+  max-width: 1100px;
 
   background: rgba(10, 14, 46, 0.98);
   backdrop-filter: blur(20px);
@@ -2982,6 +2982,9 @@ select option {
 
   max-width: 1100px;
   margin: 0 auto;
+}
+.mega-col {
+  min-width: 220px;
 }
 
 /* COLUMN */
@@ -3021,4 +3024,7 @@ select option {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+}
+.nav-inner {
+  position: relative;
 }
