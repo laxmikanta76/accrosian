@@ -29,9 +29,11 @@
                 </a>
 
                 <div class="dropdown-menu">
-                    <a href="<?php echo e(route('about')); ?>">About</a>
-                    <a href="<?php echo e(route('portfolio')); ?>">Portfolio</a>
-                    <a href="<?php echo e(route('contact')); ?>">Contact</a>
+                    <a href="<?php echo e(route('about')); ?>">🏢 About Us</a>
+                    <a href="<?php echo e(route('portfolio')); ?>">💼 Portfolio</a>
+                    <a href="<?php echo e(route('contact')); ?>">📞 Contact</a>
+                    <a href="<?php echo e(route('student.register')); ?>">🎓 Student Registration</a>
+                    <a href="<?php echo e(route('airs')); ?>">🌉 AIRS Program</a>
                 </div>
             </li>
 
