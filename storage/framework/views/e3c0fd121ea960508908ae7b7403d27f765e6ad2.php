@@ -11,8 +11,8 @@
         <ul class="nav-menu">
             <li><a href="<?php echo e(route('home')); ?>" class="<?php echo e(request()->routeIs('home') ? 'active' : ''); ?>">Home</a></li>
             <li class="nav-dropdown">
-                <a href="<?php echo e(route('services')); ?>"
-                    class="<?php echo e(request()->routeIs('services*') ? 'active' : ''); ?>">Services</a>
+                <a href="<?php echo e(route('services')); ?>" class="<?php echo e(request()->routeIs('services*') ? 'active' : ''); ?>">What We
+                    Do</a>
                 <div class="dropdown-menu">
                     <?php $navServices = \App\Models\Service::active()->orderBy('sort_order')->get(); ?>
                     <?php $__currentLoopData = $navServices; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $svc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
