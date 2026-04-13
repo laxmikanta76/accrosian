@@ -175,38 +175,64 @@
 @push('styles')
 <style>
 /* GLOBAL */
+/* ===== GLOBAL ===== */
 body {
     background: #020617;
     color: #fff;
     font-family: 'Segoe UI', sans-serif;
+    margin: 0;
 }
 
-section {
-    padding: 80px 0;
-}
-
-/* HERO */
+/* FIX NAVBAR OVERLAP */
 .hero-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 120px;
+    /* 🔥 IMPORTANT FIX */
     background: linear-gradient(135deg, #020617, #0f172a);
 }
 
+/* CONTAINER FIX */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ===== HERO ===== */
 .hero-section h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .hero-section span {
     color: #ff6b35;
 }
 
-/* BUTTON */
+.hero-section p {
+    max-width: 550px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* BUTTON GROUP */
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ===== BUTTON ===== */
 .btn {
-    padding: 12px 25px;
-    border-radius: 8px;
+    padding: 12px 28px;
+    border-radius: 10px;
     text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .btn-primary {
@@ -214,42 +240,86 @@ section {
     color: #fff;
 }
 
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.5);
+}
+
 .btn-outline {
-    border: 1px solid #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
 }
 
-/* CARDS */
-.card-box {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 20px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.card-box:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-}
-
-/* LIST HOVER */
-ul li:hover {
-    transform: translateX(6px);
+.btn-outline:hover {
+    border-color: #ff6b35;
     color: #ff6b35;
 }
 
-/* CTA */
-.cta {
-    text-align: center;
+/* ===== SECTIONS ===== */
+section {
+    padding: 80px 0;
 }
 
-/* DARK BG */
 .section-dark {
     background: #0f172a;
 }
 
 .section-black {
     background: #020617;
+}
+
+/* ===== CONTENT BOX ===== */
+.content-box {
+    max-width: 700px;
+}
+
+/* ===== CARDS ===== */
+.card-box {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== LIST ===== */
+ul {
+    padding-left: 18px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+ul li:hover {
+    transform: translateX(6px);
+    color: #ff6b35;
+}
+
+/* ===== CTA ===== */
+.cta {
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
 }
 </style>
 @endpush
