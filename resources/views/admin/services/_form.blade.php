@@ -35,6 +35,39 @@
                         min="0" />
                 </div>
             </div>
+            <div class="form-field">
+                <label>
+                    Category
+                    <span style="font-size:0.78rem;color:var(--muted);font-weight:400">
+                        (groups services in navbar)
+                    </span>
+                </label>
+                <input type="text" name="category" value="{{ old('category', $service->category ?? 'Tech Solution') }}"
+                    placeholder="e.g. Tech Solution, Growth Marketing, Design Studio..." list="categoryOptions"
+                    autocomplete="off" />
+                <datalist id="categoryOptions">
+                    @php
+                    $existingCats = \App\Models\Service::select('category')
+                    ->distinct()
+                    ->whereNotNull('category')
+                    ->where('category','!=','')
+                    ->orderBy('category')
+                    ->pluck('category');
+                    @endphp
+                    @foreach($existingCats as $ec)
+                    <option value="{{ $ec }}">
+                        @endforeach
+                    <option value="Tech Solution">
+                    <option value="Growth Marketing">
+                    <option value="Design Studio">
+                    <option value="Consulting">
+                    <option value="Other">
+                </datalist>
+                <span class="hint">
+                    Type any group name. Services with the same category appear together under "What We Do" in the
+                    navbar.
+                </span>
+            </div>
 
             <div class="form-field">
                 <label>Short Description</label>
