@@ -22,18 +22,6 @@ cloud, and AI domains.')
     </div>
 </section>
 
-{{-- 🔥 NEW INTRO PARAGRAPH SECTION --}}
-<section class="portfolio-intro">
-    <div class="container">
-        <p class="portfolio-intro-text">
-            At <strong>Accrosian</strong>, we explore our work and discover how we deliver high-quality software
-            solutions in Bhubaneswar for businesses and startups.We have successfully completed projects in web
-            development, custom software development,and digital solutions, helping clients improve efficiency and grow
-            their business.Each project reflects our commitment to quality, innovation, and real-world results.
-        </p>
-    </div>
-</section>
-
 <section style="padding:100px 0">
     <div class="container">
 
@@ -126,21 +114,6 @@ document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
     background: var(--orange);
     border-color: var(--orange);
     color: #fff;
-}
-
-
-.portfolio-intro {
-    padding: 60px 0 20px;
-    text-align: center;
-}
-
-.portfolio-intro-text {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-light);
-    opacity: 0.9;
 }
 </style>
 @endpush

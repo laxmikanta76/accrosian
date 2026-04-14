@@ -289,29 +289,15 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
         <div class="portfolio-grid">
             @foreach($portfolio->take(6) as $i => $item)
             <div class="portfolio-card reveal reveal-delay-{{ ($i%3)+1 }}">
-
-                <div class="portfolio-image-wrap">
-                    <img src="{{ $item->image && !str_starts_with($item->image,'assets/') 
-            ? asset('storage/'.$item->image) 
-            : asset('assets/images/about-us.jpg') }}" alt="{{ $item->title }}" class="portfolio-img" />
-
-                    <div class="portfolio-gradient"></div>
-                </div>
-
-                <div class="portfolio-content">
-                    <span class="portfolio-tag">{{ $item->category }}</span>
-
+                @if($item->image && !str_starts_with($item->image,'assets/'))
+                <img src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}" class="portfolio-img" />
+                @else
+                <img src="{{ asset('assets/images/about-us.jpg') }}" alt="{{ $item->title }}" class="portfolio-img" />
+                @endif
+                <div class="portfolio-overlay">
+                    <div class="portfolio-tag">{{ $item->category }}</div>
                     <h3 class="portfolio-title">{{ $item->title }}</h3>
-
-                    <p class="portfolio-desc">
-                        Premium scalable solution designed for performance and growth.
-                    </p>
-
-                    <div class="portfolio-arrow">
-                        View Project →
-                    </div>
                 </div>
-
             </div>
             @endforeach
         </div>
