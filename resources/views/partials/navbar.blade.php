@@ -40,29 +40,27 @@
             <li><a href="{{ route('blog') }}" class="{{ request()->routeIs('blog*') ? 'active' : '' }}">Blog</a></li>
             {{-- Our Company Dropdown --}}
             <li class="nav-dropdown">
-                <a href="#"
-                    class="{{ request()->routeIs('about') || request()->routeIs('portfolio') || request()->routeIs('contact') ? 'active' : '' }}">
-                    Our Company
-                </a>
+                <a href="#">Our Company</a>
+                <div class="simple-dropdown">
+                    <a href="{{ route('about') }}"><span class="drop-icon">🏢</span> About Us</a>
+                    <a href="{{ route('portfolio') }}"><span class="drop-icon">💼</span> Portfolio</a>
+                    <a href="{{ route('contact') }}"><span class="drop-icon">📞</span> Contact</a>
+                </div>
+            </li>
 
-                <div class="dropdown-menu">
-                    <a href="{{ route('about') }}">🏢 About Us</a>
-                    <a href="{{ route('portfolio') }}">💼 Portfolio</a>
-                    <a href="{{ route('contact') }}">📞 Contact</a>
-                    <a href="{{ route('student.register') }}">🎓 Student Registration</a>
-                    <a href="{{ route('airs') }}">🌉 AIRS Program</a>
+            <li class="nav-dropdown">
+                <a href="#">Our Initiatives</a>
+                <div class="simple-dropdown">
+                    <a href="{{ route('student.register') }}"><span class="drop-icon">🎓</span> Student Registration</a>
+                    <a href="{{ route('airs') }}"><span class="drop-icon">🌉</span> AIRS Program</a>
                 </div>
             </li>
             {{-- Our Initiatives Dropdown --}}
             <li class="nav-dropdown">
-                <a href="#"
-                    class="{{ request()->routeIs('about') || request()->routeIs('portfolio') || request()->routeIs('contact') ? 'active' : '' }}">
-                    Our Initiatives
-                </a>
-
-                <div class="dropdown-menu">
-                    <a href="{{ route('student.register') }}">🎓 Student Registration</a>
-                    <a href="{{ route('airs') }}">🌉 AIRS Program</a>
+                <a href="#">Our Initiatives</a>
+                <div class="simple-dropdown">
+                    <a href="{{ route('student.register') }}"><span class="drop-icon">🎓</span> Student Registration</a>
+                    <a href="{{ route('airs') }}"><span class="drop-icon">🌉</span> AIRS Program</a>
                 </div>
             </li>
 
