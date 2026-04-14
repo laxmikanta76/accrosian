@@ -576,6 +576,7 @@
 
 @push('styles')
 <style>
+/* ================= ANIMATIONS ================= */
 @keyframes airsPulse {
 
     0%,
@@ -638,77 +639,116 @@
     }
 }
 
-/* 🔥 FORCE MOBILE FIX */
-@media (max-width: 768px) {
 
-    /* MAIN HERO GRID */
+/* ================= GLOBAL FIX ================= */
+body {
+    overflow-x: hidden;
+    /* 🔥 prevents side scroll */
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+
+    /* HERO GRID */
     div[style*="grid-template-columns:1fr 1fr"] {
         grid-template-columns: 1fr !important;
         gap: 40px !important;
     }
 
-    /* STATS GRID */
+    /* 4 CARDS → 2 */
     div[style*="grid-template-columns:repeat(4,1fr)"] {
         grid-template-columns: repeat(2, 1fr) !important;
     }
 
-    /* ALL SECTIONS */
+    /* 3 CARDS → 2 */
     div[style*="grid-template-columns:repeat(3,1fr)"] {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    /* HERO FIX */
+    section[style*="min-height:100vh"] {
+        padding: 100px 0 60px !important;
     }
 
-    /* BEFORE AFTER */
-    div[style*="grid-template-columns:1fr 80px 1fr"] {
+    /* HERO GRID */
+    div[style*="grid-template-columns:1fr 1fr"] {
         grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 30px !important;
     }
 
-    /* HIDE FLOATING CARDS (IMPORTANT) */
+    /* 🔥 HIDE RIGHT SIDE (BIG FIX) */
+    div[style*="position:relative"]>div[style*="border-radius:24px"] {
+        display: none !important;
+    }
+
+    /* FLOATING ELEMENTS REMOVE */
     div[style*="position:absolute"] {
         display: none !important;
     }
 
-    /* FIX TEXT */
+    /* TEXT FIX */
     h1 {
         font-size: 1.8rem !important;
+        line-height: 1.3 !important;
+    }
+
+    p {
+        font-size: 0.95rem !important;
     }
 
     /* BUTTON CENTER */
     div[style*="display:flex;gap:16px"] {
         justify-content: center !important;
     }
-}
 
-/* Responsive */
-@media (max-width: 1024px) {
+    /* STATS → 2x2 */
     div[style*="grid-template-columns:repeat(4,1fr)"] {
         grid-template-columns: repeat(2, 1fr) !important;
     }
-}
 
-@media (max-width: 768px) {
-    div[style*="grid-template-columns:1fr 1fr"] {
+    /* ALL GRIDS → SINGLE */
+    div[style*="grid-template-columns:repeat(3,1fr)"],
+    div[style*="grid-template-columns:repeat(4,1fr)"] {
         grid-template-columns: 1fr !important;
     }
 
+    /* BEFORE/AFTER FIX */
     div[style*="grid-template-columns:1fr 80px 1fr"] {
         grid-template-columns: 1fr !important;
     }
 
-    div[style*="grid-template-columns:repeat(3,1fr)"] {
-        grid-template-columns: 1fr 1fr !important;
+    /* CARD PADDING */
+    div[style*="padding:32px"],
+    div[style*="padding:36px"] {
+        padding: 20px !important;
     }
 
-    div[style*="grid-template-columns:repeat(4,1fr)"] {
-        grid-template-columns: 1fr 1fr !important;
-    }
 }
 
+
+/* ================= SMALL MOBILE ================= */
 @media (max-width: 480px) {
 
-    div[style*="grid-template-columns:repeat(3,1fr)"],
-    div[style*="grid-template-columns:repeat(4,1fr)"],
-    div[style*="grid-template-columns:repeat(2,1fr)"] {
+    h1 {
+        font-size: 1.6rem !important;
+    }
+
+    /* FORCE SINGLE COLUMN */
+    div[style*="grid-template-columns"] {
         grid-template-columns: 1fr !important;
+    }
+
+    /* FULL WIDTH BUTTON */
+    a {
+        width: 100%;
+        justify-content: center;
     }
 }
 </style>
