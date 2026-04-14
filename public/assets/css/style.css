@@ -3328,4 +3328,34 @@ select option {
     transform: translateX(-50%);
   }
 }
+/* 🔥 FORCE REMOVE ORANGE OVERLAY */
+.portfolio-card:hover {
+  background: transparent !important;
+}
+
+/* FIX OVERLAY */
+.portfolio-gradient {
+  background: linear-gradient(
+    to top,
+    rgba(5,8,30,0.95),
+    rgba(10,14,46,0.6),
+    transparent
+  ) !important;
+}
+
+/* SUBTLE HOVER EFFECT */
+.portfolio-card:hover .portfolio-gradient {
+  background: linear-gradient(
+    to top,
+    rgba(255,122,0,0.12),
+    rgba(10,14,46,0.6),
+    transparent
+  ) !important;
+}
+
+/* CLEAN HOVER */
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(255,122,0,0.15);
+}
 
