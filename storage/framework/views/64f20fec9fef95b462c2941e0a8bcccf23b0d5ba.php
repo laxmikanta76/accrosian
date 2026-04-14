@@ -135,33 +135,54 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
             <p class="section-subtitle" style="margin:0 auto 0">We offer a comprehensive range of technology services to
                 help your business thrive in the digital age.</p>
         </div>
-        <div class="services-grid">
-            <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="service-card reveal reveal-delay-<?php echo e(($i % 3) + 1); ?>">
-                <?php if($service->image && !str_starts_with($service->image, 'assets/')): ?>
-                <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>"
-                    class="service-card-img" />
-                <?php elseif($service->image): ?>
-                <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>" class="service-card-img" />
-                <?php else: ?>
-                <img src="<?php echo e(asset('assets/images/web-dev-img.png')); ?>" alt="<?php echo e($service->title); ?>"
-                    class="service-card-img" />
-                <?php endif; ?>
-                <div class="service-card-overlay"></div>
-                <div class="service-card-content">
-                    <h3 class="service-title"><?php echo e($service->icon); ?> <?php echo e($service->title); ?></h3>
-                    <a href="<?php echo e(route('services.show', $service->slug)); ?>" class="service-link">
-                        Learn More
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
+        <div class="services-wrapper">
+            <div class="services-track">
+                <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="service-card reveal reveal-delay-<?php echo e(($i % 3) + 1); ?>">
+                    <?php if($service->image && !str_starts_with($service->image, 'assets/')): ?>
+                    <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>"
+                        class="service-card-img" />
+                    <?php elseif($service->image): ?>
+                    <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>" class="service-card-img" />
+                    <?php else: ?>
+                    <img src="<?php echo e(asset('assets/images/web-dev-img.png')); ?>" alt="<?php echo e($service->title); ?>"
+                        class="service-card-img" />
+                    <?php endif; ?>
+                    <div class="service-card-overlay"></div>
+                    <div class="service-card-content">
+                        <h3 class="service-title"><?php echo e($service->icon); ?> <?php echo e($service->title); ?></h3>
+                        <a href="<?php echo e(route('services.show', $service->slug)); ?>" class="service-link">
+                            Learn More
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="service-card">
+                    <?php if($service->image && !str_starts_with($service->image, 'assets/')): ?>
+                    <img src="<?php echo e(asset('storage/'.$service->image)); ?>" class="service-card-img" />
+                    <?php elseif($service->image): ?>
+                    <img src="<?php echo e(asset($service->image)); ?>" class="service-card-img" />
+                    <?php else: ?>
+                    <img src="<?php echo e(asset('assets/images/web-dev-img.png')); ?>" class="service-card-img" />
+                    <?php endif; ?>
+
+                    <div class="service-card-overlay"></div>
+
+                    <div class="service-card-content">
+                        <h3 class="service-title"><?php echo e($service->icon); ?> <?php echo e($service->title); ?></h3>
+                        <a href="<?php echo e(route('services.show', $service->slug)); ?>" class="service-link">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
-    </div>
 </section>
 
 

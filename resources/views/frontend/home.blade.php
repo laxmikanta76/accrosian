@@ -197,7 +197,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
             <p class="process-header-sub">Our streamlined development workflow ensures high-quality, scalable, and
                 reliable digital products — delivered on time, every time.</p>
         </div>
-        <div class="process-grid">
+        <div class="process-grid process-flow">
             <div class="process-card reveal reveal-delay-1">
                 <img src="{{ asset('assets/images/discover-img.png') }}" alt="Discovery" class="process-card-img" />
                 <div class="process-overlay"></div>
