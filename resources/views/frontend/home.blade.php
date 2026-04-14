@@ -286,30 +286,34 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
             <span class="section-tag">Our Work</span>
             <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
         </div>
-        <div class="portfolio-card reveal reveal-delay-{{ ($i%3)+1 }}">
+        <div class="portfolio-grid">
+            @foreach($portfolio->take(6) as $i => $item)
+            <div class="portfolio-card reveal reveal-delay-{{ ($i%3)+1 }}">
 
-            <div class="portfolio-image-wrap">
-                <img src="{{ $item->image && !str_starts_with($item->image,'assets/') 
+                <div class="portfolio-image-wrap">
+                    <img src="{{ $item->image && !str_starts_with($item->image,'assets/') 
             ? asset('storage/'.$item->image) 
             : asset('assets/images/about-us.jpg') }}" alt="{{ $item->title }}" class="portfolio-img" />
 
-                <div class="portfolio-gradient"></div>
-            </div>
-
-            <div class="portfolio-content">
-                <span class="portfolio-tag">{{ $item->category }}</span>
-
-                <h3 class="portfolio-title">{{ $item->title }}</h3>
-
-                <p class="portfolio-desc">
-                    Premium scalable solution designed for performance and growth.
-                </p>
-
-                <div class="portfolio-arrow">
-                    View Project →
+                    <div class="portfolio-gradient"></div>
                 </div>
-            </div>
 
+                <div class="portfolio-content">
+                    <span class="portfolio-tag">{{ $item->category }}</span>
+
+                    <h3 class="portfolio-title">{{ $item->title }}</h3>
+
+                    <p class="portfolio-desc">
+                        Premium scalable solution designed for performance and growth.
+                    </p>
+
+                    <div class="portfolio-arrow">
+                        View Project →
+                    </div>
+                </div>
+
+            </div>
+            @endforeach
         </div>
         <div style="text-align:center;margin-top:48px">
             <a href="{{ route('portfolio') }}" class="btn btn-primary">View All Projects</a>
