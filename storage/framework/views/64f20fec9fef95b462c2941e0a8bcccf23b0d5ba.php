@@ -284,30 +284,34 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
             <span class="section-tag">Our Work</span>
             <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
         </div>
-        <div class="portfolio-card reveal reveal-delay-<?php echo e(($i%3)+1); ?>">
+        <div class="portfolio-grid">
+            <?php $__currentLoopData = $portfolio->take(6); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="portfolio-card reveal reveal-delay-<?php echo e(($i%3)+1); ?>">
 
-            <div class="portfolio-image-wrap">
-                <img src="<?php echo e($item->image && !str_starts_with($item->image,'assets/') 
+                <div class="portfolio-image-wrap">
+                    <img src="<?php echo e($item->image && !str_starts_with($item->image,'assets/') 
             ? asset('storage/'.$item->image) 
             : asset('assets/images/about-us.jpg')); ?>" alt="<?php echo e($item->title); ?>" class="portfolio-img" />
 
-                <div class="portfolio-gradient"></div>
-            </div>
-
-            <div class="portfolio-content">
-                <span class="portfolio-tag"><?php echo e($item->category); ?></span>
-
-                <h3 class="portfolio-title"><?php echo e($item->title); ?></h3>
-
-                <p class="portfolio-desc">
-                    Premium scalable solution designed for performance and growth.
-                </p>
-
-                <div class="portfolio-arrow">
-                    View Project →
+                    <div class="portfolio-gradient"></div>
                 </div>
-            </div>
 
+                <div class="portfolio-content">
+                    <span class="portfolio-tag"><?php echo e($item->category); ?></span>
+
+                    <h3 class="portfolio-title"><?php echo e($item->title); ?></h3>
+
+                    <p class="portfolio-desc">
+                        Premium scalable solution designed for performance and growth.
+                    </p>
+
+                    <div class="portfolio-arrow">
+                        View Project →
+                    </div>
+                </div>
+
+            </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
         <div style="text-align:center;margin-top:48px">
             <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-primary">View All Projects</a>
