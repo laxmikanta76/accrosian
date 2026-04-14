@@ -268,7 +268,7 @@ body {
 }
 .nav-menu a:hover,
 .nav-menu a.active {
-  color: var(--gradient-orange);
+  color: var(--white);
   background: rgba(255, 255, 255, 0.07);
 }
 
@@ -421,8 +421,8 @@ body {
   margin-bottom: 2px;
 }
 .mega-col a:hover {
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.07);
+  color: var(--orange);
+  background: rgba(255, 165, 0, 0.12);
   transform: translateX(4px);
 }
 .mega-col a .svc-icon {

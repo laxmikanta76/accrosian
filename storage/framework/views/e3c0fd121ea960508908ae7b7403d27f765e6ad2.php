@@ -71,15 +71,6 @@
                     <a href="<?php echo e(route('airs')); ?>"><span class="drop-icon">🌉</span> AIRS Program</a>
                 </div>
             </li>
-            
-            <li class="nav-dropdown">
-                <a href="#">Our Initiatives</a>
-                <div class="simple-dropdown">
-                    <a href="<?php echo e(route('student.register')); ?>"><span class="drop-icon">🎓</span> Student Registration</a>
-                    <a href="<?php echo e(route('airs')); ?>"><span class="drop-icon">🌉</span> AIRS Program</a>
-                </div>
-            </li>
-
         </ul>
         <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
         <?php if(auth()->guard()->check()): ?>
