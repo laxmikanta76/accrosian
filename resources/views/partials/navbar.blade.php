@@ -37,7 +37,7 @@
             <li class="nav-dropdown">
                 <a href="#"
                     class="{{ request()->routeIs('about') || request()->routeIs('portfolio') || request()->routeIs('contact') ? 'active' : '' }}">
-                    Our Company
+                    Our Initiatives
                 </a>
 
                 <div class="dropdown-menu">
