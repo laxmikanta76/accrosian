@@ -2232,10 +2232,16 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(120deg, transparent, #ff7a00, transparent);
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,122,0,0.15),
+    transparent
+  );
+
   opacity: 0;
-  transition: 0.4s;
+  transition: 0.4s ease;
 }
 
 .portfolio-card:hover::before {
@@ -3328,34 +3334,3 @@ select option {
     transform: translateX(-50%);
   }
 }
-/* 🔥 FORCE REMOVE ORANGE OVERLAY */
-.portfolio-card:hover {
-  background: transparent !important;
-}
-
-/* FIX OVERLAY */
-.portfolio-gradient {
-  background: linear-gradient(
-    to top,
-    rgba(5,8,30,0.95),
-    rgba(10,14,46,0.6),
-    transparent
-  ) !important;
-}
-
-/* SUBTLE HOVER EFFECT */
-.portfolio-card:hover .portfolio-gradient {
-  background: linear-gradient(
-    to top,
-    rgba(255,122,0,0.12),
-    rgba(10,14,46,0.6),
-    transparent
-  ) !important;
-}
-
-/* CLEAN HOVER */
-.portfolio-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(255,122,0,0.15);
-}
-
