@@ -127,20 +127,5 @@ document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
     border-color: var(--orange);
     color: #fff;
 }
-
-
-.portfolio-intro {
-    padding: 60px 0 20px;
-    text-align: center;
-}
-
-.portfolio-intro-text {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-light);
-    opacity: 0.9;
-}
 </style>
 @endpush
