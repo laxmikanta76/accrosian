@@ -8,7 +8,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
 
 {{-- HERO --}}
 <section class="hero">
-    <img src="{{ asset('assets/images/hero-img.png') }}" alt="Hero Background" class="hero-bg-img" />
+    <!-- <img src="{{ asset('assets/images/hero-img.png') }}" alt="Hero Background" class="hero-bg-img" /> -->
     <div class="hero-bg-effects">
         <div class="hero-orb hero-orb-1"></div>
         <div class="hero-orb hero-orb-2"></div>
@@ -53,7 +53,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                 </div>
             </div>
         </div>
-        <div class="hero-visual">
+        <!-- <div class="hero-visual">
             <div class="hero-card-main">
                 <div class="hero-card-header">
                     <div class="hero-card-icon">📊</div>
@@ -105,7 +105,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 
