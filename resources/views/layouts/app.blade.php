@@ -14,6 +14,7 @@
     <title>@yield('meta_title', $setting->site_title ?? config('app.name'))</title>
     <meta name="description" content="@yield('meta_description', $setting->meta_description ?? '')">
     <meta name="keywords" content="@yield('meta_keywords', $setting->meta_keywords ?? '')">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {{-- Open Graph --}}
     <meta property="og:title" content="@yield('meta_title', $setting->site_title ?? config('app.name'))">

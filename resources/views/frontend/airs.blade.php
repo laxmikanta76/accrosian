@@ -638,6 +638,46 @@
     }
 }
 
+/* 🔥 FORCE MOBILE FIX */
+@media (max-width: 768px) {
+
+    /* MAIN HERO GRID */
+    div[style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    /* STATS GRID */
+    div[style*="grid-template-columns:repeat(4,1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* ALL SECTIONS */
+    div[style*="grid-template-columns:repeat(3,1fr)"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* BEFORE AFTER */
+    div[style*="grid-template-columns:1fr 80px 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* HIDE FLOATING CARDS (IMPORTANT) */
+    div[style*="position:absolute"] {
+        display: none !important;
+    }
+
+    /* FIX TEXT */
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    /* BUTTON CENTER */
+    div[style*="display:flex;gap:16px"] {
+        justify-content: center !important;
+    }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     div[style*="grid-template-columns:repeat(4,1fr)"] {
