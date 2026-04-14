@@ -26,15 +26,20 @@
                             <a href="{{ route('services') }}" class="mega-cat-cta">View All Services →</a>
                         </div>
 
-                        {{-- Right Columns --}}
+                        {{-- Right Columns grouped by category --}}
                         @php
-                        $navServices = \App\Models\Service::active()->orderBy('sort_order')->get();
+                        $navServices = \App\Models\Service::active()
+                        ->orderBy('category')
+                        ->orderBy('sort_order')
+                        ->get()
+                        ->groupBy('category');
                         @endphp
 
                         <div class="mega-cols">
-                            @foreach($navServices->chunk(3) as $chunk)
+                            @foreach($navServices as $category => $services)
                             <div class="mega-col">
-                                @foreach($chunk as $svc)
+                                <div class="mega-col-title">{{ $category }}</div>
+                                @foreach($services as $svc)
                                 <a href="{{ route('services.show', $svc->slug) }}">
                                     <span class="svc-icon">{{ $svc->icon }}</span>
                                     {{ $svc->title }}

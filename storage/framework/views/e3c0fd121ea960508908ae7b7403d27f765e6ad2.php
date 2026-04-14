@@ -16,25 +16,35 @@
                     class="<?php echo e(request()->routeIs('services*') ? 'active' : ''); ?>">Services</a>
                 <div class="mega-menu">
                     <div class="mega-inner">
+
+                        
                         <div class="mega-category">
-                            <div class="mega-cat-label">What we offer</div>
+                            <div class="mega-cat-label">What We Offer</div>
                             <div class="mega-cat-title">Our Services</div>
                             <div class="mega-cat-desc">Explore the full range of solutions we deliver for growing
                                 businesses.</div>
                             <a href="<?php echo e(route('services')); ?>" class="mega-cat-cta">View All Services →</a>
                         </div>
+
+                        
+                        <?php
+                        $navServices = \App\Models\Service::active()->orderBy('sort_order')->get();
+                        ?>
+
                         <div class="mega-cols">
-                            <?php $navServices = \App\Models\Service::active()->orderBy('sort_order')->get(); ?>
-                            <?php $__currentLoopData = $navServices; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $svc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php $__currentLoopData = $navServices->chunk(3); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $chunk): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="mega-col">
+                                <?php $__currentLoopData = $chunk; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $svc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <a href="<?php echo e(route('services.show', $svc->slug)); ?>">
                                     <span class="svc-icon"><?php echo e($svc->icon); ?></span>
                                     <?php echo e($svc->title); ?>
 
                                 </a>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
+
                     </div>
                 </div>
             </li>
