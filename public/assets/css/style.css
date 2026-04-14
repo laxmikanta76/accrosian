@@ -232,7 +232,7 @@ body {
 }
 
 .nav-logo img {
-  max-height: 140px; /* 🔥 control size */
+  max-height: 140px;
   width: auto;
   object-fit: contain;
   margin-top: 10px;
@@ -272,6 +272,7 @@ body {
   background: rgba(255, 255, 255, 0.07);
 }
 
+/* ── Dropdown trigger arrow ── */
 .nav-dropdown {
   position: relative;
 }
@@ -279,13 +280,162 @@ body {
   content: " ▾";
   font-size: 0.75rem;
 }
-.dropdown-menu {
+
+/* ============================================================
+   OLD .dropdown-menu is REMOVED.
+   Now we have TWO dropdown styles:
+   1. .mega-menu      → full-width (Services)
+   2. .simple-dropdown → small panel (Our Company, Our Initiatives)
+   ============================================================ */
+
+/* ── 1. MEGA MENU (Services) ── */
+
+/* The Services <li> must NOT be position:relative
+   so the panel can stretch full viewport width */
+.nav-dropdown.mega {
+  position: static;
+}
+
+.mega-menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 80px; /* matches nav-inner height */
+  background: var(--navy-mid);
+  border-top: 2px solid var(--orange);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 32px 0 36px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--transition);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 999;
+}
+.nav-dropdown.mega:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Constrain content to your site width */
+.mega-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+/* Left panel: title + description + CTA */
+.mega-category {
+  min-width: 230px;
+  max-width: 230px;
+  border-right: 1px solid var(--glass-border);
+  padding-right: 32px;
+  margin-right: 36px;
+  flex-shrink: 0;
+}
+.mega-cat-label {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.mega-cat-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.mega-cat-desc {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.mega-cat-cta {
+  display: inline-block;
+  padding: 9px 18px;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.mega-cat-cta:hover {
+  opacity: 0.88;
+  background: var(--orange);
+  color: var(--white);
+}
+
+/* Right side: columns of links */
+.mega-cols {
+  display: flex;
+  gap: 36px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.mega-col {
+  min-width: 140px;
+  flex: 1;
+}
+.mega-col-title {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.mega-col a {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.85rem !important;
+  font-weight: 500;
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 7px 10px !important;
+  border-radius: 8px;
+  transition: var(--transition);
+  margin-bottom: 2px;
+}
+.mega-col a:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateX(4px);
+}
+.mega-col a .svc-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+/* ── 2. SIMPLE DROPDOWN (Our Company, Our Initiatives) ── */
+.simple-dropdown {
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + 10px);
   left: 0;
   background: var(--navy-mid);
   border: 1px solid var(--glass-border);
-  border-radius: var(--border-radius);
+  border-top: 2px solid var(--orange);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   min-width: 220px;
   padding: 8px;
   opacity: 0;
@@ -294,23 +444,43 @@ body {
   transition: var(--transition);
   box-shadow: var(--shadow-card);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 999;
 }
-.nav-dropdown:hover .dropdown-menu {
+.nav-dropdown:hover .simple-dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
-.dropdown-menu a {
-  display: block;
-  padding: 10px 16px !important;
+.simple-dropdown a {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px !important;
   border-radius: 8px;
+  font-family: var(--font-display);
   font-size: 0.88rem !important;
+  font-weight: 500;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.simple-dropdown a:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateX(4px);
+}
+.simple-dropdown a .drop-icon {
+  font-size: 15px;
+  flex-shrink: 0;
 }
 
+/* ── CTA button ── */
 .nav-cta {
   margin-left: 16px;
 }
 
+/* ── Hamburger (mobile) ── */
 .hamburger {
   display: none;
   flex-direction: column;
