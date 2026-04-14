@@ -70,15 +70,6 @@
                     <a href="{{ route('airs') }}"><span class="drop-icon">🌉</span> AIRS Program</a>
                 </div>
             </li>
-            {{-- Our Initiatives Dropdown --}}
-            <li class="nav-dropdown">
-                <a href="#">Our Initiatives</a>
-                <div class="simple-dropdown">
-                    <a href="{{ route('student.register') }}"><span class="drop-icon">🎓</span> Student Registration</a>
-                    <a href="{{ route('airs') }}"><span class="drop-icon">🌉</span> AIRS Program</a>
-                </div>
-            </li>
-
         </ul>
         <a href="{{ route('contact') }}" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
         @auth

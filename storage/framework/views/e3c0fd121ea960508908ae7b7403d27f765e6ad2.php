@@ -28,13 +28,18 @@
 
                         
                         <?php
-                        $navServices = \App\Models\Service::active()->orderBy('sort_order')->get();
+                        $navServices = \App\Models\Service::active()
+                        ->orderBy('category')
+                        ->orderBy('sort_order')
+                        ->get()
+                        ->groupBy('category');
                         ?>
 
                         <div class="mega-cols">
-                            <?php $__currentLoopData = $navServices->chunk(3); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $chunk): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php $__currentLoopData = $navServices; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category => $services): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="mega-col">
-                                <?php $__currentLoopData = $chunk; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $svc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <div class="mega-col-title"><?php echo e($category); ?></div>
+                                <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $svc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <a href="<?php echo e(route('services.show', $svc->slug)); ?>">
                                     <span class="svc-icon"><?php echo e($svc->icon); ?></span>
                                     <?php echo e($svc->title); ?>
