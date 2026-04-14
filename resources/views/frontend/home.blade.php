@@ -137,33 +137,54 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
             <p class="section-subtitle" style="margin:0 auto 0">We offer a comprehensive range of technology services to
                 help your business thrive in the digital age.</p>
         </div>
-        <div class="services-grid">
-            @foreach($services as $i => $service)
-            <div class="service-card reveal reveal-delay-{{ ($i % 3) + 1 }}">
-                @if($service->image && !str_starts_with($service->image, 'assets/'))
-                <img src="{{ asset('storage/'.$service->image) }}" alt="{{ $service->title }}"
-                    class="service-card-img" />
-                @elseif($service->image)
-                <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" class="service-card-img" />
-                @else
-                <img src="{{ asset('assets/images/web-dev-img.png') }}" alt="{{ $service->title }}"
-                    class="service-card-img" />
-                @endif
-                <div class="service-card-overlay"></div>
-                <div class="service-card-content">
-                    <h3 class="service-title">{{ $service->icon }} {{ $service->title }}</h3>
-                    <a href="{{ route('services.show', $service->slug) }}" class="service-link">
-                        Learn More
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
+        <div class="services-wrapper">
+            <div class="services-track">
+                @foreach($services as $i => $service)
+                <div class="service-card reveal reveal-delay-{{ ($i % 3) + 1 }}">
+                    @if($service->image && !str_starts_with($service->image, 'assets/'))
+                    <img src="{{ asset('storage/'.$service->image) }}" alt="{{ $service->title }}"
+                        class="service-card-img" />
+                    @elseif($service->image)
+                    <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" class="service-card-img" />
+                    @else
+                    <img src="{{ asset('assets/images/web-dev-img.png') }}" alt="{{ $service->title }}"
+                        class="service-card-img" />
+                    @endif
+                    <div class="service-card-overlay"></div>
+                    <div class="service-card-content">
+                        <h3 class="service-title">{{ $service->icon }} {{ $service->title }}</h3>
+                        <a href="{{ route('services.show', $service->slug) }}" class="service-link">
+                            Learn More
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+                @endforeach
+                @foreach($services as $service)
+                <div class="service-card">
+                    @if($service->image && !str_starts_with($service->image, 'assets/'))
+                    <img src="{{ asset('storage/'.$service->image) }}" class="service-card-img" />
+                    @elseif($service->image)
+                    <img src="{{ asset($service->image) }}" class="service-card-img" />
+                    @else
+                    <img src="{{ asset('assets/images/web-dev-img.png') }}" class="service-card-img" />
+                    @endif
+
+                    <div class="service-card-overlay"></div>
+
+                    <div class="service-card-content">
+                        <h3 class="service-title">{{ $service->icon }} {{ $service->title }}</h3>
+                        <a href="{{ route('services.show', $service->slug) }}" class="service-link">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
-    </div>
 </section>
 
 {{-- PROCESS --}}

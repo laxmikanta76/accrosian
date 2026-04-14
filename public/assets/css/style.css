@@ -856,11 +856,11 @@ body {
    ============================================= */
 
 /* ---- Grid (unchanged from original) ---- */
-.services-grid {
+/* .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
-}
+} */
 
 /* ---- Card Shell ---- */
 .service-card {
@@ -3252,4 +3252,40 @@ select option {
     letter-spacing: 0.8px;
     color: rgba(255,107,53,0.6);
     padding: 10px 20px 4px;
+}
+
+/* ===== HORIZONTAL AUTO SCROLL SERVICES ===== */
+
+.services-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.services-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: scrollServices 25s linear infinite;
+}
+
+/* Pause on hover */
+.services-track:hover {
+  animation-play-state: paused;
+}
+
+/* Each card fixed width */
+.service-card {
+  min-width: 300px;
+  max-width: 320px;
+  flex: 0 0 auto;
+}
+
+/* Smooth infinite animation */
+@keyframes scrollServices {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
