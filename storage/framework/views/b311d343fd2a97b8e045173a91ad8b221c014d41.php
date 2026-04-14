@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('meta_title', $page->meta_title ?? 'Portfolio – Our Featured Projects'); ?>
 <?php $__env->startSection('meta_description', $page->meta_description ?? 'Browse our portfolio of successful projects across web, mobile,
 cloud, and AI domains.'); ?>
@@ -126,21 +124,6 @@ document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
     background: var(--orange);
     border-color: var(--orange);
     color: #fff;
-}
-
-
-.portfolio-intro {
-    padding: 60px 0 20px;
-    text-align: center;
-}
-
-.portfolio-intro-text {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-light);
-    opacity: 0.9;
 }
 </style>
 <?php $__env->stopPush(); ?>
