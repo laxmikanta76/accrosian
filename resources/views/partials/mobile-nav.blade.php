@@ -14,6 +14,8 @@
         <a href="{{ route('portfolio') }}">Portfolio</a>
         <a href="{{ route('blog') }}">Blog</a>
         <a href="{{ route('contact') }}">Contact</a>
+        <a href="{{ route('student.register') }}">Student Registration</a>
+        <a href="{{ route('airs') }}">AIRS Program</a>
 
         @auth
         @if(auth()->user()->role === 'admin')
