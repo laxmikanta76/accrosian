@@ -32,7 +32,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                 <a href="{{ route('services') }}" class="btn btn-primary btn-arrow">Explore Services</a>
                 <a href="{{ route('portfolio') }}" class="btn btn-outline">View Our Work</a>
             </div>
-            <div class="hero-stats">
+            <!-- <div class="hero-stats">
                 <div class="hero-stat">
                     <div class="hero-stat-num" data-target="250" data-suffix="+"
                         style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--orange);">250+
@@ -51,7 +51,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                     </div>
                     <div class="hero-stat-label">Years Experience</div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- <div class="hero-visual">
             <div class="hero-card-main">
