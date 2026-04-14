@@ -16,24 +16,34 @@
                     class="{{ request()->routeIs('services*') ? 'active' : '' }}">Services</a>
                 <div class="mega-menu">
                     <div class="mega-inner">
+
+                        {{-- Left Panel --}}
                         <div class="mega-category">
-                            <div class="mega-cat-label">What we offer</div>
+                            <div class="mega-cat-label">What We Offer</div>
                             <div class="mega-cat-title">Our Services</div>
                             <div class="mega-cat-desc">Explore the full range of solutions we deliver for growing
                                 businesses.</div>
                             <a href="{{ route('services') }}" class="mega-cat-cta">View All Services →</a>
                         </div>
+
+                        {{-- Right Columns --}}
+                        @php
+                        $navServices = \App\Models\Service::active()->orderBy('sort_order')->get();
+                        @endphp
+
                         <div class="mega-cols">
-                            @php $navServices = \App\Models\Service::active()->orderBy('sort_order')->get(); @endphp
-                            @foreach($navServices as $svc)
+                            @foreach($navServices->chunk(3) as $chunk)
                             <div class="mega-col">
+                                @foreach($chunk as $svc)
                                 <a href="{{ route('services.show', $svc->slug) }}">
                                     <span class="svc-icon">{{ $svc->icon }}</span>
                                     {{ $svc->title }}
                                 </a>
+                                @endforeach
                             </div>
                             @endforeach
                         </div>
+
                     </div>
                 </div>
             </li>

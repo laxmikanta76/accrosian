@@ -41,29 +41,27 @@
             <li><a href="<?php echo e(route('blog')); ?>" class="<?php echo e(request()->routeIs('blog*') ? 'active' : ''); ?>">Blog</a></li>
             
             <li class="nav-dropdown">
-                <a href="#"
-                    class="<?php echo e(request()->routeIs('about') || request()->routeIs('portfolio') || request()->routeIs('contact') ? 'active' : ''); ?>">
-                    Our Company
-                </a>
+                <a href="#">Our Company</a>
+                <div class="simple-dropdown">
+                    <a href="<?php echo e(route('about')); ?>"><span class="drop-icon">🏢</span> About Us</a>
+                    <a href="<?php echo e(route('portfolio')); ?>"><span class="drop-icon">💼</span> Portfolio</a>
+                    <a href="<?php echo e(route('contact')); ?>"><span class="drop-icon">📞</span> Contact</a>
+                </div>
+            </li>
 
-                <div class="dropdown-menu">
-                    <a href="<?php echo e(route('about')); ?>">🏢 About Us</a>
-                    <a href="<?php echo e(route('portfolio')); ?>">💼 Portfolio</a>
-                    <a href="<?php echo e(route('contact')); ?>">📞 Contact</a>
-                    <a href="<?php echo e(route('student.register')); ?>">🎓 Student Registration</a>
-                    <a href="<?php echo e(route('airs')); ?>">🌉 AIRS Program</a>
+            <li class="nav-dropdown">
+                <a href="#">Our Initiatives</a>
+                <div class="simple-dropdown">
+                    <a href="<?php echo e(route('student.register')); ?>"><span class="drop-icon">🎓</span> Student Registration</a>
+                    <a href="<?php echo e(route('airs')); ?>"><span class="drop-icon">🌉</span> AIRS Program</a>
                 </div>
             </li>
             
             <li class="nav-dropdown">
-                <a href="#"
-                    class="<?php echo e(request()->routeIs('about') || request()->routeIs('portfolio') || request()->routeIs('contact') ? 'active' : ''); ?>">
-                    Our Initiatives
-                </a>
-
-                <div class="dropdown-menu">
-                    <a href="<?php echo e(route('student.register')); ?>">🎓 Student Registration</a>
-                    <a href="<?php echo e(route('airs')); ?>">🌉 AIRS Program</a>
+                <a href="#">Our Initiatives</a>
+                <div class="simple-dropdown">
+                    <a href="<?php echo e(route('student.register')); ?>"><span class="drop-icon">🎓</span> Student Registration</a>
+                    <a href="<?php echo e(route('airs')); ?>"><span class="drop-icon">🌉</span> AIRS Program</a>
                 </div>
             </li>
 
