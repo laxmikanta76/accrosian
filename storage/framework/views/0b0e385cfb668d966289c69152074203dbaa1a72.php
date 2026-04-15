@@ -23,7 +23,7 @@
     <div class="container page-hero-inner">
         <!-- <div style="font-size:4rem;margin-bottom:16px"><?php echo e($service->icon); ?></div> -->
         <h1 class="page-hero-title"><span class="text-gradient"><?php echo e($service->title); ?></span></h1>
-        <!-- <p class="page-hero-sub"><?php echo e($service->short_description); ?></p> -->
+        <p class="page-hero-sub"><?php echo e($service->short_description); ?></p>
     </div>
 </section>
 
