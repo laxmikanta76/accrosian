@@ -278,30 +278,61 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
 
 
 <?php if($portfolio->isNotEmpty()): ?>
-<section style="padding:100px 0;background:var(--surface)">
-    <div class="container">
-        <div style="text-align:center;margin-bottom:60px" class="reveal">
-            <span class="section-tag">Our Work</span>
-            <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
-        </div>
-        <div class="portfolio-grid">
+<section class="showcase-section">
+    <div class="showcase-header reveal">
+        <span class="section-tag">Our Work</span>
+        <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+        <p class="showcase-sub">Real projects, real results — explore our work across industries.</p>
+    </div>
+
+    <div class="showcase-track-wrap">
+        <div class="showcase-track" id="showcaseTrack">
             <?php $__currentLoopData = $portfolio->take(6); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="portfolio-card reveal reveal-delay-<?php echo e(($i%3)+1); ?>">
-                <?php if($item->image && !str_starts_with($item->image,'assets/')): ?>
-                <img src="<?php echo e(asset('storage/'.$item->image)); ?>" alt="<?php echo e($item->title); ?>" class="portfolio-img" />
-                <?php else: ?>
-                <img src="<?php echo e(asset('assets/images/about-us.jpg')); ?>" alt="<?php echo e($item->title); ?>" class="portfolio-img" />
-                <?php endif; ?>
-                <div class="portfolio-overlay">
-                    <div class="portfolio-tag"><?php echo e($item->category); ?></div>
-                    <h3 class="portfolio-title"><?php echo e($item->title); ?></h3>
+            <div class="showcase-card" data-index="<?php echo e($i); ?>">
+                <div class="showcase-card-inner">
+                    <?php if($item->image && !str_starts_with($item->image,'assets/')): ?>
+                    <img src="<?php echo e(asset('storage/'.$item->image)); ?>" alt="<?php echo e($item->title); ?>" class="showcase-img" />
+                    <?php else: ?>
+                    <img src="<?php echo e(asset('assets/images/about-us.jpg')); ?>" alt="<?php echo e($item->title); ?>"
+                        class="showcase-img" />
+                    <?php endif; ?>
+                    <div class="showcase-overlay"></div>
+                    <div class="showcase-content">
+                        <?php if($item->category): ?>
+                        <span class="showcase-tag"><?php echo e($item->category); ?></span>
+                        <?php endif; ?>
+                        <h3 class="showcase-title"><?php echo e($item->title); ?></h3>
+                        <?php if($item->description): ?>
+                        <p class="showcase-desc"><?php echo e(Str::limit($item->description, 90)); ?></p>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
-        <div style="text-align:center;margin-top:48px">
-            <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-primary">View All Projects</a>
+
+        
+        <div class="showcase-dots" id="showcaseDots">
+            <?php $__currentLoopData = $portfolio->take(6); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <button class="showcase-dot <?php echo e($i === 0 ? 'active' : ''); ?>" data-index="<?php echo e($i); ?>"></button>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
+
+        
+        <button class="showcase-arrow showcase-arrow-left" id="showcasePrev">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+        </button>
+        <button class="showcase-arrow showcase-arrow-right" id="showcaseNext">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6" />
+            </svg>
+        </button>
+    </div>
+
+    <div style="text-align:center;margin-top:48px">
+        <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-primary btn-arrow">View All Projects</a>
     </div>
 </section>
 <?php endif; ?>

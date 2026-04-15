@@ -1775,18 +1775,22 @@ body {
 .page-hero-inner {
   position: relative;
   z-index: 2;
+  align-items: flex-start;   /* 🔥 LEFT ALIGN */
+  text-align: left;          /* 🔥 TEXT LEFT */
+  margin-left: 60px;
 }
 .page-hero-title {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   margin-bottom: 20px;
+  text-align: left;
 }
 .page-hero-sub {
   color: var(--text-light);
   font-size: 1.1rem;
   max-width: 600px;
-  margin: 0 auto;
+  text-align: left;
 }
 .breadcrumb {
   display: flex;

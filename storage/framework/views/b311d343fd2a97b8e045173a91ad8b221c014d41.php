@@ -22,46 +22,54 @@ cloud, and AI domains.'); ?>
     </div>
 </section>
 
-<section style="padding:100px 0">
-    <div class="container">
-
-        <?php if($categories->isNotEmpty()): ?>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:48px" class="reveal">
-            <button class="portfolio-filter-btn active" data-filter="all">All Projects</button>
-            <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <button class="portfolio-filter-btn" data-filter="<?php echo e(Str::slug($cat)); ?>"><?php echo e($cat); ?></button>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        </div>
-        <?php endif; ?>
-
-        <div class="portfolio-grid" id="portfolioGrid">
+<section style="padding:60px 0 0">
+    <div class="showcase-track-wrap">
+        <div class="showcase-track" id="showcaseTrack">
             <?php $__empty_1 = true; $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
-            <div class="portfolio-card reveal reveal-delay-<?php echo e(($i%3)+1); ?>"
-                data-category="<?php echo e(Str::slug($item->category)); ?>">
-                <?php if($item->image && !str_starts_with($item->image,'assets/')): ?>
-                <img src="<?php echo e(asset('storage/'.$item->image)); ?>" alt="<?php echo e($item->title); ?>" class="portfolio-img" />
-                <?php else: ?>
-                <img src="<?php echo e(asset('assets/images/about-us.jpg')); ?>" alt="<?php echo e($item->title); ?>" class="portfolio-img" />
-                <?php endif; ?>
-                <div class="portfolio-overlay">
-                    <?php if($item->category): ?>
-                    <div class="portfolio-tag"><?php echo e($item->category); ?></div>
+            <div class="showcase-card" data-index="<?php echo e($i); ?>">
+                <div class="showcase-card-inner">
+                    <?php if($item->image && !str_starts_with($item->image,'assets/')): ?>
+                    <img src="<?php echo e(asset('storage/'.$item->image)); ?>" alt="<?php echo e($item->title); ?>" class="showcase-img" />
+                    <?php else: ?>
+                    <img src="<?php echo e(asset('assets/images/about-us.jpg')); ?>" alt="<?php echo e($item->title); ?>"
+                        class="showcase-img" />
                     <?php endif; ?>
-                    <h3 class="portfolio-title"><?php echo e($item->title); ?></h3>
-                    <?php if($item->description): ?>
-                    <p style="color:rgba(255,255,255,0.8);font-size:0.85rem;margin-top:8px;line-height:1.5">
-                        <?php echo e(Str::limit($item->description, 100)); ?></p>
-                    <?php endif; ?>
+                    <div class="showcase-overlay"></div>
+                    <div class="showcase-content">
+                        <?php if($item->category): ?>
+                        <span class="showcase-tag"><?php echo e($item->category); ?></span>
+                        <?php endif; ?>
+                        <h3 class="showcase-title"><?php echo e($item->title); ?></h3>
+                        <?php if($item->description): ?>
+                        <p class="showcase-desc"><?php echo e(Str::limit($item->description, 90)); ?></p>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
-            <div style="text-align:center;padding:80px;grid-column:1/-1;color:var(--text-light)">
+            <div style="text-align:center;padding:80px;color:var(--text-light);min-width:100vw">
                 <div style="font-size:3rem;margin-bottom:16px">🚧</div>
                 <h3>Portfolio Coming Soon</h3>
-                <p style="margin-top:8px">We're currently updating our portfolio. Check back soon!</p>
             </div>
             <?php endif; ?>
         </div>
+
+        <div class="showcase-dots" id="showcaseDots">
+            <?php $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <button class="showcase-dot <?php echo e($i === 0 ? 'active' : ''); ?>" data-index="<?php echo e($i); ?>"></button>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </div>
+
+        <button class="showcase-arrow showcase-arrow-left" id="showcasePrev">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+        </button>
+        <button class="showcase-arrow showcase-arrow-right" id="showcaseNext">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6" />
+            </svg>
+        </button>
     </div>
 </section>
 
