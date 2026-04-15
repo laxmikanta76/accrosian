@@ -28,33 +28,39 @@
 </section>
 
 <section style="padding:100px 0">
-    <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start;grid-auto-rows:auto;"
-            class="reveal">
+    <div style="max-width:100%;padding:0 40px">
+
+        {{-- Top: Image right, intro text left --}}
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start;" class="reveal">
             <div>
                 <span class="section-tag">Overview</span>
                 <h2 class="section-title">What We <span class="text-gradient">Deliver</span></h2>
-                <div style="color:var(--text-light);line-height:1.8;margin-top:24px" class="service-full-desc">
-                    {!! $service->full_description !!}
-                </div>
-                <div style="margin-top:36px;display:flex;gap:16px;flex-wrap:wrap">
-                    <a href="{{ route('contact') }}" class="btn btn-primary">Get a Quote</a>
-                    <a href="{{ route('services') }}" class="btn btn-outline">All Services</a>
-                </div>
             </div>
             <div class="reveal reveal-delay-2">
                 @if($service->image && !str_starts_with($service->image,'assets/'))
                 <img src="{{ asset('storage/'.$service->image) }}" alt="{{ $service->title }}"
-                    style="width:100%;max-height:450px;border-radius:16px;object-fit:cover;object-position:center;position:sticky;top:100px;" />
+                    style="width:100%;max-height:450px;border-radius:16px;object-fit:cover;object-position:center;" />
                 @elseif($service->image)
                 <img src="{{ asset($service->image) }}" alt="{{ $service->title }}"
-                    style="width:100%;max-height:450px;border-radius:16px;object-fit:cover;object-position:center;position:sticky;top:100px;" />
+                    style="width:100%;max-height:450px;border-radius:16px;object-fit:cover;object-position:center;" />
                 @else
                 <img src="{{ asset('assets/images/web-dev-img.png') }}" alt="{{ $service->title }}"
-                    style="width:100%;max-height:450px;border-radius:16px;object-fit:cover;object-position:center;position:sticky;top:100px;" />
+                    style="width:100%;max-height:450px;border-radius:16px;object-fit:cover;object-position:center;" />
                 @endif
             </div>
         </div>
+
+        {{-- Full width content below --}}
+        <div style="margin-top:40px;color:var(--text-light);line-height:1.8;" class="service-full-desc reveal">
+            {!! $service->full_description !!}
+        </div>
+
+        {{-- Buttons --}}
+        <div style="margin-top:36px;display:flex;gap:16px;flex-wrap:wrap;" class="reveal">
+            <a href="{{ route('contact') }}" class="btn btn-primary">Get a Quote</a>
+            <a href="{{ route('services') }}" class="btn btn-outline">All Services</a>
+        </div>
+
     </div>
 </section>
 
