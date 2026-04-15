@@ -28,7 +28,7 @@
 </section>
 
 <section style="padding:100px 0">
-    <div class="container">
+    <div style="max-width:100%;padding:0 40px">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start" class="reveal">
             <div>
                 <span class="section-tag">Overview</span>

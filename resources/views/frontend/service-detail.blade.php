@@ -28,8 +28,9 @@
 </section>
 
 <section style="padding:100px 0">
-    <div style="max-width:100%;padding:0 40px">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start" class="reveal">
+    <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start;grid-auto-rows:auto;"
+            class="reveal">
             <div>
                 <span class="section-tag">Overview</span>
                 <h2 class="section-title">What We <span class="text-gradient">Deliver</span></h2>
@@ -44,13 +45,13 @@
             <div class="reveal reveal-delay-2">
                 @if($service->image && !str_starts_with($service->image,'assets/'))
                 <img src="{{ asset('storage/'.$service->image) }}" alt="{{ $service->title }}"
-                    style="width:100%;border-radius:16px;object-fit:cover" />
+                    style="width:100%;max-height:450px;border-radius:16px;object-fit:cover;object-position:center;position:sticky;top:100px;" />
                 @elseif($service->image)
                 <img src="{{ asset($service->image) }}" alt="{{ $service->title }}"
-                    style="width:100%;border-radius:16px;object-fit:cover" />
+                    style="width:100%;max-height:450px;border-radius:16px;object-fit:cover;object-position:center;position:sticky;top:100px;" />
                 @else
                 <img src="{{ asset('assets/images/web-dev-img.png') }}" alt="{{ $service->title }}"
-                    style="width:100%;border-radius:16px;object-fit:cover" />
+                    style="width:100%;max-height:450px;border-radius:16px;object-fit:cover;object-position:center;position:sticky;top:100px;" />
                 @endif
             </div>
         </div>
