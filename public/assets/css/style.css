@@ -1781,8 +1781,8 @@ body {
 }
 .page-hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-weight: 800;
   margin-bottom: 20px;
   text-align: left;
 }
