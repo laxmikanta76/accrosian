@@ -280,30 +280,61 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
 
 {{-- PORTFOLIO PREVIEW --}}
 @if($portfolio->isNotEmpty())
-<section style="padding:100px 0;background:var(--surface)">
-    <div class="container">
-        <div style="text-align:center;margin-bottom:60px" class="reveal">
-            <span class="section-tag">Our Work</span>
-            <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
-        </div>
-        <div class="portfolio-grid">
+<section class="showcase-section">
+    <div class="showcase-header reveal">
+        <span class="section-tag">Our Work</span>
+        <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+        <p class="showcase-sub">Real projects, real results — explore our work across industries.</p>
+    </div>
+
+    <div class="showcase-track-wrap">
+        <div class="showcase-track" id="showcaseTrack">
             @foreach($portfolio->take(6) as $i => $item)
-            <div class="portfolio-card reveal reveal-delay-{{ ($i%3)+1 }}">
-                @if($item->image && !str_starts_with($item->image,'assets/'))
-                <img src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}" class="portfolio-img" />
-                @else
-                <img src="{{ asset('assets/images/about-us.jpg') }}" alt="{{ $item->title }}" class="portfolio-img" />
-                @endif
-                <div class="portfolio-overlay">
-                    <div class="portfolio-tag">{{ $item->category }}</div>
-                    <h3 class="portfolio-title">{{ $item->title }}</h3>
+            <div class="showcase-card" data-index="{{ $i }}">
+                <div class="showcase-card-inner">
+                    @if($item->image && !str_starts_with($item->image,'assets/'))
+                    <img src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}" class="showcase-img" />
+                    @else
+                    <img src="{{ asset('assets/images/about-us.jpg') }}" alt="{{ $item->title }}"
+                        class="showcase-img" />
+                    @endif
+                    <div class="showcase-overlay"></div>
+                    <div class="showcase-content">
+                        @if($item->category)
+                        <span class="showcase-tag">{{ $item->category }}</span>
+                        @endif
+                        <h3 class="showcase-title">{{ $item->title }}</h3>
+                        @if($item->description)
+                        <p class="showcase-desc">{{ Str::limit($item->description, 90) }}</p>
+                        @endif
+                    </div>
                 </div>
             </div>
             @endforeach
         </div>
-        <div style="text-align:center;margin-top:48px">
-            <a href="{{ route('portfolio') }}" class="btn btn-primary">View All Projects</a>
+
+        {{-- Navigation dots --}}
+        <div class="showcase-dots" id="showcaseDots">
+            @foreach($portfolio->take(6) as $i => $item)
+            <button class="showcase-dot {{ $i === 0 ? 'active' : '' }}" data-index="{{ $i }}"></button>
+            @endforeach
         </div>
+
+        {{-- Arrow controls --}}
+        <button class="showcase-arrow showcase-arrow-left" id="showcasePrev">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+        </button>
+        <button class="showcase-arrow showcase-arrow-right" id="showcaseNext">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6" />
+            </svg>
+        </button>
+    </div>
+
+    <div style="text-align:center;margin-top:48px">
+        <a href="{{ route('portfolio') }}" class="btn btn-primary btn-arrow">View All Projects</a>
     </div>
 </section>
 @endif

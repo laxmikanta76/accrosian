@@ -22,46 +22,54 @@ cloud, and AI domains.')
     </div>
 </section>
 
-<section style="padding:100px 0">
-    <div class="container">
-
-        @if($categories->isNotEmpty())
-        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:48px" class="reveal">
-            <button class="portfolio-filter-btn active" data-filter="all">All Projects</button>
-            @foreach($categories as $cat)
-            <button class="portfolio-filter-btn" data-filter="{{ Str::slug($cat) }}">{{ $cat }}</button>
-            @endforeach
-        </div>
-        @endif
-
-        <div class="portfolio-grid" id="portfolioGrid">
+<section style="padding:60px 0 0">
+    <div class="showcase-track-wrap">
+        <div class="showcase-track" id="showcaseTrack">
             @forelse($items as $i => $item)
-            <div class="portfolio-card reveal reveal-delay-{{ ($i%3)+1 }}"
-                data-category="{{ Str::slug($item->category) }}">
-                @if($item->image && !str_starts_with($item->image,'assets/'))
-                <img src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}" class="portfolio-img" />
-                @else
-                <img src="{{ asset('assets/images/about-us.jpg') }}" alt="{{ $item->title }}" class="portfolio-img" />
-                @endif
-                <div class="portfolio-overlay">
-                    @if($item->category)
-                    <div class="portfolio-tag">{{ $item->category }}</div>
+            <div class="showcase-card" data-index="{{ $i }}">
+                <div class="showcase-card-inner">
+                    @if($item->image && !str_starts_with($item->image,'assets/'))
+                    <img src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}" class="showcase-img" />
+                    @else
+                    <img src="{{ asset('assets/images/about-us.jpg') }}" alt="{{ $item->title }}"
+                        class="showcase-img" />
                     @endif
-                    <h3 class="portfolio-title">{{ $item->title }}</h3>
-                    @if($item->description)
-                    <p style="color:rgba(255,255,255,0.8);font-size:0.85rem;margin-top:8px;line-height:1.5">
-                        {{ Str::limit($item->description, 100) }}</p>
-                    @endif
+                    <div class="showcase-overlay"></div>
+                    <div class="showcase-content">
+                        @if($item->category)
+                        <span class="showcase-tag">{{ $item->category }}</span>
+                        @endif
+                        <h3 class="showcase-title">{{ $item->title }}</h3>
+                        @if($item->description)
+                        <p class="showcase-desc">{{ Str::limit($item->description, 90) }}</p>
+                        @endif
+                    </div>
                 </div>
             </div>
             @empty
-            <div style="text-align:center;padding:80px;grid-column:1/-1;color:var(--text-light)">
+            <div style="text-align:center;padding:80px;color:var(--text-light);min-width:100vw">
                 <div style="font-size:3rem;margin-bottom:16px">🚧</div>
                 <h3>Portfolio Coming Soon</h3>
-                <p style="margin-top:8px">We're currently updating our portfolio. Check back soon!</p>
             </div>
             @endforelse
         </div>
+
+        <div class="showcase-dots" id="showcaseDots">
+            @foreach($items as $i => $item)
+            <button class="showcase-dot {{ $i === 0 ? 'active' : '' }}" data-index="{{ $i }}"></button>
+            @endforeach
+        </div>
+
+        <button class="showcase-arrow showcase-arrow-left" id="showcasePrev">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+        </button>
+        <button class="showcase-arrow showcase-arrow-right" id="showcaseNext">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6" />
+            </svg>
+        </button>
     </div>
 </section>
 

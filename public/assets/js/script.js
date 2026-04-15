@@ -245,3 +245,107 @@ console.log(
   "color:#E8750A;font-size:16px;font-weight:bold;",
 );
 
+// ============ APPLE SHOWCASE ============
+(function () {
+    const track   = document.getElementById('showcaseTrack');
+    const dots    = document.querySelectorAll('.showcase-dot');
+    const cards   = document.querySelectorAll('.showcase-card');
+    const btnPrev = document.getElementById('showcasePrev');
+    const btnNext = document.getElementById('showcaseNext');
+
+    if (!track || !cards.length) return;
+
+    let current   = 0;
+    let isDragging = false;
+    let startX    = 0;
+    let scrollStart = 0;
+
+    // ── Scroll to card by index ──
+    function goTo(index) {
+        index = Math.max(0, Math.min(index, cards.length - 1));
+        current = index;
+
+        const card     = cards[index];
+        const trackRect = track.getBoundingClientRect();
+        const cardRect  = card.getBoundingClientRect();
+
+        // center the card
+        const offset = cardRect.left - trackRect.left
+                     - (trackRect.width / 2)
+                     + (cardRect.width / 2)
+                     + track.scrollLeft;
+
+        track.scrollTo({ left: offset, behavior: 'smooth' });
+        updateState();
+    }
+
+    // ── Update active / adjacent states ──
+    function updateState() {
+        cards.forEach((c, i) => {
+            c.classList.remove('active', 'adjacent');
+            if (i === current)               c.classList.add('active');
+            else if (Math.abs(i - current) === 1) c.classList.add('adjacent');
+        });
+
+        dots.forEach((d, i) => {
+            d.classList.toggle('active', i === current);
+        });
+    }
+
+    // ── Detect which card is centered after free scroll ──
+    let scrollTimer;
+    track.addEventListener('scroll', () => {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+            const center = track.scrollLeft + track.clientWidth / 2;
+            let closest = 0, minDist = Infinity;
+            cards.forEach((c, i) => {
+                const dist = Math.abs(
+                    c.offsetLeft + c.offsetWidth / 2 - center
+                );
+                if (dist < minDist) { minDist = dist; closest = i; }
+            });
+            if (closest !== current) {
+                current = closest;
+                updateState();
+            }
+        }, 80);
+    });
+
+    // ── Arrow buttons ──
+    btnPrev?.addEventListener('click', () => goTo(current - 1));
+    btnNext?.addEventListener('click', () => goTo(current + 1));
+
+    // ── Dot buttons ──
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+    // ── Click on side cards to navigate ──
+    cards.forEach((card, i) => {
+        card.addEventListener('click', () => {
+            if (i !== current) goTo(i);
+        });
+    });
+
+    // ── Mouse drag ──
+    track.addEventListener('mousedown', e => {
+        isDragging = true;
+        startX     = e.pageX;
+        scrollStart = track.scrollLeft;
+        track.classList.add('grabbing');
+    });
+    track.addEventListener('mousemove', e => {
+        if (!isDragging) return;
+        track.scrollLeft = scrollStart - (e.pageX - startX);
+    });
+    track.addEventListener('mouseup',   () => { isDragging = false; track.classList.remove('grabbing'); });
+    track.addEventListener('mouseleave',() => { isDragging = false; track.classList.remove('grabbing'); });
+
+    // ── Keyboard navigation ──
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft')  goTo(current - 1);
+        if (e.key === 'ArrowRight') goTo(current + 1);
+    });
+
+    // ── Init ──
+    goTo(0);
+})();
