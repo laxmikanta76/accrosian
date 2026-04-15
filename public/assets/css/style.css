@@ -3568,3 +3568,80 @@ select option {
     }
 }
 
+/* ===== PREMIUM SERVICE DESIGN ===== */
+
+.premium-service h3 {
+  margin-top: 35px;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.premium-service p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* GRID CARDS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.mini-card {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.mini-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--orange);
+  box-shadow: 0 8px 30px rgba(255,122,0,0.15);
+}
+
+/* DIFFERENT COLORS */
+.problem .mini-card {
+  border-color: rgba(255,0,0,0.2);
+}
+
+.solution .mini-card {
+  border-color: rgba(0,255,150,0.2);
+}
+
+/* PROGRESS BAR */
+.progress-box {
+  margin: 20px 0 40px;
+}
+
+.progress-item {
+  margin-bottom: 15px;
+}
+
+.progress-item span {
+  font-size: 0.85rem;
+}
+
+.bar {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #ff7a00, #ffb347);
+}
+
+/* FULL WIDTH */
+.service-full {
+  margin-top: 60px;
+}
+
