@@ -33,8 +33,9 @@
         {{-- Top: Image right, intro text left --}}
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start;" class="reveal">
             <div>
-                <span class="section-tag">Overview</span>
-                <h2 class="section-title">What We <span class="text-gradient">Deliver</span></h2>
+                <!-- <span class="section-tag">Overview</span> -->
+                <h2 class="section-title">Custom Mobile Application Development<span class="text-gradient">Services for
+                        Modern Businesses</span></h2>
                 <p style="color:var(--text-light);line-height:1.8;margin-top:16px;font-size:1.05rem;">
                     {{ $service->short_description }}
                 </p>
