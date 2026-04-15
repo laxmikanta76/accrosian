@@ -23,7 +23,7 @@
     <div class="container page-hero-inner">
         <!-- <div style="font-size:4rem;margin-bottom:16px">{{ $service->icon }}</div> -->
         <h1 class="page-hero-title"><span class="text-gradient">{{ $service->title }}</span></h1>
-        <!-- <p class="page-hero-sub">{{ $service->short_description }}</p> -->
+        <p class="page-hero-sub">{{ $service->short_description }}</p>
     </div>
 </section>
 

@@ -23,7 +23,7 @@
     <div class="container page-hero-inner">
         <!-- <div style="font-size:4rem;margin-bottom:16px"><?php echo e($service->icon); ?></div> -->
         <h1 class="page-hero-title"><span class="text-gradient"><?php echo e($service->title); ?></span></h1>
-        <p class="page-hero-sub"><?php echo e($service->short_description); ?></p>
+        <!-- <p class="page-hero-sub"><?php echo e($service->short_description); ?></p> -->
     </div>
 </section>
 
@@ -36,10 +36,9 @@
                 <span class="section-tag">Overview</span>
                 <h2 class="section-title">What We <span class="text-gradient">Deliver</span></h2>
                 <p style="color:var(--text-light);line-height:1.8;margin-top:16px;font-size:1.05rem;">
-                    We build high-performance mobile apps.Designed for scalability and growth.Optimized for speed
-                    andUX.Designed for scalability and growth.Optimized for speed and UX.Built with modern
-                    technologies.We build high-performance mobile apps.Designed for scalability and growth.Optimized for
-                    speed and UX.Built with modern technologies.
+                    <?php echo e($service->short_description); ?>
+
+                </p>
             </div>
             <div class="reveal reveal-delay-2">
                 <?php if($service->image && !str_starts_with($service->image,'assets/')): ?>
