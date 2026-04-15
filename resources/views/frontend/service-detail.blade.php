@@ -36,7 +36,10 @@
                 <span class="section-tag">Overview</span>
                 <h2 class="section-title">What We <span class="text-gradient">Deliver</span></h2>
                 <p style="color:var(--text-light);line-height:1.8;margin-top:16px;font-size:1.05rem;">
-                    {{ $service->short_description }}
+                    We build high-performance mobile apps.<br>
+                    Designed for scalability and growth.<br>
+                    Optimized for speed and UX.<br>
+                    Built with modern technologies.
                 </p>
             </div>
             <div class="reveal reveal-delay-2">
