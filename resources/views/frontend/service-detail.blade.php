@@ -36,11 +36,10 @@
                 <span class="section-tag">Overview</span>
                 <h2 class="section-title">What We <span class="text-gradient">Deliver</span></h2>
                 <p style="color:var(--text-light);line-height:1.8;margin-top:16px;font-size:1.05rem;">
-                    We build high-performance mobile apps.<br>
-                    Designed for scalability and growth.<br>
-                    Optimized for speed and UX.<br>
-                    Built with modern technologies.
-                </p>
+                    We build high-performance mobile apps.Designed for scalability and growth.Optimized for speed
+                    andUX.Designed for scalability and growth.Optimized for speed and UX.Built with modern
+                    technologies.We build high-performance mobile apps.Designed for scalability and growth.Optimized for
+                    speed and UX.Built with modern technologies.
             </div>
             <div class="reveal reveal-delay-2">
                 @if($service->image && !str_starts_with($service->image,'assets/'))
