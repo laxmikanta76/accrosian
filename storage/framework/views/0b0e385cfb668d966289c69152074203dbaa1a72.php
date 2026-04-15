@@ -28,50 +28,34 @@
 </section>
 
 <section style="padding:100px 0">
-
-    <!-- TOP GRID (LEFT + IMAGE) -->
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start">
-
-            <!-- LEFT CONTENT -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start" class="reveal">
             <div>
                 <span class="section-tag">Overview</span>
-                <h2 class="section-title">
-                    What We <span class="text-gradient">Deliver</span>
-                </h2>
+                <h2 class="section-title">What We <span class="text-gradient">Deliver</span></h2>
+                <div style="color:var(--text-light);line-height:1.8;margin-top:24px" class="service-full-desc">
+                    <?php echo $service->full_description; ?>
 
-                <!-- ONLY SHORT CONTENT HERE -->
-                <p style="color:var(--text-light);line-height:1.8;margin-top:20px">
-                    <?php echo e($service->short_description); ?>
-
-                </p>
-
-                <div style="margin-top:30px;display:flex;gap:16px">
+                </div>
+                <div style="margin-top:36px;display:flex;gap:16px;flex-wrap:wrap">
                     <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary">Get a Quote</a>
                     <a href="<?php echo e(route('services')); ?>" class="btn btn-outline">All Services</a>
                 </div>
             </div>
-
-            <!-- IMAGE -->
-            <div>
-                <img src="<?php echo e(asset('storage/'.$service->image)); ?>" style="width:100%;border-radius:16px;">
+            <div class="reveal reveal-delay-2">
+                <?php if($service->image && !str_starts_with($service->image,'assets/')): ?>
+                <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>"
+                    style="width:100%;border-radius:16px;object-fit:cover" />
+                <?php elseif($service->image): ?>
+                <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>"
+                    style="width:100%;border-radius:16px;object-fit:cover" />
+                <?php else: ?>
+                <img src="<?php echo e(asset('assets/images/web-dev-img.png')); ?>" alt="<?php echo e($service->title); ?>"
+                    style="width:100%;border-radius:16px;object-fit:cover" />
+                <?php endif; ?>
             </div>
-
         </div>
     </div>
-
-    <!-- 🔥 FULL WIDTH CONTENT (IMPORTANT) -->
-    <div style="width:100%;margin-top:80px">
-        <div class="container-wide">
-
-            <div class="service-full-desc">
-                <?php echo $service->full_description; ?>
-
-            </div>
-
-        </div>
-    </div>
-
 </section>
 
 <?php if($others->isNotEmpty()): ?>
