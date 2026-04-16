@@ -249,6 +249,8 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Why Accrosian</span>
             <h2 class="section-title">Built for <span class="text-gradient">Performance & Scale</span></h2>
+            <p class="process-header-sub">We deliver high-performance, secure, and scalable digital solutions with
+                speed, reliability, and dedicated support to drive your business growth</p>
         </div>
         <div class="features-grid">
             <div class="feature-card reveal reveal-delay-1">
@@ -284,7 +286,8 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
     <div class="showcase-header reveal">
         <span class="section-tag">Our Work</span>
         <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
-        <p class="showcase-sub">Real projects, real results — explore our work across industries.</p>
+        <p class="showcase-sub">Explore our featured projects showcasing innovative solutions, real-world impact, and
+            successful results delivered across diverse industries and client needs</p>
     </div>
 
     <div class="showcase-track-wrap">
@@ -345,6 +348,8 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Client Love</span>
             <h2 class="section-title">What Our Clients <span class="text-gradient">Say About Us</span></h2>
+            <p class="showcase-sub">Hear from our satisfied clients who trust us for delivering reliable, innovative
+                solutions and exceptional results that exceed expectations</p>
         </div>
         <div class="testimonials-slider">
             <div class="testimonials-track">
