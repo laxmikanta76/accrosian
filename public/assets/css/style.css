@@ -172,14 +172,17 @@ body {
 }
 
 .btn-outline {
-  background: transparent;
+  background: var(--gradient-orange);
   color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  /* border: 1px solid rgba(255, 255, 255, 0.25); */
+  box-shadow: 0 4px 24px rgba(232, 117, 10, 0.35);
 }
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.08);
+  /* background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px); */
   transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(232, 117, 10, 0.5);
 }
 
 .btn-sm {
