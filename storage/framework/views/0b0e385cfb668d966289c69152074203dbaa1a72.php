@@ -34,13 +34,11 @@
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start;" class="reveal">
             <div>
                 <!-- <span class="section-tag">Overview</span> -->
-                <h2 class="section-title">Mobile application development requires mastering UI design,<span
-                        class="text-gradient"> performance optimization, platform guidelines, testing, debugging, and
-                        user analytics</span></h2>
-                <!-- <p style="color:var(--text-light);line-height:1.8;margin-top:16px;font-size:1.05rem;">
+                <h2 class="section-title">What We <span class="text-gradient">Deliver</span></h2>
+                <p style="color:var(--text-light);line-height:1.8;margin-top:16px;font-size:1.05rem;">
                     <?php echo e($service->short_description); ?>
 
-                </p> -->
+                </p>
             </div>
             <div class="reveal reveal-delay-2">
                 <?php if($service->image && !str_starts_with($service->image,'assets/')): ?>

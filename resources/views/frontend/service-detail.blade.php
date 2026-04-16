@@ -23,7 +23,7 @@
     <div class="container page-hero-inner">
         <!-- <div style="font-size:4rem;margin-bottom:16px">{{ $service->icon }}</div> -->
         <h1 class="page-hero-title"><span class="text-gradient">{{ $service->title }}</span></h1>
-        <p class="page-hero-sub">{{ $service->short_description }}</p>
+        <!-- <p class="page-hero-sub">{{ $service->short_description }}</p> -->
     </div>
 </section>
 
@@ -34,7 +34,7 @@
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start;" class="reveal">
             <div>
                 <!-- <span class="section-tag">Overview</span> -->
-                <h2 class="section-title">What We <span class="text-gradient">Deliver</span></h2>
+                <h2 class="section-title">What We <span class="text-gradient">Offer</span></h2>
                 <p style="color:var(--text-light);line-height:1.8;margin-top:16px;font-size:1.05rem;">
                     {{ $service->short_description }}
                 </p>
