@@ -85,13 +85,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  background: white;
 }
 .container-wide {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
-  background: white;
 }
 
 .section-tag {
