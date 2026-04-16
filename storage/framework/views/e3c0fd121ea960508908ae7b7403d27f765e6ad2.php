@@ -76,12 +76,11 @@
         <?php if(auth()->guard()->check()): ?>
         <div style="display:flex;align-items:center;gap:8px;margin-left:8px;">
             <?php if(auth()->user()->role === 'admin'): ?>
-            <a href="<?php echo e(route('admin.dashboard')); ?>" class="btn btn-outline btn-sm">Admin</a>
+            <a href="<?php echo e(route('admin.dashboard')); ?>" class="btn btn-primary btn-sm nav-cta">Admin</a>
             <?php endif; ?>
             <form action="<?php echo e(route('logout')); ?>" method="POST" style="margin:0;">
                 <?php echo csrf_field(); ?>
-                <button type="submit" class="btn btn-sm"
-                    style="background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;cursor:pointer;">Logout</button>
+                <button type="submit" class="btn btn-primary btn-sm nav-cta">Logout</button>
             </form>
         </div>
         <?php endif; ?>
