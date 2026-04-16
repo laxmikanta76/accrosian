@@ -56,8 +56,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--white);
-  color: var(--navy);
+  background: var(--navy);
+  color: var(--white);
   overflow-x: hidden;
   line-height: 1.6;
 }
@@ -85,6 +85,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  background: white;
 }
 .container-wide {
   max-width: 1400px;
