@@ -284,7 +284,8 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
     <div class="showcase-header reveal">
         <span class="section-tag">Our Work</span>
         <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
-        <p class="showcase-sub">Explore our featured projects showcasing innovative solutions, real-world impact, and
+        <p class="process-header-sub">Explore our featured projects showcasing innovative solutions, real-world impact,
+            and
             successful results delivered across diverse industries and client needs</p>
     </div>
 
@@ -346,7 +347,8 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Client Love</span>
             <h2 class="section-title">What Our Clients <span class="text-gradient">Say About Us</span></h2>
-            <p class="showcase-sub">Hear from our satisfied clients who trust us for delivering reliable, innovative
+            <p class="process-header-sub">>Hear from our satisfied clients who trust us for delivering reliable,
+                innovative
                 solutions and exceptional results that exceed expectations</p>
         </div>
         <div class="testimonials-slider">
