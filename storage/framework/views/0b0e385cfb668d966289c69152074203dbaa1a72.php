@@ -55,7 +55,7 @@
         </div>
 
         
-        <div style="margin-top:40px;color:var(--text-light);line-height:1.8;" class="service-full-desc reveal">
+        <div style="margin-top:10px;color:var(--text-light);line-height:1.8;" class="service-full-desc reveal">
             <?php echo $service->full_description; ?>
 
         </div>
