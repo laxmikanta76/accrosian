@@ -56,8 +56,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--navy);
-  color: var(--white);
+  background: var(--white);
+  color: var(--navy);
   overflow-x: hidden;
   line-height: 1.6;
 }
@@ -1608,7 +1608,7 @@ body {
 
 /* ============ FOOTER ============ */
 .footer {
-  background: var(--navy-mid);
+  background: rgba(10, 14, 46, 0.95);
   border-top: 1px solid var(--glass-border);
   padding: 80px 0 0;
 }

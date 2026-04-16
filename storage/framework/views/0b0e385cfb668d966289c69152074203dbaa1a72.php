@@ -25,7 +25,7 @@
         <h1 class="page-hero-title"><span class="text-gradient"><?php echo e($service->title); ?></span></h1>
         <p class="page-hero-sub">Right from conceptualization to planning and development to deployment, we prioritize
             collaboration and transparency at every stage of mobile app development.</p>
-        <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary">Get a Quote</a>
+        <a style="margin-top:20px" href="<?php echo e(route('contact')); ?>" class="btn btn-primary">Get a Quote</a>
     </div>
 
 </section>
