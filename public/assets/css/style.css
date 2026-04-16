@@ -5001,13 +5001,48 @@ select option {
 .industry-card:hover::before { transform: scaleX(1); }
  
 .industry-icon {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    display: block;
-    transition: var(--transition);
+     width: 70px;
+  height: 70px;
+  margin: 0 auto 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  /* subtle glass bg */
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+
+  transition: var(--transition);
+}
+/* SVG ICON STYLE */
+.industry-icon svg {
+  width: 34px;
+  height: 34px;
+  stroke: #2bbecb; /* teal like your image */
+  stroke-width: 2;
+  fill: none;
+  transition: var(--transition);
 }
  
-.industry-card:hover .industry-icon { transform: scale(1.15); }
+.industry-card:hover .industry-icon { 
+  transform: translateY(-6px) scale(1.08);
+  border-color: rgba(43, 190, 203, 0.4);
+  box-shadow: 0 10px 30px rgba(43, 190, 203, 0.2); 
+}
+
+.industry-card:hover .industry-icon svg {
+  stroke: #00e0ff;
+  transform: scale(1.15);
+}
+
+.industry-card:hover .industry-icon {
+  box-shadow: 
+    0 10px 30px rgba(43,190,203,0.25),
+    0 0 20px rgba(0,224,255,0.2);
+}
  
 .industry-name {
     font-family: var(--font-display);
