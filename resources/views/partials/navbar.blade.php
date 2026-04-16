@@ -75,12 +75,11 @@
         @auth
         <div style="display:flex;align-items:center;gap:8px;margin-left:8px;">
             @if(auth()->user()->role === 'admin')
-            <a href="{{ route('admin.dashboard') }}" class="btn btn-outline btn-sm">Admin</a>
+            <a href="{{ route('admin.dashboard') }}" class="btn btn-primary btn-sm nav-cta">Admin</a>
             @endif
             <form action="{{ route('logout') }}" method="POST" style="margin:0;">
                 @csrf
-                <button type="submit" class="btn btn-sm"
-                    style="background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;cursor:pointer;">Logout</button>
+                <button type="submit" class="btn btn-primary btn-sm nav-cta">Logout</button>
             </form>
         </div>
         @endauth
