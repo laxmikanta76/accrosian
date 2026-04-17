@@ -130,7 +130,7 @@ body {
   color: var(--black);
   max-width: 560px;
   line-height: 1.7;
-  font-weight: 450;
+  font-weight: 500;
   margin-bottom: 48px;
 }
 
@@ -1468,7 +1468,7 @@ body {
 }
 
 .testimonial-card {
-  background: var(--gradient-card);
+  background: var(--navy-light);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-lg);
   padding: 40px;
@@ -1484,7 +1484,7 @@ body {
 .testimonial-text {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: var(--text-light);
+  color: var(--white);
   margin-bottom: 28px;
   font-style: italic;
 }
@@ -1512,7 +1512,7 @@ body {
 }
 .testimonial-role {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--white);
 }
 
 .slider-controls {
