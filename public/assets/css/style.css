@@ -1382,7 +1382,7 @@ body {
 }
 .clients-label {
   text-align: center;
-  color: var(--text-muted);
+  color: var(--white);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -1418,6 +1418,7 @@ body {
   align-items: center;
   animation: scrollTrack 30s linear infinite;
   width: max-content;
+  background: var(--navy-light);
 }
 @keyframes scrollTrack {
   from {

@@ -14,6 +14,8 @@
         <a href="<?php echo e(route('portfolio')); ?>">Portfolio</a>
         <a href="<?php echo e(route('blog')); ?>">Blog</a>
         <a href="<?php echo e(route('contact')); ?>">Contact</a>
+        <a href="<?php echo e(route('student.register')); ?>">Student Registration</a>
+        <a href="<?php echo e(route('airs')); ?>">AIRS Program</a>
 
         <?php if(auth()->guard()->check()): ?>
         <?php if(auth()->user()->role === 'admin'): ?>
