@@ -56,8 +56,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--white);
-  color: var(--navy);
+  background: var(--navy);
+  color: var(--white);
   overflow-x: hidden;
   line-height: 1.6;
 }
@@ -1382,7 +1382,7 @@ body {
 }
 .clients-label {
   text-align: center;
-  color: var(--black);
+  color: var(--text-muted);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -1418,7 +1418,6 @@ body {
   align-items: center;
   animation: scrollTrack 30s linear infinite;
   width: max-content;
-  background: var(--navy);
 }
 @keyframes scrollTrack {
   from {
@@ -1438,7 +1437,7 @@ body {
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-muted);
   display: flex;
   align-items: center;
   padding: 0 8px;
