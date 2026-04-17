@@ -4315,7 +4315,7 @@ select option {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    background: var(--navy-light);
+    background: var(--text-light);
 }
  
 .tech-tag-item {
