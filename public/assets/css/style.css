@@ -4226,7 +4226,7 @@ select option {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--black);
+    color: var(--white);
 }
  
 .case-title {
@@ -4250,13 +4250,13 @@ select option {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--black);
+    color: var(--white);
     margin-bottom: 6px;
 }
  
 .case-detail-text {
     font-size: 0.88rem;
-    color: var(--black);
+    color: var(--white);
     line-height: 1.6;
 }
  
