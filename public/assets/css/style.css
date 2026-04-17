@@ -3072,7 +3072,7 @@ select option {
 }
 
 .faq-subtitle {
-    color: var(--text-muted);
+    color: var(--black);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -3091,7 +3091,7 @@ select option {
     width: 100%;
     background: none;
     border: none;
-    color: #fff;
+    color: var(--black);
     font-size: 18px;
     font-weight: 600;
     display: flex;
@@ -3109,7 +3109,7 @@ select option {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
-    color: var(--text-muted);
+    color: var(--black);
 }
 
 .faq-item.active .faq-answer {
