@@ -96,9 +96,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(232, 117, 10, 0.12);
+  background:var(--navy-light);
   border: 1px solid rgba(232, 117, 10, 0.3);
-  color: var(--orange-light);
+  color: var(--white);
   font-family: var(--font-display);
   font-size: 0.78rem;
   font-weight: 600;
@@ -1382,7 +1382,7 @@ body {
 }
 .clients-label {
   text-align: center;
-  color: var(--white);
+  color: var(--navy-light);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -1438,7 +1438,7 @@ body {
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--text-muted);
+  color: var(--white);
   display: flex;
   align-items: center;
   padding: 0 8px;
