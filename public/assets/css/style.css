@@ -1601,8 +1601,9 @@ body {
   line-height: 1.2;
 }
 .cta-subtitle {
-  color: var(--text-light);
+  color: var(--black);
   font-size: 1.1rem;
+  font-weight: 600;
   margin-bottom: 40px;
 }
 .cta-actions {
