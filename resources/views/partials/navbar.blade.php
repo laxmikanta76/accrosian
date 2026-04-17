@@ -71,7 +71,6 @@
                 </div>
             </li>
         </ul>
-        <a href="{{ route('contact') }}" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
         @auth
         <div style="display:flex;align-items:center;gap:8px;margin-left:8px;">
             @if(auth()->user()->role === 'admin')
