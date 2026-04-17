@@ -4141,7 +4141,7 @@ select option {
 .proc-step-num {
     width: 56px; height: 56px;
     border-radius: 50%;
-    background: var(--navy-mid);
+    background: var(--navy-light);
     border: 2px solid var(--glass-border);
     display: flex; align-items: center; justify-content: center;
     font-size: 1.2rem;
@@ -4151,7 +4151,7 @@ select option {
 }
  
 .proc-step:hover .proc-step-num {
-    border-color: var(--orange);
+    border-color: var(--navy);
     background: rgba(232,117,10,0.12);
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(232,117,10,0.3);
