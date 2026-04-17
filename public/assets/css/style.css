@@ -3914,7 +3914,7 @@ select option {
 /* ── PROBLEM SOLUTION ── */
 .prob-sol-section {
     padding: 100px 80px;
-    background: var(--navy);
+    background: var(--white);
     position: relative;
     overflow: hidden;
 }
