@@ -242,7 +242,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
 </section>
 
 
-<section class="features-section">
+<section class="process-section">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Why Accrosian</span>
