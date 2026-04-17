@@ -21,6 +21,9 @@
             <span style="color:rgba(255,255,255,0.7);font-size:0.85rem"><?php echo e($post->read_time); ?></span>
         </div>
         <h1 class="page-hero-title" style="font-size:clamp(1rem, 3vw, 2.5rem)"><?php echo e($post->title); ?></h1>
+        <p class="page-hero-sub">Artificial intelligence is transforming software development by enhancing automation,
+            improving efficiency, enabling smarter solutions, and accelerating innovation across modern digital
+            applications</p>
         <a style="margin-top:30px" href="<?php echo e(route('contact')); ?>" class="btn btn-primary">Get a Quote</a>
     </div>
 </section>
