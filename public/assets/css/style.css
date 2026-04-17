@@ -4167,14 +4167,15 @@ select option {
  
 .proc-step-desc {
     font-size: 0.75rem;
-    color: var(--text-muted);
+    color: var(--black);
+    font-weight: 500;
     line-height: 1.5;
 }
  
 /* ── CASE STUDIES ── */
 .case-studies-section {
     padding: 100px 80px;
-    background: var(--navy-mid);
+    background: var(--white);
 }
  
 .case-studies-grid {
@@ -4283,7 +4284,7 @@ select option {
 /* ── TECH STACK ── */
 .tech-section {
     padding: 80px;
-    background: var(--navy);
+    background: var(--white);
     border-top: 1px solid var(--glass-border);
     border-bottom: 1px solid var(--glass-border);
 }
