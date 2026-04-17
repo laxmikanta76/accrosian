@@ -4101,7 +4101,7 @@ select option {
 /* ── PROCESS TIMELINE ── */
 .process-section-svc {
     padding: 100px 80px;
-    background: var(--navy);
+    background: var(--white);
     position: relative;
     overflow: hidden;
 }
