@@ -16,6 +16,7 @@
   --off-white: #f4f6ff;
   --text-light: #a8b4d0;
   --text-muted: #6b7a99;
+  --black: #000000;
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
   --card-bg: rgba(26, 32, 96, 0.6);
@@ -126,7 +127,7 @@ body {
 
 .section-subtitle {
   font-size: 1.05rem;
-  color: var(--shadow-card);
+  color: var(--black);
   max-width: 560px;
   line-height: 1.7;
   margin-bottom: 48px;
