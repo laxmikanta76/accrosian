@@ -129,7 +129,8 @@ body {
   font-size: 1.05rem;
   color: var(--black);
   max-width: 560px;
-  line-height: 1.8;
+  line-height: 1.7;
+  font-weight: 450;
   margin-bottom: 48px;
 }
 
@@ -1108,7 +1109,8 @@ body {
 }
 
 .process-header-sub {
-  color: var(--text-light);
+  color: var(--black);
+  font-weight: 450;
   font-size: 1.05rem;
   line-height: 1.75;
   margin-top: 4px;
