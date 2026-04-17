@@ -4187,7 +4187,7 @@ select option {
 }
  
 .case-card {
-    background: rgba(255,255,255,0.02);
+    background: var(--navy-light);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     overflow: hidden;
@@ -4226,7 +4226,7 @@ select option {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: var(--black);
 }
  
 .case-title {
@@ -4250,13 +4250,13 @@ select option {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: var(--black);
     margin-bottom: 6px;
 }
  
 .case-detail-text {
     font-size: 0.88rem;
-    color: var(--text-light);
+    color: var(--black);
     line-height: 1.6;
 }
  
@@ -4315,13 +4315,14 @@ select option {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    background: var(--navy-light);
 }
  
 .tech-tag-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255,255,255,0.04);
+    background: var(--gradient-orange);
     border: 1px solid var(--glass-border);
     border-radius: 10px;
     padding: 10px 18px;
