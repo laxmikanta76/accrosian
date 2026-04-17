@@ -4024,7 +4024,7 @@ select option {
 /* ── CORE SERVICES GRID ── */
 .core-services {
     padding: 100px 80px;
-    background: var(--navy-mid);
+    background: var(--white);
     position: relative;
 }
  
@@ -4037,7 +4037,7 @@ select option {
 }
  
 .core-card {
-    background: rgba(255,255,255,0.03);
+    background: var(--navy-light);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
     padding: 28px;
