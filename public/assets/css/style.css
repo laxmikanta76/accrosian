@@ -4322,14 +4322,14 @@ select option {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: var(--gradient-orange);
+    background: var(--navy-light);
     border: 1px solid var(--glass-border);
     border-radius: 10px;
     padding: 10px 18px;
     font-family: var(--font-display);
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-light);
+    color: var(--white);
     transition: var(--transition);
     cursor: default;
 }
