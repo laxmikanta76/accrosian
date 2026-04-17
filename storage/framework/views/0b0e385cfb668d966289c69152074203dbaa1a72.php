@@ -37,8 +37,9 @@
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start;" class="reveal">
             <div>
                 <!-- <span class="section-tag">Overview</span> -->
-                <h2 class="section-title">What We <span class="text-gradient">Offer</span></h2>
-                <p style="color:var(--text-light);line-height:1.8;margin-top:16px;font-size:1.05rem;">
+                <h2 class="section-title">High-Performance Software <span class="text-gradient">& Digital
+                        Solutions</span></h2>
+                <p style="color:var(--black);line-height:1.8;margin-top:16px;font-size:1.05rem;">
                     <?php echo e($service->short_description); ?>
 
                 </p>
