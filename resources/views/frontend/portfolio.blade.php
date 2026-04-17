@@ -19,6 +19,7 @@ cloud, and AI domains.')
     <div class="container page-hero-inner">
         <h1 class="page-hero-title">Our <span class="text-gradient">Portfolio</span></h1>
         <p class="page-hero-sub">Real projects, real results — explore our work across industries and technologies.</p>
+        <a style="margin-top:30px" href="{{ route('contact') }}" class="btn btn-primary">Get a Quote</a>
     </div>
 </section>
 

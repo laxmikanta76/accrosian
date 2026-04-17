@@ -114,54 +114,55 @@ cloud, and AI domains.'); ?>
 
         <div class="port-industries-grid">
             <div class="industry-card reveal reveal-delay-1">
-                <span class="industry-icon">🏥</span>
+                <div class="industry-icon"><i data-lucide="heart-pulse"></i></div> <!-- Healthcare -->
                 <div class="industry-name">Healthcare</div>
             </div>
             <div class="industry-card reveal reveal-delay-1">
-                <span class="industry-icon">💰</span>
+                <div class="industry-icon"><i data-lucide="banknote"></i></div> <!-- FinTech -->
                 <div class="industry-name">FinTech</div>
             </div>
             <div class="industry-card reveal reveal-delay-2">
-                <span class="industry-icon">🛒</span>
+                <div class="industry-icon"><i data-lucide="shopping-cart"></i></div> <!-- E-Commerce -->
                 <div class="industry-name">E-Commerce</div>
             </div>
             <div class="industry-card reveal reveal-delay-2">
-                <span class="industry-icon">🎓</span>
+                <div class="industry-icon"><i data-lucide="graduation-cap"></i></div> <!-- EdTech -->
                 <div class="industry-name">EdTech</div>
             </div>
             <div class="industry-card reveal reveal-delay-3">
-                <span class="industry-icon">🏭</span>
+                <div class="industry-icon"><i data-lucide="factory"></i></div> <!-- Manufacturing -->
                 <div class="industry-name">Manufacturing</div>
             </div>
             <div class="industry-card reveal reveal-delay-3">
-                <span class="industry-icon">🚚</span>
-                <div class="industry-name">Logistics</div>
-            </div>
-            <div class="industry-card reveal reveal-delay-1">
-                <span class="industry-icon">🏨</span>
-                <div class="industry-name">Hospitality</div>
-            </div>
-            <div class="industry-card reveal reveal-delay-2">
-                <span class="industry-icon">🔐</span>
-                <div class="industry-name">Cybersecurity</div>
-            </div>
-            <div class="industry-card reveal reveal-delay-2">
-                <span class="industry-icon">📱</span>
-                <div class="industry-name">SaaS</div>
-            </div>
-            <div class="industry-card reveal reveal-delay-3">
-                <span class="industry-icon">🌐</span>
-                <div class="industry-name">Media &amp; Tech</div>
-            </div>
-            <div class="industry-card reveal reveal-delay-3">
-                <span class="industry-icon">🏠</span>
-                <div class="industry-name">Real Estate</div>
-            </div>
-            <div class="industry-card reveal reveal-delay-4">
-                <span class="industry-icon">🎮</span>
-                <div class="industry-name">Gaming</div>
-            </div>
+                <<div class="industry-icon"><i data-lucide="truck"></i>
+            </div> <!-- Logistics -->
+            <div class="industry-name">Logistics</div>
         </div>
+        <div class="industry-card reveal reveal-delay-1">
+            <div class="industry-icon"><i data-lucide="hotel"></i></div> <!-- Hospitality -->
+            <div class="industry-name">Hospitality</div>
+        </div>
+        <div class="industry-card reveal reveal-delay-2">
+            <div class="industry-icon"><i data-lucide="shield-check"></i></div> <!-- Cybersecurity -->
+            <div class="industry-name">Cybersecurity</div>
+        </div>
+        <div class="industry-card reveal reveal-delay-2">
+            <div class="industry-icon"><i data-lucide="smartphone"></i></div> <!-- SaaS -->
+            <div class="industry-name">SaaS</div>
+        </div>
+        <div class="industry-card reveal reveal-delay-3">
+            <div class="industry-icon"><i data-lucide="globe"></i></div> <!-- Media -->
+            <div class="industry-name">Media &amp; Tech</div>
+        </div>
+        <div class="industry-card reveal reveal-delay-3">
+            <div class="industry-icon"><i data-lucide="home"></i></div> <!-- Real Estate -->
+            <div class="industry-name">Real Estate</div>
+        </div>
+        <div class="industry-card reveal reveal-delay-4">
+            <div class="industry-icon"><i data-lucide="gamepad-2"></i></div> <!-- Gaming -->
+            <div class="industry-name">Gaming</div>
+        </div>
+    </div>
     </div>
 </section>
 

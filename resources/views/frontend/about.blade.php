@@ -21,6 +21,7 @@ team behind our innovative software solutions.')
         <h1 class="page-hero-title">About <span class="text-gradient">Accrosian</span></h1>
         <p class="page-hero-sub">We are a team of passionate technologists turning ambitious ideas into world-class
             digital products since 2016.</p>
+        <a style="margin-top:30px" href="{{ route('contact') }}" class="btn btn-primary">Get a Quote</a>
     </div>
 </section>
 

@@ -136,6 +136,11 @@
     });
     </script>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+    lucide.createIcons();
+    </script>
+
 </body>
 
 </html><?php /**PATH C:\xamppNew\htdocs\accroNew\resources\views/layouts/app.blade.php ENDPATH**/ ?>
