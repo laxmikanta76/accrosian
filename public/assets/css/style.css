@@ -259,7 +259,7 @@ body {
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: var(--white);
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 8px;
@@ -268,7 +268,7 @@ body {
 }
 .nav-menu a:hover,
 .nav-menu a.active {
-  color: var(--white);
+  color: var(--orange);
   background: rgba(255, 255, 255, 0.07);
 }
 

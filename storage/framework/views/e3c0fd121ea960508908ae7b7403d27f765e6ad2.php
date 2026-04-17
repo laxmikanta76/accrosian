@@ -72,7 +72,6 @@
                 </div>
             </li>
         </ul>
-        <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
         <?php if(auth()->guard()->check()): ?>
         <div style="display:flex;align-items:center;gap:8px;margin-left:8px;">
             <?php if(auth()->user()->role === 'admin'): ?>
