@@ -83,7 +83,7 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px">
             <?php $__currentLoopData = $others; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $other): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <a href="<?php echo e(route('services.show', $other->slug)); ?>"
-                style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;transition:all 0.3s;display:block"
+                style="background:var(--navy-light);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;transition:all 0.3s;display:block"
                 class="reveal">
                 <div style="font-size:2rem;margin-bottom:12px"><?php echo e($other->icon); ?></div>
                 <h4 style="color:var(--text);font-weight:700;margin-bottom:8px"><?php echo e($other->title); ?></h4>
