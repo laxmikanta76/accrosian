@@ -81,7 +81,7 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px">
             @foreach($others as $other)
             <a href="{{ route('services.show', $other->slug) }}"
-                style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;transition:all 0.3s;display:block"
+                style="background:var(--navy-light);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;transition:all 0.3s;display:block"
                 class="reveal">
                 <div style="font-size:2rem;margin-bottom:12px">{{ $other->icon }}</div>
                 <h4 style="color:var(--text);font-weight:700;margin-bottom:8px">{{ $other->title }}</h4>
