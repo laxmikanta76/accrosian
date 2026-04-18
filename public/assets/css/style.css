@@ -622,6 +622,7 @@ body {
   margin-bottom: 24px;
   animation: fadeInUp 0.8s ease 0.2s both;
   margin-top: 40px;
+  color: var(--white);
 }
 
 .hero-description {
