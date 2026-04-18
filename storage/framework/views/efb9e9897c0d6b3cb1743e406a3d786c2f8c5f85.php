@@ -1,18 +1,18 @@
-@extends('layouts.app')
 
-@section('meta_title', $page->meta_title ?? 'About Accrosian – Our Story & Team')
-@section('meta_description', $page->meta_description ?? 'Learn about Accrosian, our mission, values, and the talented
-team behind our innovative software solutions.')
 
-@section('content')
+<?php $__env->startSection('meta_title', $page->meta_title ?? 'About Accrosian – Our Story & Team'); ?>
+<?php $__env->startSection('meta_description', $page->meta_description ?? 'Learn about Accrosian, our mission, values, and the talented
+team behind our innovative software solutions.'); ?>
 
-{{-- PAGE HERO --}}
+<?php $__env->startSection('content'); ?>
+
+
 <section class="page-hero">
-    @if($page && $page->banner_image)
-    <img src="{{ asset('storage/'.$page->banner_image) }}" alt="About Accrosian Banner" class="page-hero-image" />
-    @else
-    <img src="{{ asset('assets/images/hero-bg-img-2.png') }}" alt="About Accrosian Banner" class="page-hero-image" />
-    @endif
+    <?php if($page && $page->banner_image): ?>
+    <img src="<?php echo e(asset('storage/'.$page->banner_image)); ?>" alt="About Accrosian Banner" class="page-hero-image" />
+    <?php else: ?>
+    <img src="<?php echo e(asset('assets/images/hero-bg-img-2.png')); ?>" alt="About Accrosian Banner" class="page-hero-image" />
+    <?php endif; ?>
     <div class="hero-bg-effects">
         <div class="hero-orb hero-orb-1" style="opacity:0.08"></div>
         <div class="hero-grid"></div>
@@ -21,17 +21,17 @@ team behind our innovative software solutions.')
         <h1 class="page-hero-title">About <span class="text-gradient">Accrosian</span></h1>
         <p class="page-hero-sub">We are a team of passionate technologists turning ambitious ideas into world-class
             digital products since 2016.</p>
-        <a style="margin-top:30px" href="{{ route('contact') }}" class="btn btn-primary">Get a Quote</a>
+        <a style="margin-top:30px" href="<?php echo e(route('contact')); ?>" class="btn btn-primary">Get a Quote</a>
     </div>
 </section>
 
-{{-- ABOUT INTRO --}}
+
 <section class="about-intro">
     <div class="container">
         <div class="about-grid">
             <div class="about-image-wrap reveal">
                 <div class="about-image-main">
-                    <img src="{{ asset('assets/images/about-us-img.png') }}" alt="About Accrosian"
+                    <img src="<?php echo e(asset('assets/images/about-us-img.png')); ?>" alt="About Accrosian"
                         class="page-hero-image" />
                     <div class="about-image-icon">🏢</div>
                     <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;">Accrosian Technologies
@@ -60,7 +60,7 @@ team behind our innovative software solutions.')
                     Bhubaneswar for students, where they can work on live projects, gain practical knowledge, and build
                     industry-ready skills.
                 </p>
-                <a href="{{ route('contact') }}" class="btn btn-primary">Work With Us</a>
+                <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary">Work With Us</a>
             </div>
         </div>
 
@@ -93,7 +93,7 @@ team behind our innovative software solutions.')
     </div>
 </section>
 
-{{-- MISSION & VISION --}}
+
 <section class="mission-vision">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
@@ -150,36 +150,36 @@ team behind our innovative software solutions.')
     </div>
 </section>
 
-{{-- STATS --}}
+
 <section style="padding:80px 0;background:var(--surface)">
     <div class="container">
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:40px;text-align:center">
-            @foreach([['250+','Projects Delivered'],['98%','Client Satisfaction'],['8+','Years Experience'],['50+','Team
-            Members']] as $stat)
+            <?php $__currentLoopData = [['250+','Projects Delivered'],['98%','Client Satisfaction'],['8+','Years Experience'],['50+','Team
+            Members']]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $stat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="reveal">
                 <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--orange)">
-                    {{ $stat[0] }}</div>
-                <div style="color:var(--text-light);margin-top:8px">{{ $stat[1] }}</div>
+                    <?php echo e($stat[0]); ?></div>
+                <div style="color:var(--text-light);margin-top:8px"><?php echo e($stat[1]); ?></div>
             </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </div>
 </section>
 
-{{-- CTA --}}
+
 <section class="cta-section">
     <div class="container cta-inner">
         <span class="section-tag" style="margin-bottom:24px">Join Our Journey</span>
         <h2 class="cta-title">Ready to Build <span class="text-gradient">Something Amazing?</span></h2>
         <p class="cta-subtitle">Let's discuss your project and turn your vision into a world-class digital product.</p>
         <div class="cta-actions">
-            <a href="{{ route('contact') }}" class="btn btn-primary btn-arrow">Get In Touch</a>
-            <a href="{{ route('services') }}" class="btn btn-outline">Our Services</a>
+            <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary btn-arrow">Get In Touch</a>
+            <a href="<?php echo e(route('services')); ?>" class="btn btn-outline">Our Services</a>
         </div>
     </div>
 </section>
 
-{{-- FAQ SECTION --}}
+
 <section class="faq-section">
     <div class="container">
         <div class="faq-header reveal">
@@ -194,7 +194,7 @@ team behind our innovative software solutions.')
 
         <div class="faq-container">
 
-            @php
+            <?php
             $faqs = [
             [
             'q' => 'What makes Accrosian a trusted IT company in Hyderabad?',
@@ -226,23 +226,24 @@ team behind our innovative software solutions.')
             with real-world technology.'
             ],
             ];
-            @endphp
+            ?>
 
-            @foreach($faqs as $index => $faq)
+            <?php $__currentLoopData = $faqs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $faq): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="faq-item">
                 <button class="faq-question">
-                    <span>{{ $faq['q'] }}</span>
+                    <span><?php echo e($faq['q']); ?></span>
                     <span class="faq-icon">+</span>
                 </button>
 
                 <div class="faq-answer">
-                    <p>{{ $faq['a'] }}</p>
+                    <p><?php echo e($faq['a']); ?></p>
                 </div>
             </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
         </div>
     </div>
 </section>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xamppNew\htdocs\accroNew\resources\views/frontend/about.blade.php ENDPATH**/ ?>

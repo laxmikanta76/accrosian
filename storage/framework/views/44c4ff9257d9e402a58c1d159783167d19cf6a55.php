@@ -1,15 +1,15 @@
-@extends('layouts.app')
 
-@section('meta_title', 'AIRS – India\'s First Structured Bridge Between Campus and Corporate')
-@section('meta_description', 'AIRS by Accrosian transforms students into industry-ready problem solvers.')
 
-@section('content')
+<?php $__env->startSection('meta_title', 'AIRS – India\'s First Structured Bridge Between Campus and Corporate'); ?>
+<?php $__env->startSection('meta_description', 'AIRS by Accrosian transforms students into industry-ready problem solvers.'); ?>
 
-{{-- ═══════════ HERO ═══════════ --}}
+<?php $__env->startSection('content'); ?>
+
+
 <section
-    style="position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;background:url('{{ asset('assets/images/student-reg-img.png') }}') center/cover no-repeat;">
+    style="position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;background:url('<?php echo e(asset('assets/images/student-reg-img.png')); ?>') center/cover no-repeat;">
 
-    {{-- Animated background --}}
+    
     <div style="position:absolute;inset:0;z-index:0">
         <div style="position:absolute;width:700px;height:700px;border-radius:50%;
                     background:radial-gradient(circle,rgba(255,107,53,0.12) 0%,transparent 70%);
@@ -25,7 +25,7 @@
     <div class="container" style="position:relative;z-index:2">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
 
-            {{-- LEFT --}}
+            
             <div>
                 <div style="display:inline-flex;align-items:center;gap:8px;
                             background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.35);
@@ -52,7 +52,7 @@
                 </p>
 
                 <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:52px">
-                    <a href="{{ route('student.register') }}" style="display:inline-flex;align-items:center;gap:10px;
+                    <a href="<?php echo e(route('student.register')); ?>" style="display:inline-flex;align-items:center;gap:10px;
                               background:var(--orange);color:#fff;padding:15px 34px;
                               border-radius:12px;font-weight:700;font-size:1rem;
                               text-decoration:none;transition:all 0.3s;
@@ -72,31 +72,31 @@
                     </a>
                 </div>
 
-                {{-- Stats --}}
+                
                 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
                             padding:24px;background:rgba(255,255,255,0.03);
                             border:1px solid rgba(255,255,255,0.06);border-radius:16px">
-                    @foreach([['500+','Students'],['50+','Colleges'],['92%','Placement'],['100%','Aligned']] as [$n,$l])
+                    <?php $__currentLoopData = [['500+','Students'],['50+','Colleges'],['92%','Placement'],['100%','Aligned']]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as [$n,$l]): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div style="text-align:center">
                         <div style="font-family:var(--font-display);font-size:1.6rem;font-weight:900;
-                                    color:var(--orange);line-height:1">{{ $n }}</div>
-                        <div style="color:var(--text-muted);font-size:0.78rem;margin-top:4px">{{ $l }}</div>
+                                    color:var(--orange);line-height:1"><?php echo e($n); ?></div>
+                        <div style="color:var(--text-muted);font-size:0.78rem;margin-top:4px"><?php echo e($l); ?></div>
                     </div>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
 
-            {{-- RIGHT — Bridge Visual --}}
+            
             <div style="position:relative">
 
-                {{-- Main bridge card --}}
+                
                 <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);
                             border-radius:24px;padding:36px 28px;
                             backdrop-filter:blur(20px);
                             box-shadow:0 40px 80px rgba(0,0,0,0.3)">
 
                     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px">
-                        {{-- College --}}
+                        
                         <div style="text-align:center">
                             <div style="width:80px;height:80px;border-radius:20px;
                                         background:linear-gradient(135deg,#1e3a8a,#2563eb);
@@ -107,7 +107,7 @@
                             <div style="color:var(--text-muted);font-size:0.78rem;margin-top:4px">Campus Life</div>
                         </div>
 
-                        {{-- Bridge --}}
+                        
                         <div style="flex:1;padding:0 16px;text-align:center">
                             <div style="height:3px;background:linear-gradient(90deg,#2563eb,var(--orange));
                                         border-radius:2px;margin-bottom:12px"></div>
@@ -120,7 +120,7 @@
                                         border-radius:2px;margin-top:12px"></div>
                         </div>
 
-                        {{-- Corporate --}}
+                        
                         <div style="text-align:center">
                             <div style="width:80px;height:80px;border-radius:20px;
                                         background:linear-gradient(135deg,#064e3b,#059669);
@@ -134,17 +134,17 @@
 
                     <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;
                                 display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
-                        @foreach([['📚','Theory → Practice'],['🤖','AI Integration'],['🏆','Career Ready']] as [$e,$t])
+                        <?php $__currentLoopData = [['📚','Theory → Practice'],['🤖','AI Integration'],['🏆','Career Ready']]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as [$e,$t]): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div style="text-align:center;background:rgba(255,255,255,0.03);
                                     border-radius:10px;padding:12px 8px">
-                            <div style="font-size:1.3rem;margin-bottom:6px">{{ $e }}</div>
-                            <div style="font-size:0.75rem;color:var(--text-muted);font-weight:600">{{ $t }}</div>
+                            <div style="font-size:1.3rem;margin-bottom:6px"><?php echo e($e); ?></div>
+                            <div style="font-size:0.75rem;color:var(--text-muted);font-weight:600"><?php echo e($t); ?></div>
                         </div>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
 
-                {{-- Floating cards --}}
+                
                 <div style="position:absolute;top:-20px;right:-20px;
                             background:var(--navy-mid);border:1px solid rgba(255,255,255,0.1);
                             border-radius:14px;padding:12px 18px;
@@ -175,7 +175,7 @@
     </div>
 </section>
 
-{{-- ═══════════ WHAT IS AIRS ═══════════ --}}
+
 <section class="cta-section style=" padding:90px 0;background:var(--navy-mid)">
     <div class="container">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center">
@@ -190,12 +190,12 @@
                     Bridging the gap between learning and industry.
                 </p>
 
-                @foreach([
+                <?php $__currentLoopData = [
                 ['What the current job market looks like','📊'],
                 ['What skills actually matter','🎯'],
                 ['How to prepare in a structured way','📐'],
                 ['How to use AI effectively','🤖'],
-                ] as [$item,$emoji])
+                ]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as [$item,$emoji]): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;
                             padding:16px 20px;background:rgba(255,255,255,0.03);
                             border:1px solid rgba(255,255,255,0.06);border-radius:12px;
@@ -206,12 +206,12 @@
                                 background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);
                                 display:flex;align-items:center;justify-content:center;
                                 font-size:0.75rem;font-weight:800;color:#22c55e;flex-shrink:0">✓</div>
-                    <span style="color:var(--text-light);font-size:0.95rem">{{ $item }}</span>
-                    <span style="margin-left:auto;font-size:1.2rem">{{ $emoji }}</span>
+                    <span style="color:var(--text-light);font-size:0.95rem"><?php echo e($item); ?></span>
+                    <span style="margin-left:auto;font-size:1.2rem"><?php echo e($emoji); ?></span>
                 </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-                <a href="{{ route('student.register') }}" style="display:inline-flex;align-items:center;gap:10px;
+                <a href="<?php echo e(route('student.register')); ?>" style="display:inline-flex;align-items:center;gap:10px;
                           background:var(--orange);color:#fff;padding:14px 32px;
                           border-radius:12px;font-weight:700;text-decoration:none;
                           margin-top:28px;transition:all 0.3s" onmouseover="this.style.transform='translateY(-2px)'"
@@ -220,9 +220,9 @@
                 </a>
             </div>
 
-            {{-- Campus-Corporate Visual --}}
+            
             <div class="reveal" style="display:flex;flex-direction:column;gap:16px">
-                {{-- Campus side --}}
+                
                 <div style="background:linear-gradient(135deg,rgba(30,58,138,0.4),rgba(37,99,235,0.2));
                             border:1px solid rgba(37,99,235,0.3);border-radius:16px;padding:24px">
                     <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
@@ -236,17 +236,17 @@
                         </div>
                     </div>
                     <div style="display:flex;flex-direction:column;gap:8px">
-                        @foreach(['Theoretical Knowledge Only','Academic Projects Only','No Industry Connect'] as $i)
+                        <?php $__currentLoopData = ['Theoretical Knowledge Only','Academic Projects Only','No Industry Connect']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div style="display:flex;align-items:center;gap:10px;
                                     background:rgba(235,87,87,0.08);border-radius:8px;padding:8px 12px">
                             <span style="color:#eb5757;font-size:0.8rem;font-weight:700">✗</span>
-                            <span style="color:var(--text-muted);font-size:0.85rem">{{ $i }}</span>
+                            <span style="color:var(--text-muted);font-size:0.85rem"><?php echo e($i); ?></span>
                         </div>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
 
-                {{-- AIRS Bridge --}}
+                
                 <div style="background:linear-gradient(135deg,var(--orange),#ff9a5c);
                             border-radius:14px;padding:18px 24px;
                             display:flex;align-items:center;justify-content:space-between">
@@ -254,7 +254,7 @@
                     <span style="color:rgba(255,255,255,0.8);font-size:1.4rem">→</span>
                 </div>
 
-                {{-- Corporate side --}}
+                
                 <div style="background:linear-gradient(135deg,rgba(6,78,59,0.4),rgba(5,150,105,0.2));
                             border:1px solid rgba(5,150,105,0.3);border-radius:16px;padding:24px">
                     <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
@@ -267,13 +267,13 @@
                         </div>
                     </div>
                     <div style="display:flex;flex-direction:column;gap:8px">
-                        @foreach(['Real Project Experience','Industry-Grade Skills','Professional Mindset'] as $i)
+                        <?php $__currentLoopData = ['Real Project Experience','Industry-Grade Skills','Professional Mindset']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div style="display:flex;align-items:center;gap:10px;
                                     background:rgba(34,197,94,0.08);border-radius:8px;padding:8px 12px">
                             <span style="color:#22c55e;font-size:0.8rem;font-weight:700">✓</span>
-                            <span style="color:var(--text-light);font-size:0.85rem">{{ $i }}</span>
+                            <span style="color:var(--text-light);font-size:0.85rem"><?php echo e($i); ?></span>
                         </div>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
             </div>
@@ -281,7 +281,7 @@
     </div>
 </section>
 
-{{-- ═══════════ THE GAP IS REAL ═══════════ --}}
+
 <section style="padding:90px 0;background:var(--navy)">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
@@ -297,7 +297,7 @@
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
-            @foreach([
+            <?php $__currentLoopData = [
             ['🧭','No Clear Direction','Students don\'t know where to focus their energy and
             skills.','rgba(255,107,53,0.1)','rgba(255,107,53,0.3)'],
             ['📋','Surface-Level Projects','College projects lack real-world depth and industry
@@ -306,23 +306,23 @@
             outcomes.','rgba(235,87,87,0.1)','rgba(235,87,87,0.3)'],
             ['🏭','No Industry Exposure','Zero connection to how real companies think and
             operate.','rgba(86,204,242,0.1)','rgba(86,204,242,0.3)'],
-            ] as [$icon,$title,$desc,$bg,$border])
-            <div class="reveal" style="background:{{ $bg }};border:1px solid {{ $border }};
+            ]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as [$icon,$title,$desc,$bg,$border]): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="reveal" style="background:<?php echo e($bg); ?>;border:1px solid <?php echo e($border); ?>;
                         border-radius:20px;padding:32px 24px;text-align:center;
                         transition:all 0.3s;cursor:default"
                 onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.3)'"
                 onmouseout="this.style.transform='';this.style.boxShadow=''">
-                <div style="font-size:2.8rem;margin-bottom:18px">{{ $icon }}</div>
+                <div style="font-size:2.8rem;margin-bottom:18px"><?php echo e($icon); ?></div>
                 <h4 style="font-family:var(--font-display);font-weight:800;color:var(--white);
-                           font-size:0.95rem;margin-bottom:12px">{{ $title }}</h4>
-                <p style="color:var(--text-muted);font-size:0.83rem;line-height:1.65">{{ $desc }}</p>
+                           font-size:0.95rem;margin-bottom:12px"><?php echo e($title); ?></h4>
+                <p style="color:var(--text-muted);font-size:0.83rem;line-height:1.65"><?php echo e($desc); ?></p>
             </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </div>
 </section>
 
-{{-- ═══════════ WHY AIRS ═══════════ --}}
+
 <section class="cta-section style=" padding:90px 0;background:var(--navy-mid)">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
@@ -334,7 +334,7 @@
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
-            @foreach([
+            <?php $__currentLoopData = [
             ['🏭','Industry Reality Exposure','#ff6b35','Understand what each role really demands — not just job
             descriptions, but day-to-day reality.','Learn industry expectations','Know hiring criteria'],
             ['📐','Structured Preparation','#6c63ff','A clear path with zero confusion — know exactly what to study and
@@ -343,38 +343,39 @@
             industry-level work.','AI as skill multiplier','Before & after projects'],
             ['💡','Real Project Ownership','#56ccf2','Not just building — explaining, presenting, and owning your work
             like a professional.','Own projects fully','Explain with confidence'],
-            ] as [$icon,$title,$color,$desc,$p1,$p2])
+            ]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as [$icon,$title,$color,$desc,$p1,$p2]): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="reveal" style="border-radius:20px;overflow:hidden;
                         border:1px solid rgba(255,255,255,0.06);
                         background:rgba(255,255,255,0.02);
                         transition:transform 0.3s" onmouseover="this.style.transform='translateY(-8px)'"
                 onmouseout="this.style.transform=''">
-                <div style="background:{{ $color }};padding:20px 22px;
+                <div style="background:<?php echo e($color); ?>;padding:20px 22px;
                             display:flex;align-items:center;gap:12px">
-                    <span style="font-size:1.5rem">{{ $icon }}</span>
+                    <span style="font-size:1.5rem"><?php echo e($icon); ?></span>
                     <span style="font-family:var(--font-display);font-weight:800;
-                                 color:#fff;font-size:0.92rem">{{ $title }}</span>
+                                 color:#fff;font-size:0.92rem"><?php echo e($title); ?></span>
                 </div>
                 <div style="padding:22px">
                     <p style="color:var(--text-light);font-size:0.85rem;
-                              line-height:1.7;margin-bottom:16px">{{ $desc }}</p>
+                              line-height:1.7;margin-bottom:16px"><?php echo e($desc); ?></p>
                     <div style="display:flex;flex-direction:column;gap:8px">
-                        @foreach([$p1,$p2] as $point)
+                        <?php $__currentLoopData = [$p1,$p2]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $point): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div style="display:flex;align-items:center;gap:8px;
                                     font-size:0.8rem;color:var(--text-muted)">
-                            <span style="color:{{ $color }};font-weight:700">✓</span>
-                            {{ $point }}
+                            <span style="color:<?php echo e($color); ?>;font-weight:700">✓</span>
+                            <?php echo e($point); ?>
+
                         </div>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
             </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </div>
 </section>
 
-{{-- ═══════════ BEFORE VS AFTER ═══════════ --}}
+
 <section style="padding:90px 0;background:var(--navy)">
     <div class="container" style="max-width:920px">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
@@ -389,7 +390,7 @@
                     border-radius:20px;overflow:hidden;
                     border:1px solid rgba(255,255,255,0.08)" class="reveal">
 
-            {{-- BEFORE --}}
+            
             <div style="background:rgba(30,58,138,0.15)">
                 <div style="background:linear-gradient(135deg,#1e3a8a,#2563eb);
                             padding:18px 28px;display:flex;align-items:center;gap:12px">
@@ -398,26 +399,26 @@
                                  color:#fff;font-size:1rem">Before AIRS</span>
                 </div>
                 <div style="padding:28px">
-                    @foreach([
+                    <?php $__currentLoopData = [
                     'Struggle to Explain Projects',
                     'AI Without Structure',
                     'Scattered Preparation',
                     'Lack Confidence in Interviews',
                     'No Industry Connections',
                     'Unclear Career Path',
-                    ] as $item)
+                    ]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
                         <div style="width:22px;height:22px;border-radius:50%;flex-shrink:0;
                                     background:rgba(235,87,87,0.15);border:1px solid rgba(235,87,87,0.4);
                                     display:flex;align-items:center;justify-content:center;
                                     font-size:0.72rem;font-weight:700;color:#eb5757">✗</div>
-                        <span style="color:var(--text-light);font-size:0.9rem">{{ $item }}</span>
+                        <span style="color:var(--text-light);font-size:0.9rem"><?php echo e($item); ?></span>
                     </div>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
 
-            {{-- DIVIDER --}}
+            
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
                         background:linear-gradient(180deg,rgba(255,107,53,0.08),rgba(255,107,53,0.15));
                         border-left:1px solid rgba(255,107,53,0.2);border-right:1px solid rgba(255,107,53,0.2);
@@ -427,7 +428,7 @@
                             letter-spacing:2px;writing-mode:vertical-rl;text-orientation:mixed">AIRS</div>
             </div>
 
-            {{-- AFTER --}}
+            
             <div style="background:rgba(6,78,59,0.15)">
                 <div style="background:linear-gradient(135deg,var(--orange),#ff9a5c);
                             padding:18px 28px;display:flex;align-items:center;gap:12px">
@@ -436,29 +437,29 @@
                                  color:#fff;font-size:1rem">After AIRS</span>
                 </div>
                 <div style="padding:28px">
-                    @foreach([
+                    <?php $__currentLoopData = [
                     'Explain Projects End-to-End',
                     'AI, Structured & Effective',
                     'Clear Preparation Strategy',
                     'Industry-Ready Mindset',
                     'Real Industry Network',
                     'Defined Career Roadmap',
-                    ] as $item)
+                    ]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
                         <div style="width:22px;height:22px;border-radius:50%;flex-shrink:0;
                                     background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.4);
                                     display:flex;align-items:center;justify-content:center;
                                     font-size:0.72rem;font-weight:700;color:#22c55e">✓</div>
-                        <span style="color:var(--text-light);font-size:0.9rem">{{ $item }}</span>
+                        <span style="color:var(--text-light);font-size:0.9rem"><?php echo e($item); ?></span>
                     </div>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-{{-- ═══════════ HOW AIRS OPERATES ═══════════ --}}
+
 <section class="cta-section style=" padding:90px 0;background:var(--navy-mid)">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
@@ -473,7 +474,7 @@
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-            @foreach([
+            <?php $__currentLoopData = [
             ['🎓','College Sessions','Direct on-campus sessions bringing industry insight to your
             classroom.','rgba(37,99,235,0.1)','rgba(37,99,235,0.3)'],
             ['🛠','Workshops','Hands-on skill workshops designed around real industry
@@ -486,22 +487,22 @@
             companies.','rgba(34,197,94,0.1)','rgba(34,197,94,0.3)'],
             ['📜','Certification','Industry-recognized certificates to validate your skills and
             learning.','rgba(245,158,11,0.1)','rgba(245,158,11,0.3)'],
-            ] as $i => [$icon,$title,$desc,$bg,$border])
-            <div class="reveal" style="background:{{ $bg }};border:1px solid {{ $border }};
+            ]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => [$icon,$title,$desc,$bg,$border]): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="reveal" style="background:<?php echo e($bg); ?>;border:1px solid <?php echo e($border); ?>;
                         border-radius:20px;padding:32px 26px;
                         transition:all 0.3s;cursor:default" onmouseover="this.style.transform='translateY(-5px)'"
                 onmouseout="this.style.transform=''">
-                <div style="font-size:2.5rem;margin-bottom:18px">{{ $icon }}</div>
+                <div style="font-size:2.5rem;margin-bottom:18px"><?php echo e($icon); ?></div>
                 <h4 style="font-family:var(--font-display);font-weight:800;
-                           color:var(--white);font-size:1rem;margin-bottom:10px">{{ $title }}</h4>
-                <p style="color:var(--text-muted);font-size:0.84rem;line-height:1.7">{{ $desc }}</p>
+                           color:var(--white);font-size:1rem;margin-bottom:10px"><?php echo e($title); ?></h4>
+                <p style="color:var(--text-muted);font-size:0.84rem;line-height:1.7"><?php echo e($desc); ?></p>
             </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </div>
 </section>
 
-{{-- ═══════════ FELLOWSHIP ═══════════ --}}
+
 <section style="padding:90px 0;background:var(--navy)" id="fellowship">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
@@ -518,25 +519,25 @@
 
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
                     max-width:900px;margin:0 auto 48px" class="reveal">
-            @foreach([
+            <?php $__currentLoopData = [
             ['🎯','Dedicated Mentor','1:1 with a senior professional','rgba(255,107,53,0.12)','rgba(255,107,53,0.35)'],
             ['💼','Real Projects','Work on actual client work','rgba(108,99,255,0.12)','rgba(108,99,255,0.35)'],
             ['📜','Certificate','AIRS Fellowship certified','rgba(34,197,94,0.12)','rgba(34,197,94,0.35)'],
             ['🚀','Fast-Track','Priority Accrosian internship','rgba(86,204,242,0.12)','rgba(86,204,242,0.35)'],
-            ] as [$icon,$title,$desc,$bg,$border])
-            <div style="background:{{ $bg }};border:1px solid {{ $border }};
+            ]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as [$icon,$title,$desc,$bg,$border]): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div style="background:<?php echo e($bg); ?>;border:1px solid <?php echo e($border); ?>;
                         border-radius:18px;padding:28px 20px;text-align:center;
                         transition:all 0.3s" onmouseover="this.style.transform='translateY(-5px)'"
                 onmouseout="this.style.transform=''">
-                <div style="font-size:2.2rem;margin-bottom:14px">{{ $icon }}</div>
-                <div style="font-weight:800;color:var(--white);font-size:0.92rem;margin-bottom:6px">{{ $title }}</div>
-                <div style="color:var(--text-muted);font-size:0.8rem;line-height:1.5">{{ $desc }}</div>
+                <div style="font-size:2.2rem;margin-bottom:14px"><?php echo e($icon); ?></div>
+                <div style="font-weight:800;color:var(--white);font-size:0.92rem;margin-bottom:6px"><?php echo e($title); ?></div>
+                <div style="color:var(--text-muted);font-size:0.8rem;line-height:1.5"><?php echo e($desc); ?></div>
             </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
 
         <div style="text-align:center" class="reveal">
-            <a href="{{ route('student.register') }}" style="display:inline-flex;align-items:center;gap:12px;
+            <a href="<?php echo e(route('student.register')); ?>" style="display:inline-flex;align-items:center;gap:12px;
                       background:var(--orange);color:#fff;padding:16px 52px;
                       border-radius:14px;font-weight:800;font-size:1.05rem;
                       text-decoration:none;transition:all 0.3s;
@@ -552,7 +553,7 @@
     </div>
 </section>
 
-{{-- ═══════════ FINAL CTA ═══════════ --}}
+
 <section class="cta-section">
     <div class="container cta-inner">
         <span class="section-tag" style="margin-bottom:20px">Ready to Transform?</span>
@@ -564,17 +565,17 @@
             Join thousands of students already preparing the right way with AIRS.
         </p>
         <div class="cta-actions">
-            <a href="{{ route('student.register') }}" class="btn btn-primary btn-arrow">
+            <a href="<?php echo e(route('student.register')); ?>" class="btn btn-primary btn-arrow">
                 🚀 Join AIRS Now
             </a>
-            <a href="{{ route('contact') }}" class="btn btn-outline">Contact Us</a>
+            <a href="<?php echo e(route('contact')); ?>" class="btn btn-outline">Contact Us</a>
         </div>
     </div>
 </section>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@push('styles')
+<?php $__env->startPush('styles'); ?>
 <style>
 @keyframes airsPulse {
 
@@ -672,4 +673,5 @@
     }
 }
 </style>
-@endpush
+<?php $__env->stopPush(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xamppNew\htdocs\accroNew\resources\views/frontend/airs.blade.php ENDPATH**/ ?>

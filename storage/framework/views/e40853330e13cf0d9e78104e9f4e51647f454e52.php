@@ -14,6 +14,7 @@
     <title><?php echo $__env->yieldContent('meta_title', $setting->site_title ?? config('app.name')); ?></title>
     <meta name="description" content="<?php echo $__env->yieldContent('meta_description', $setting->meta_description ?? ''); ?>">
     <meta name="keywords" content="<?php echo $__env->yieldContent('meta_keywords', $setting->meta_keywords ?? ''); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
     <meta property="og:title" content="<?php echo $__env->yieldContent('meta_title', $setting->site_title ?? config('app.name')); ?>">
@@ -134,6 +135,11 @@
             item.classList.toggle('active');
         });
     });
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+    lucide.createIcons();
     </script>
 
 </body>

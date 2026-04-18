@@ -1,17 +1,17 @@
-@extends('layouts.app')
 
-@section('meta_title', $page->meta_title ?? 'Portfolio – Our Featured Projects')
-@section('meta_description', $page->meta_description ?? 'Browse our portfolio of successful projects across web, mobile,
-cloud, and AI domains.')
 
-@section('content')
+<?php $__env->startSection('meta_title', $page->meta_title ?? 'Portfolio – Our Featured Projects'); ?>
+<?php $__env->startSection('meta_description', $page->meta_description ?? 'Browse our portfolio of successful projects across web, mobile,
+cloud, and AI domains.'); ?>
+
+<?php $__env->startSection('content'); ?>
 
 <section class="page-hero">
-    @if($page && $page->banner_image)
-    <img src="{{ asset('storage/'.$page->banner_image) }}" alt="Portfolio" class="page-hero-image" />
-    @else
-    <img src="{{ asset('assets/images/hero-bg-img-2.png') }}" alt="Portfolio" class="page-hero-image" />
-    @endif
+    <?php if($page && $page->banner_image): ?>
+    <img src="<?php echo e(asset('storage/'.$page->banner_image)); ?>" alt="Portfolio" class="page-hero-image" />
+    <?php else: ?>
+    <img src="<?php echo e(asset('assets/images/hero-bg-img-2.png')); ?>" alt="Portfolio" class="page-hero-image" />
+    <?php endif; ?>
     <div class="hero-bg-effects">
         <div class="hero-orb hero-orb-1" style="opacity:0.08"></div>
         <div class="hero-grid"></div>
@@ -19,13 +19,11 @@ cloud, and AI domains.')
     <div class="container page-hero-inner">
         <h1 class="page-hero-title">Our <span class="text-gradient">Portfolio</span></h1>
         <p class="page-hero-sub">Real projects, real results — explore our work across industries and technologies.</p>
-        <a style="margin-top:30px" href="{{ route('contact') }}" class="btn btn-primary">Get a Quote</a>
+        <a style="margin-top:30px" href="<?php echo e(route('contact')); ?>" class="btn btn-primary">Get a Quote</a>
     </div>
 </section>
 
-{{-- ══════════════════════════════════════
-     CATEGORY FILTER BAR
-══════════════════════════════════════ --}}
+
 <section class="port-filter-section">
     <div class="port-filter-inner reveal">
         <button class="port-filter-btn active" data-filter="all">All Projects</button>
@@ -37,9 +35,7 @@ cloud, and AI domains.')
     </div>
 </section>
 
-{{-- ══════════════════════════════════════
-     SHOWCASE LABEL + HINT
-══════════════════════════════════════ --}}
+
 <div style="background:var(--navy)">
     <div class="showcase-label-bar reveal">
         <div class="showcase-label-left">
@@ -55,45 +51,43 @@ cloud, and AI domains.')
     </div>
 </div>
 
-{{-- ══════════════════════════════════════
-     SHOWCASE SLIDER (ORIGINAL — UNCHANGED)
-══════════════════════════════════════ --}}
+
 <section style="padding:20px 0 0; background:var(--navy)">
     <div class="showcase-track-wrap">
         <div class="showcase-track" id="showcaseTrack">
-            @forelse($items as $i => $item)
-            <div class="showcase-card" data-index="{{ $i }}">
+            <?php $__empty_1 = true; $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+            <div class="showcase-card" data-index="<?php echo e($i); ?>">
                 <div class="showcase-card-inner">
-                    @if($item->image && !str_starts_with($item->image,'assets/'))
-                    <img src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}" class="showcase-img" />
-                    @else
-                    <img src="{{ asset('assets/images/about-us.jpg') }}" alt="{{ $item->title }}"
+                    <?php if($item->image && !str_starts_with($item->image,'assets/')): ?>
+                    <img src="<?php echo e(asset('storage/'.$item->image)); ?>" alt="<?php echo e($item->title); ?>" class="showcase-img" />
+                    <?php else: ?>
+                    <img src="<?php echo e(asset('assets/images/about-us.jpg')); ?>" alt="<?php echo e($item->title); ?>"
                         class="showcase-img" />
-                    @endif
+                    <?php endif; ?>
                     <div class="showcase-overlay"></div>
                     <div class="showcase-content">
-                        @if($item->category)
-                        <span class="showcase-tag">{{ $item->category }}</span>
-                        @endif
-                        <h3 class="showcase-title">{{ $item->title }}</h3>
-                        @if($item->description)
-                        <p class="showcase-desc">{{ Str::limit($item->description, 90) }}</p>
-                        @endif
+                        <?php if($item->category): ?>
+                        <span class="showcase-tag"><?php echo e($item->category); ?></span>
+                        <?php endif; ?>
+                        <h3 class="showcase-title"><?php echo e($item->title); ?></h3>
+                        <?php if($item->description): ?>
+                        <p class="showcase-desc"><?php echo e(Str::limit($item->description, 90)); ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
-            @empty
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
             <div style="text-align:center;padding:80px;color:var(--text-light);min-width:100vw">
                 <div style="font-size:3rem;margin-bottom:16px">🚧</div>
                 <h3>Portfolio Coming Soon</h3>
             </div>
-            @endforelse
+            <?php endif; ?>
         </div>
 
         <div class="showcase-dots" id="showcaseDots">
-            @foreach($items as $i => $item)
-            <button class="showcase-dot {{ $i === 0 ? 'active' : '' }}" data-index="{{ $i }}"></button>
-            @endforeach
+            <?php $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <button class="showcase-dot <?php echo e($i === 0 ? 'active' : ''); ?>" data-index="<?php echo e($i); ?>"></button>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
 
         <button class="showcase-arrow showcase-arrow-left" id="showcasePrev">
@@ -109,9 +103,7 @@ cloud, and AI domains.')
     </div>
 </section>
 
-{{-- ══════════════════════════════════════
-     INDUSTRIES WE SERVE
-══════════════════════════════════════ --}}
+
 <section class="port-industries">
     <div class="port-industries-inner">
         <div style="text-align:center" class="reveal">
@@ -175,9 +167,7 @@ cloud, and AI domains.')
     </div>
 </section>
 
-{{-- ══════════════════════════════════════
-     HOW WE WORK
-══════════════════════════════════════ --}}
+
 <section class="port-process">
     <div class="port-process-inner">
         <div style="text-align:center" class="reveal">
@@ -227,9 +217,7 @@ cloud, and AI domains.')
     </div>
 </section>
 
-{{-- ══════════════════════════════════════
-     CLIENT TESTIMONIALS
-══════════════════════════════════════ --}}
+
 <section class="port-testimonials">
     <div class="port-testi-inner">
         <div style="text-align:center" class="reveal">
@@ -288,15 +276,15 @@ cloud, and AI domains.')
         <p class="cta-subtitle">Join 250+ satisfied clients who've trusted Accrosian to deliver exceptional digital
             products.</p>
         <div class="cta-actions">
-            <a href="{{ route('contact') }}" class="btn btn-primary btn-arrow">Start Your Project</a>
-            <a href="{{ route('services') }}" class="btn btn-outline">Our Services</a>
+            <a href="<?php echo e(route('contact')); ?>" class="btn btn-primary btn-arrow">Start Your Project</a>
+            <a href="<?php echo e(route('services')); ?>" class="btn btn-outline">Our Services</a>
         </div>
     </div>
 </section>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@push('scripts')
+<?php $__env->startPush('scripts'); ?>
 <script>
 document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
     btn.addEventListener('click', function() {
@@ -332,4 +320,5 @@ document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
     color: #fff;
 }
 </style>
-@endpush
+<?php $__env->stopPush(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xamppNew\htdocs\accroNew\resources\views/frontend/portfolio.blade.php ENDPATH**/ ?>

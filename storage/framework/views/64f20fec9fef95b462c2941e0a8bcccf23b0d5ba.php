@@ -8,7 +8,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
 
 
 <section class="hero">
-    <img src="<?php echo e(asset('assets/images/hero-img.png')); ?>" alt="Hero Background" class="hero-bg-img" />
+    <img src="<?php echo e(asset('assets/images/touch-bg-img.jpeg')); ?>" alt="Hero Background" class="hero-bg-img" />
     <div class="hero-bg-effects">
         <div class="hero-orb hero-orb-1"></div>
         <div class="hero-orb hero-orb-2"></div>
@@ -32,7 +32,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                 <a href="<?php echo e(route('services')); ?>" class="btn btn-primary btn-arrow">Explore Services</a>
                 <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-outline">View Our Work</a>
             </div>
-            <div class="hero-stats">
+            <!-- <div class="hero-stats">
                 <div class="hero-stat">
                     <div class="hero-stat-num" data-target="250" data-suffix="+"
                         style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--orange);">250+
@@ -51,9 +51,9 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                     </div>
                     <div class="hero-stat-label">Years Experience</div>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="hero-visual">
+        <!-- <div class="hero-visual">
             <div class="hero-card-main">
                 <div class="hero-card-header">
                     <div class="hero-card-icon">📊</div>
@@ -105,7 +105,7 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 
@@ -135,33 +135,54 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
             <p class="section-subtitle" style="margin:0 auto 0">We offer a comprehensive range of technology services to
                 help your business thrive in the digital age.</p>
         </div>
-        <div class="services-grid">
-            <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="service-card reveal reveal-delay-<?php echo e(($i % 3) + 1); ?>">
-                <?php if($service->image && !str_starts_with($service->image, 'assets/')): ?>
-                <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>"
-                    class="service-card-img" />
-                <?php elseif($service->image): ?>
-                <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>" class="service-card-img" />
-                <?php else: ?>
-                <img src="<?php echo e(asset('assets/images/web-dev-img.png')); ?>" alt="<?php echo e($service->title); ?>"
-                    class="service-card-img" />
-                <?php endif; ?>
-                <div class="service-card-overlay"></div>
-                <div class="service-card-content">
-                    <h3 class="service-title"><?php echo e($service->icon); ?> <?php echo e($service->title); ?></h3>
-                    <a href="<?php echo e(route('services.show', $service->slug)); ?>" class="service-link">
-                        Learn More
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
+        <div class="services-wrapper">
+            <div class="services-track">
+                <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="service-card reveal reveal-delay-<?php echo e(($i % 3) + 1); ?>">
+                    <?php if($service->image && !str_starts_with($service->image, 'assets/')): ?>
+                    <img src="<?php echo e(asset('storage/'.$service->image)); ?>" alt="<?php echo e($service->title); ?>"
+                        class="service-card-img" />
+                    <?php elseif($service->image): ?>
+                    <img src="<?php echo e(asset($service->image)); ?>" alt="<?php echo e($service->title); ?>" class="service-card-img" />
+                    <?php else: ?>
+                    <img src="<?php echo e(asset('assets/images/web-dev-img.png')); ?>" alt="<?php echo e($service->title); ?>"
+                        class="service-card-img" />
+                    <?php endif; ?>
+                    <div class="service-card-overlay"></div>
+                    <div class="service-card-content">
+                        <h3 class="service-title"><?php echo e($service->icon); ?> <?php echo e($service->title); ?></h3>
+                        <a href="<?php echo e(route('services.show', $service->slug)); ?>" class="service-link">
+                            Learn More
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="service-card">
+                    <?php if($service->image && !str_starts_with($service->image, 'assets/')): ?>
+                    <img src="<?php echo e(asset('storage/'.$service->image)); ?>" class="service-card-img" />
+                    <?php elseif($service->image): ?>
+                    <img src="<?php echo e(asset($service->image)); ?>" class="service-card-img" />
+                    <?php else: ?>
+                    <img src="<?php echo e(asset('assets/images/web-dev-img.png')); ?>" class="service-card-img" />
+                    <?php endif; ?>
+
+                    <div class="service-card-overlay"></div>
+
+                    <div class="service-card-content">
+                        <h3 class="service-title"><?php echo e($service->icon); ?> <?php echo e($service->title); ?></h3>
+                        <a href="<?php echo e(route('services.show', $service->slug)); ?>" class="service-link">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
-    </div>
 </section>
 
 
@@ -221,11 +242,15 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
 </section>
 
 
-<section class="features-section">
+<section class="process-section">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Why Accrosian</span>
             <h2 class="section-title">Built for <span class="text-gradient">Performance & Scale</span></h2>
+            <p class="process-header-sub">“We deliver high-performance, secure, and scalable digital solutions with
+                speed, reliability, and dedicated support to drive your business growth, leveraging cutting-edge
+                technologies, industry best practices, and a results-driven approach to ensure seamless execution,
+                enhanced efficiency, and long-term success</p>
         </div>
         <div class="features-grid">
             <div class="feature-card reveal reveal-delay-1">
@@ -257,30 +282,64 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
 
 
 <?php if($portfolio->isNotEmpty()): ?>
-<section style="padding:100px 0;background:var(--surface)">
-    <div class="container">
-        <div style="text-align:center;margin-bottom:60px" class="reveal">
-            <span class="section-tag">Our Work</span>
-            <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
-        </div>
-        <div class="portfolio-grid">
+<section class="showcase-section">
+    <div class="showcase-header reveal">
+        <span class="section-tag">Our Work</span>
+        <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+        <p class="process-header-sub">Explore our featured projects showcasing innovative solutions, real-world impact,
+            and successful results delivered across diverse industries and client needs, highlighting our expertise in
+            solving complex challenges, driving digital transformation, enhancing user experiences, and delivering
+            scalable, high-performance solutions tailored to business goals</p>
+    </div>
+
+    <div class="showcase-track-wrap">
+        <div class="showcase-track" id="showcaseTrack">
             <?php $__currentLoopData = $portfolio->take(6); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="portfolio-card reveal reveal-delay-<?php echo e(($i%3)+1); ?>">
-                <?php if($item->image && !str_starts_with($item->image,'assets/')): ?>
-                <img src="<?php echo e(asset('storage/'.$item->image)); ?>" alt="<?php echo e($item->title); ?>" class="portfolio-img" />
-                <?php else: ?>
-                <img src="<?php echo e(asset('assets/images/about-us.jpg')); ?>" alt="<?php echo e($item->title); ?>" class="portfolio-img" />
-                <?php endif; ?>
-                <div class="portfolio-overlay">
-                    <div class="portfolio-tag"><?php echo e($item->category); ?></div>
-                    <h3 class="portfolio-title"><?php echo e($item->title); ?></h3>
+            <div class="showcase-card" data-index="<?php echo e($i); ?>">
+                <div class="showcase-card-inner">
+                    <?php if($item->image && !str_starts_with($item->image,'assets/')): ?>
+                    <img src="<?php echo e(asset('storage/'.$item->image)); ?>" alt="<?php echo e($item->title); ?>" class="showcase-img" />
+                    <?php else: ?>
+                    <img src="<?php echo e(asset('assets/images/about-us.jpg')); ?>" alt="<?php echo e($item->title); ?>"
+                        class="showcase-img" />
+                    <?php endif; ?>
+                    <div class="showcase-overlay"></div>
+                    <div class="showcase-content">
+                        <?php if($item->category): ?>
+                        <span class="showcase-tag"><?php echo e($item->category); ?></span>
+                        <?php endif; ?>
+                        <h3 class="showcase-title"><?php echo e($item->title); ?></h3>
+                        <?php if($item->description): ?>
+                        <p class="showcase-desc"><?php echo e(Str::limit($item->description, 90)); ?></p>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
-        <div style="text-align:center;margin-top:48px">
-            <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-primary">View All Projects</a>
+
+        
+        <div class="showcase-dots" id="showcaseDots">
+            <?php $__currentLoopData = $portfolio->take(6); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <button class="showcase-dot <?php echo e($i === 0 ? 'active' : ''); ?>" data-index="<?php echo e($i); ?>"></button>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
+
+        
+        <button class="showcase-arrow showcase-arrow-left" id="showcasePrev">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+        </button>
+        <button class="showcase-arrow showcase-arrow-right" id="showcaseNext">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6" />
+            </svg>
+        </button>
+    </div>
+
+    <div style="text-align:center;margin-top:48px">
+        <a href="<?php echo e(route('portfolio')); ?>" class="btn btn-primary btn-arrow">View All Projects</a>
     </div>
 </section>
 <?php endif; ?>
@@ -291,6 +350,10 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Client Love</span>
             <h2 class="section-title">What Our Clients <span class="text-gradient">Say About Us</span></h2>
+            <p class="process-header-sub">Hear from our satisfied clients who trust us for delivering reliable,
+                innovative solutions and exceptional results that exceed expectations, building long-term partnerships
+                through consistent performance, transparent communication, industry expertise, and a commitment to
+                delivering measurable business value and growth</p>
         </div>
         <div class="testimonials-slider">
             <div class="testimonials-track">

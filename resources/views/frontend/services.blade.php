@@ -18,6 +18,7 @@
     <div class="container page-hero-inner">
         <h1 class="page-hero-title">Our <span class="text-gradient">Services</span></h1>
         <p class="page-hero-sub">Comprehensive technology solutions designed to accelerate your business growth.</p>
+        <a style="margin-top:30px" href="{{ route('contact') }}" class="btn btn-primary">Get a Quote</a>
     </div>
 </section>
 
