@@ -1794,6 +1794,7 @@ body {
   font-weight: 800;
   margin-bottom: 20px;
   text-align: left;
+  color: var(--white);
 }
 .page-hero-sub {
   color: var(--text-light);
