@@ -2334,7 +2334,7 @@ body {
   gap: 32px;
 }
 .blog-card {
-  background: var(--navy-light);
+  background: var(--navy);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
