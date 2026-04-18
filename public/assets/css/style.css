@@ -2334,7 +2334,7 @@ body {
   gap: 32px;
 }
 .blog-card {
-  background: var(--gradient-card);
+  background: var(--navy-light);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
@@ -2344,7 +2344,7 @@ body {
 }
 .blog-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(232, 117, 10, 0.3);
+  border-color: rgba(22, 9, 95, 0.3);
 }
 .blog-img {
   height: 100%;
@@ -2369,8 +2369,8 @@ body {
   margin-bottom: 16px;
 }
 .blog-cat {
-  background: rgba(232, 117, 10, 0.12);
-  color: var(--orange-light);
+  background:var(--orange);
+  color: var(--white);
   border-radius: 100px;
   padding: 4px 12px;
   font-size: 0.78rem;
@@ -2385,6 +2385,7 @@ body {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 12px;
+  color: var(--white);
 }
 .blog-title a {
   color: var(--white);
