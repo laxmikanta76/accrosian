@@ -1528,7 +1528,7 @@ body {
   height: 48px;
   border-radius: 50%;
   border: 1px solid var(--glass-border);
-  background: var(--glass-bg);
+  background: var(--orange);
   color: var(--white);
   cursor: pointer;
   display: flex;
@@ -1538,7 +1538,7 @@ body {
   font-size: 1.2rem;
 }
 .slider-btn:hover {
-  background: var(--gradient-orange);
+  background: var(--navy);
   border-color: var(--orange);
 }
 
@@ -1551,7 +1551,7 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 4px;
-  background: var(--glass-border);
+  background: var(--orange);
   cursor: pointer;
   transition: var(--transition);
 }
