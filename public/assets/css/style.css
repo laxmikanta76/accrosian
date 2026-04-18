@@ -1872,7 +1872,7 @@ body {
   margin-top: 40px;
 }
 .value-item {
-  background: var(--glass-bg);
+  background: var(--navy-light);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius);
   padding: 24px;
@@ -1890,9 +1890,10 @@ body {
   font-family: var(--font-display);
   font-weight: 700;
   margin-bottom: 8px;
+  color: var(--white);
 }
 .value-text {
-  color: var(--text-light);
+  color: var(--white);
   font-size: 0.9rem;
 }
 
