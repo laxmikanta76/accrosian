@@ -86,7 +86,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  background: var(--navy-light);
 }
 .container-wide {
   max-width: 1400px;
