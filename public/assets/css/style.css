@@ -123,6 +123,7 @@ body {
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 20px;
+  color: var(--navy);
 }
 
 .section-subtitle {
@@ -4813,7 +4814,7 @@ select option {
     font-family: var(--font-display);
     font-weight: 700;
     font-size: 0.9rem;
-    color: var(--navy);
+    color: var(--white);
     margin-bottom: 6px;
 }
  
