@@ -86,7 +86,7 @@
                 style="background:var(--navy-light);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;transition:all 0.3s;display:block"
                 class="reveal">
                 <div style="font-size:2rem;margin-bottom:12px"><?php echo e($other->icon); ?></div>
-                <h4 style="color:var(--gradient-orange);font-weight:700;margin-bottom:8px"><?php echo e($other->title); ?></h4>
+                <h4 style="color:var(--orange);font-weight:700;margin-bottom:8px"><?php echo e($other->title); ?></h4>
                 <p style="color:var(--white);font-size:0.9rem;line-height:1.6">
                     <?php echo e(Str::limit($other->short_description, 80)); ?></p>
             </a>

@@ -4305,11 +4305,12 @@ select option {
     font-size: 1.8rem;
     font-weight: 800;
     margin-bottom: 12px;
+    color: var(--navy);
 }
  
 .tech-left p {
     font-size: 0.9rem;
-    color: var(--text-light);
+    color: var(--black);
     line-height: 1.7;
 }
  
