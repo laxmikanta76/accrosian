@@ -211,26 +211,30 @@
                 </a>
 
                 {{-- Info Card --}}
-                <div class="service-card" style="padding:28px;margin-bottom:20px">
-                    <h4 style="font-family:var(--font-display);font-weight:800;font-size:1.1rem;margin-bottom:16px">
+                <div class="service-card"
+                    style="padding:28px;margin-bottom:20px;background:var(--navy-light);text-align:center">
+                    <h3
+                        style="font-family:var(--font-display);color:var(--white);font-size:1.3rem;font-weight:800;margin-bottom:12px">
                         Why Join Accrosian?
-                    </h4>
-                    @foreach([
-                    ['🚀', 'Real Project Experience', 'Work on live client projects from day one.'],
-                    ['👨‍💻', 'Expert Mentorship', 'Learn from senior developers and architects.'],
-                    ['📜', 'Internship Certificate', 'Get an industry-recognized certificate.'],
-                    ['💼', 'Job Opportunities', 'Top performers get full-time job offers.'],
-                    ['🕐', 'Flexible Duration', '1 to 6 month programs available.'],
-                    ] as [$icon, $title, $desc])
-                    <div style="display:flex;gap:14px;margin-bottom:18px;align-items:flex-start">
-                        <div style="font-size:1.4rem;margin-top:2px">{{ $icon }}</div>
-                        <div>
-                            <div style="font-weight:700;color:var(--white);font-size:0.92rem;margin-bottom:3px">
-                                {{ $title }}</div>
-                            <div style="color:var(--text-muted);font-size:0.82rem">{{ $desc }}</div>
+                        <h4 style="font-family:var(--font-display);font-weight:800;font-size:1.1rem;margin-bottom:16px">
+                            Why Join Accrosian?
+                        </h4>
+                        @foreach([
+                        ['🚀', 'Real Project Experience', 'Work on live client projects from day one.'],
+                        ['👨‍💻', 'Expert Mentorship', 'Learn from senior developers and architects.'],
+                        ['📜', 'Internship Certificate', 'Get an industry-recognized certificate.'],
+                        ['💼', 'Job Opportunities', 'Top performers get full-time job offers.'],
+                        ['🕐', 'Flexible Duration', '1 to 6 month programs available.'],
+                        ] as [$icon, $title, $desc])
+                        <div style="display:flex;gap:14px;margin-bottom:18px;align-items:flex-start">
+                            <div style="font-size:1.4rem;margin-top:2px">{{ $icon }}</div>
+                            <div>
+                                <div style="font-weight:700;color:var(--white);font-size:0.92rem;margin-bottom:3px">
+                                    {{ $title }}</div>
+                                <div style="color:var(--white);font-size:0.82rem">{{ $desc }}</div>
+                            </div>
                         </div>
-                    </div>
-                    @endforeach
+                        @endforeach
                 </div>
 
                 {{-- Contact quick info --}}
