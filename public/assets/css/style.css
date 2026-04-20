@@ -229,6 +229,7 @@ body {
 }
 
 .nav-logo {
+  justify-self: center; /* center */
   display: flex;
   align-items: center;
   gap: 12px;
@@ -253,6 +254,7 @@ body {
 }
 
 .nav-menu {
+  justify-self: center; /* center */
   display: flex;
   align-items: center;
   gap: 8px;
