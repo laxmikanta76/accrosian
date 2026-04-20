@@ -1069,7 +1069,7 @@ body {
 
 .service-card2:hover {
   transform: translateY(-10px);
-  border-color: rgba(232, 117, 10, 0.5);
+  border-color: rgba(35, 14, 126, 0.5);
   box-shadow: 0 20px 60px rgba(232, 117, 10, 0.2);
   background: var(--navy);
 }
