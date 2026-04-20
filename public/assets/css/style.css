@@ -5168,7 +5168,7 @@ select option {
 /* ── TESTIMONIALS ── */
 .port-testimonials {
     padding: 80px 0;
-    background: var(--navy-mid);
+    background: var(--white);
     border-top: 1px solid var(--glass-border);
 }
  
@@ -5186,7 +5186,7 @@ select option {
 }
  
 .port-testi-card {
-    background: rgba(255,255,255,0.03);
+    background: var(--navy-light);
     border: 1px solid var(--glass-border);
     border-radius: 18px;
     padding: 28px;
@@ -5207,9 +5207,9 @@ select option {
 }
  
 .port-testi-card:hover {
-    border-color: rgba(232,117,10,0.25);
+    border-color: var(--navy);
     transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+    box-shadow: 0 16px 40px rgba(8, 33, 102, 0.25);
 }
  
 .port-testi-stars {
