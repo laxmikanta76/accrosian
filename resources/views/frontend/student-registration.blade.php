@@ -47,10 +47,11 @@
             {{-- ═══ LEFT: REGISTRATION FORM ═══ --}}
             <div>
                 <div class="service-card2" style="padding:40px">
-                    <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;margin-bottom:8px">
+                    <h3
+                        style="font-family:var(--font-display);color:var(--white);font-size:1.5rem;font-weight:800;margin-bottom:8px">
                         Apply Now
                     </h3>
-                    <p style="color:var(--black);margin-bottom:32px;font-size:0.95rem">
+                    <p style="color:var(--white);margin-bottom:32px;font-size:0.95rem">
                         Fill in your details below and upload your resume to apply for our programs.
                     </p>
 
@@ -171,7 +172,7 @@
                                     ondragover="event.preventDefault();this.style.borderColor='var(--orange)'"
                                     ondragleave="this.style.borderColor='var(--border)'" ondrop="handleDrop(event)">
                                     <div style="font-size:2rem;margin-bottom:8px">📄</div>
-                                    <p style="color:var(--text-light);font-size:0.9rem;margin-bottom:4px">
+                                    <p style="color:var(--white);font-size:0.9rem;margin-bottom:4px">
                                         <strong style="color:var(--orange)">Click to upload</strong> or drag & drop
                                     </p>
                                     <p style="color:var(--text-muted);font-size:0.8rem">PDF files only — max 2MB</p>
