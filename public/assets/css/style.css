@@ -1456,7 +1456,7 @@ body {
 
 /* ============ TESTIMONIALS ============ */
 .testimonials-section {
-  padding: 100px 0;
+  padding: 60px 0;
 }
 
 .testimonials-slider {
@@ -1569,7 +1569,7 @@ body {
 
 /* ============ CTA SECTION ============ */
 .cta-section {
-  padding: 100px 0;
+  padding: 60px 0;
   background: linear-gradient(
     135deg,
     var(--navy),
@@ -3072,7 +3072,7 @@ select option {
 
 /* FAQ SECTION */
 .faq-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background: var(--background);
 }
 
@@ -3311,7 +3311,7 @@ select option {
 
 /* ============ APPLE-STYLE PROJECT SHOWCASE ============ */
 .showcase-section {
-    padding: 100px 0 60px;
+    padding: 60px 0 60px;
     overflow: hidden;
     background: var(--white);
 }
@@ -4111,7 +4111,7 @@ select option {
  
 /* ── PROCESS TIMELINE ── */
 .process-section-svc {
-    padding: 100px 80px;
+    padding: 60px 60px;
     background: var(--white);
     position: relative;
     overflow: hidden;
