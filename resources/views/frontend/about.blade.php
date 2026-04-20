@@ -110,14 +110,14 @@ team behind our innovative software solutions.')
                     that help businesses succeed in the digital world.We are also committed to providing internship
                     programs in Bhubaneswar that give students real-time experience and industry-ready skills. </p>
                 <ul style="margin-top:24px;list-style:none;display:flex;flex-direction:column;gap:10px">
-                    <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
+                    <li style="display:flex;align-items:center;gap:10px;color:var(--white);font-size:0.9rem"><span
                             style="color:var(--orange)">✓</span> Deliver high-quality and reliable software solutions
                     </li>
-                    <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
+                    <li style="display:flex;align-items:center;gap:10px;color:var(--white);font-size:0.9rem"><span
                             style="color:var(--orange)">✓</span> Build long-term partnerships with clients </li>
-                    <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
+                    <li style="display:flex;align-items:center;gap:10px;color:var(--white);font-size:0.9rem"><span
                             style="color:var(--orange)">✓</span> Help businesses achieve measurable growth </li>
-                    <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
+                    <li style="display:flex;align-items:center;gap:10px;color:var(--white);font-size:0.9rem"><span
                             style="color:var(--orange)">✓</span> Provide real-time internship opportunities for students
                     </li>
                 </ul>
@@ -132,16 +132,16 @@ team behind our innovative software solutions.')
                     Bhubaneswar,helping students gain real-world experience and build successful careers in the IT
                     industry.</p>
                 <ul style="margin-top:24px;list-style:none;display:flex;flex-direction:column;gap:10px">
-                    <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
+                    <li style="display:flex;align-items:center;gap:10px;color:var(--white);font-size:0.9rem"><span
                             style="color:var(--orange)">✓</span> Lead innovation in software and digital technologies
                     </li>
-                    <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
+                    <li style="display:flex;align-items:center;gap:10px;color:var(--white);font-size:0.9rem"><span
                             style="color:var(--orange)">✓</span> Expand our services across India and global markets
                     </li>
-                    <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
+                    <li style="display:flex;align-items:center;gap:10px;color:var(--white);font-size:0.9rem"><span
                             style="color:var(--orange)">✓</span> Support businesses with modern and scalable IT
                         solutions</li>
-                    <li style="display:flex;align-items:center;gap:10px;color:var(--text-light);font-size:0.9rem"><span
+                    <li style="display:flex;align-items:center;gap:10px;color:var(--white);font-size:0.9rem"><span
                             style="color:var(--orange)">✓</span> Empower students through real-time internship
                         opportunities </li>
                 </ul>
