@@ -1899,7 +1899,6 @@ body {
 
 .mission-vision {
   padding: 80px 0;
-  background: var(--navy-mid);
 }
 .mv-grid {
   display: grid;
