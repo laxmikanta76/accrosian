@@ -2515,7 +2515,7 @@ body {
   width: 52px;
   height: 52px;
   flex-shrink: 0;
-  background: var(--gradient-orange);
+  background: var(--navy-light);
   border-radius: 14px;
   display: flex;
   align-items: center;
