@@ -1906,7 +1906,7 @@ body {
   gap: 40px;
 }
 .mv-card {
-  background: var(--gradient-card);
+  background: var(--navy-light);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-lg);
   padding: 48px;
@@ -1931,9 +1931,10 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 16px;
+  color: var(--white);
 }
 .mv-text {
-  color: var(--text-light);
+  color: var(--white);
   line-height: 1.8;
 }
 
