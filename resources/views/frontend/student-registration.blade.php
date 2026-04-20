@@ -211,7 +211,7 @@
                 </a>
 
                 {{-- Info Card --}}
-                <div class="service-card2" style="padding:28px;margin-bottom:20px;background">
+                <div class="service-card2" style="padding:28px;margin-bottom:20px;color:var(--white)">
                     <h4 style="font-family:var(--font-display);font-weight:800;font-size:1.1rem;margin-bottom:16px">
                         Why Join Accrosian?
                     </h4>
