@@ -1661,6 +1661,7 @@ body {
 .social-links {
   display: flex;
   gap: 12px;
+  background: var(--navy);
 }
 .social-link {
   width: 40px;
@@ -1674,7 +1675,6 @@ body {
   text-decoration: none;
   transition: var(--transition);
   font-size: 1rem;
-  background: var(--navy-light);
 }
 .social-link:hover {
   background: var(--gradient-orange);
