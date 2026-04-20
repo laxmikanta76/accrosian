@@ -2499,7 +2499,7 @@ body {
   gap: 32px;
 }
 .contact-info-card {
-  background: var(--gradient-card);
+  background: var(--navy-light);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius);
   padding: 28px;
@@ -2509,7 +2509,7 @@ body {
   transition: var(--transition);
 }
 .contact-info-card:hover {
-  border-color: rgba(232, 117, 10, 0.3);
+  border-color: var(--navy);
 }
 .contact-info-icon {
   width: 52px;
@@ -2523,7 +2523,7 @@ body {
   font-size: 1.3rem;
 }
 .contact-info-label {
-  color: var(--text-muted);
+  color: var(--white);
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -2539,11 +2539,11 @@ body {
   text-decoration: none;
 }
 .contact-info-value a:hover {
-  color: var(--orange);
+  color: var(--navy);
 }
 
 .contact-form-wrap {
-  background: var(--gradient-card);
+  background: var(--navy-light);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-lg);
   padding: 48px;
@@ -2554,9 +2554,10 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 8px;
+  color: var(--white);
 }
 .form-subtitle {
-  color: var(--text-light);
+  color: var(--white);
   font-size: 0.95rem;
   margin-bottom: 36px;
 }
@@ -2579,7 +2580,7 @@ body {
 label {
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--text-light);
+  color: var(--white);
 }
 
 input,
