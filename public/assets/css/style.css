@@ -4927,6 +4927,7 @@ select option {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
+    background: var(--white);
 }
  
 .showcase-label-left {
@@ -4941,14 +4942,14 @@ select option {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--orange-light);
+    color: var(--black);
 }
  
 .showcase-label-title {
     font-family: var(--font-display);
     font-size: 1.05rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--black);
 }
  
 .showcase-hint {
@@ -4956,7 +4957,7 @@ select option {
     align-items: center;
     gap: 8px;
     font-size: 0.78rem;
-    color: var(--text-muted);
+    color: var(--black);
 }
  
 .showcase-hint-icon {
