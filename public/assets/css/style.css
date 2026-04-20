@@ -1068,11 +1068,15 @@ body {
 }
 
 .service-card2:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-12px) scale(1.03);
+    background: linear-gradient(135deg, #101a4d, #0b1026);
+
     box-shadow:
-        0 20px 60px rgba(0,0,0,0.4),
-        0 0 25px rgba(232,117,10,0.5);
-  background: var(--navy);
+        0 25px 80px rgba(0,0,0,0.6),   /* deep shadow */
+        0 0 30px rgba(232,117,10,0.4), /* orange glow */
+        0 0 60px rgba(232,117,10,0.2);
+
+    border-color: rgba(232,117,10,0.7);
 }
 
 /* =============================================
