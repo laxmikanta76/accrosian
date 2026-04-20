@@ -2510,7 +2510,7 @@ body {
   transition: var(--transition);
 }
 .contact-info-card:hover {
-  border-color: var(--navy);
+  border-color: var(--gradient-orange);
 }
 .contact-info-icon {
   width: 52px;
