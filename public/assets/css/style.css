@@ -106,7 +106,7 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 6px 16px;
-  border-radius: 50px;
+  border-radius: 100px;
   margin-bottom: 20px;
 }
 .section-tag::before {
@@ -1082,7 +1082,7 @@ body {
 
 /* ---- Section Wrapper ---- */
 .process-section {
-  padding: 120px 0;
+  padding: 60px 0;
   position: relative;
   overflow: hidden;
 }
