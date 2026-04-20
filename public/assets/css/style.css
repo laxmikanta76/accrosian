@@ -5132,7 +5132,7 @@ select option {
 }
  
 .port-proc-step:hover .port-proc-num {
-    background: rgba(232,117,10,0.15);
+    background: var(--navy);
     border-color: var(--orange);
     box-shadow: 0 0 24px rgba(232,117,10,0.3);
     transform: scale(1.1);
@@ -5161,7 +5161,7 @@ select option {
  
 .port-proc-desc {
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: var(--black);
     line-height: 1.6;
 }
  
