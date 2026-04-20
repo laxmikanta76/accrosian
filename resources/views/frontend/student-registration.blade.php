@@ -202,7 +202,7 @@
 
                 {{-- Preview Button --}}
                 <a href="#pdfPreview" onclick="document.getElementById('pdfPreview').scrollIntoView({behavior:'smooth'});
-                            document.getElementById('pdfFrame').src='{{ asset($brochurePdf) }}';
+                            document.getElementById('pdfFrame').src='{{ asset('assets/pdf/brochure.pdf') }}';
                             document.getElementById('pdfPreview').style.display='block';
                             return false;" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;margin-bottom:20px;
                           display:flex;align-items:center;gap:10px;text-decoration:none">
@@ -253,7 +253,7 @@
                     📋 Company Brochure
                 </h3>
                 <button onclick="document.getElementById('pdfPreview').style.display='none';
-                                 document.getElementById('pdfFrame').src='';" style="background:rgba(255,255,255,0.08);border:1px solid var(--border);
+                                 document.getElementById('pdfFrame').src='/assets/pdf/brochure.pdf';" style="background:rgba(255,255,255,0.08);border:1px solid var(--border);
                                color:var(--text-light);padding:8px 16px;border-radius:8px;
                                cursor:pointer;font-size:0.88rem">
                     ✕ Close Preview
@@ -266,8 +266,8 @@
                 </iframe>
             </div>
             <div style="text-align:center;margin-top:16px">
-                <a href="{{ asset($brochurePdf) }}" download class="btn btn-outline"
-                    style="display:inline-flex;align-items:center;gap:8px">
+                <a href="{{ asset('assets/pdf/brochure.pdf') }}" download class="btn btn-outline"
+                    style=" display:inline-flex;align-items:center;gap:8px">
                     ⬇ Download Brochure
                 </a>
             </div>
