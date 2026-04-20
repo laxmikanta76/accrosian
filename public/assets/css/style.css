@@ -4881,7 +4881,7 @@ select option {
 /* ── CATEGORY FILTER BAR ── */
 .port-filter-section {
     padding: 48px 0 0;
-    background: var(--navy);
+    background: var(--white);
 }
  
 .port-filter-inner {
@@ -4896,9 +4896,9 @@ select option {
 }
  
 .port-filter-btn {
-    background: rgba(255,255,255,0.04);
+    background: var(--navy);
     border: 1px solid var(--glass-border);
-    color: var(--text-light);
+    color: var(--white);
     font-family: var(--font-display);
     font-size: 0.82rem;
     font-weight: 600;
