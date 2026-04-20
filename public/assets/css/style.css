@@ -1058,6 +1058,7 @@ body {
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--glass-border);
   cursor: pointer;
+  background: var(--navy-light);
 
   /* lift + border glow on hover */
   transition:
@@ -1070,6 +1071,7 @@ body {
   transform: translateY(-10px);
   border-color: rgba(232, 117, 10, 0.5);
   box-shadow: 0 20px 60px rgba(232, 117, 10, 0.2);
+  background: var(--navy);
 }
 
 /* =============================================

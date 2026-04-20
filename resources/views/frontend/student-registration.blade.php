@@ -50,7 +50,7 @@
                     <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;margin-bottom:8px">
                         Apply Now
                     </h3>
-                    <p style="color:var(--text-muted);margin-bottom:32px;font-size:0.95rem">
+                    <p style="color:var(--black);margin-bottom:32px;font-size:0.95rem">
                         Fill in your details below and upload your resume to apply for our programs.
                     </p>
 
@@ -73,7 +73,7 @@
                             {{-- Name --}}
                             <div class="form-group">
                                 <label for="name"
-                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--white)">
                                     Full Name *
                                 </label>
                                 <input type="text" id="name" name="name" placeholder="Your full name"
@@ -83,7 +83,7 @@
                             {{-- Mobile --}}
                             <div class="form-group">
                                 <label for="mobile"
-                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--white)">
                                     Mobile Number *
                                 </label>
                                 <input type="tel" id="mobile" name="mobile" placeholder="+91 98XXXXXXXX"
@@ -93,7 +93,7 @@
                             {{-- Email --}}
                             <div class="form-group">
                                 <label for="email"
-                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--white)">
                                     Email Address *
                                 </label>
                                 <input type="email" id="email" name="email" placeholder="you@email.com"
@@ -103,7 +103,7 @@
                             {{-- College --}}
                             <div class="form-group">
                                 <label for="college_name"
-                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--white)">
                                     College Name *
                                 </label>
                                 <input type="text" id="college_name" name="college_name"
@@ -114,7 +114,7 @@
                             {{-- Course --}}
                             <div class="form-group">
                                 <label for="course"
-                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--white)">
                                     Course *
                                 </label>
                                 <select id="course" name="course" required style="width:100%;box-sizing:border-box">
@@ -131,7 +131,7 @@
                             {{-- Year --}}
                             <div class="form-group">
                                 <label for="year"
-                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--white)">
                                     Current Year *
                                 </label>
                                 <select id="year" name="year" required style="width:100%;box-sizing:border-box">
@@ -148,7 +148,7 @@
                             {{-- Specialization --}}
                             <div class="form-group" style="grid-column:span 2">
                                 <label for="specialization"
-                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--white)">
                                     Specialization <span
                                         style="color:var(--text-muted);font-weight:400">(optional)</span>
                                 </label>
@@ -160,7 +160,7 @@
                             {{-- Resume Upload --}}
                             <div class="form-group" style="grid-column:span 2">
                                 <label for="resume"
-                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--text-light)">
+                                    style="display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--white)">
                                     Upload Resume <span style="color:var(--text-muted);font-weight:400">(PDF only, max
                                         2MB)</span>
                                 </label>
