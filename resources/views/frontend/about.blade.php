@@ -159,7 +159,7 @@ team behind our innovative software solutions.')
             <div class="reveal">
                 <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--orange)">
                     {{ $stat[0] }}</div>
-                <div style="color:var(--text-light);margin-top:8px">{{ $stat[1] }}</div>
+                <div style="color:var(--black);margin-top:8px">{{ $stat[1] }}</div>
             </div>
             @endforeach
         </div>
