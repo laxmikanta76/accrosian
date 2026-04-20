@@ -4971,7 +4971,7 @@ select option {
 /* ── INDUSTRIES WE SERVE ── */
 .port-industries {
     padding: 80px 0;
-    background: var(--navy-mid);
+    background: var(--white);
     border-top: 1px solid var(--glass-border);
 }
  
