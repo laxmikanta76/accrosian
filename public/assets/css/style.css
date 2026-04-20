@@ -1670,10 +1670,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-light);
+  color: var(--white);
   text-decoration: none;
   transition: var(--transition);
   font-size: 1rem;
+  background: var(--navy-light);
 }
 .social-link:hover {
   background: var(--gradient-orange);
@@ -2515,7 +2516,7 @@ body {
   width: 52px;
   height: 52px;
   flex-shrink: 0;
-  background: var(--navy-light);
+  background: var(--gradient-orange);
   border-radius: 14px;
   display: flex;
   align-items: center;
