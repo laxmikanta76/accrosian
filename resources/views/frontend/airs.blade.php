@@ -176,7 +176,7 @@
 </section>
 
 {{-- ═══════════ WHAT IS AIRS ═══════════ --}}
-<section class="cta-section style=" padding:90px 0;background:var(--navy-mid)">
+<section class="cta-section style=" padding:90px 0;background:var(--white)">
     <div class="container">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center">
 
@@ -282,7 +282,7 @@
 </section>
 
 {{-- ═══════════ THE GAP IS REAL ═══════════ --}}
-<section style="padding:90px 0;background:var(--navy)">
+<section style="padding:90px 0;background:var(--white)">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">The Problem</span>
@@ -323,7 +323,7 @@
 </section>
 
 {{-- ═══════════ WHY AIRS ═══════════ --}}
-<section class="cta-section style=" padding:90px 0;background:var(--navy-mid)">
+<section class="cta-section style=" padding:90px 0;background:var(--white)">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Our Solution</span>
@@ -375,7 +375,7 @@
 </section>
 
 {{-- ═══════════ BEFORE VS AFTER ═══════════ --}}
-<section style="padding:90px 0;background:var(--navy)">
+<section style="padding:90px 0;background:var(--white)">
     <div class="container" style="max-width:920px">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Transformation</span>
@@ -459,7 +459,7 @@
 </section>
 
 {{-- ═══════════ HOW AIRS OPERATES ═══════════ --}}
-<section class="cta-section style=" padding:90px 0;background:var(--navy-mid)">
+<section class="cta-section style=" padding:90px 0;background:var(--white)">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">How It Works</span>
@@ -502,7 +502,7 @@
 </section>
 
 {{-- ═══════════ FELLOWSHIP ═══════════ --}}
-<section style="padding:90px 0;background:var(--navy)" id="fellowship">
+<section style="padding:90px 0;background:var(--white)" id="fellowship">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Fellowship Program</span>
