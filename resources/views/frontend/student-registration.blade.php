@@ -207,7 +207,7 @@
                             return false;" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;margin-bottom:20px;
                           display:flex;align-items:center;gap:10px;text-decoration:none">
                     <span style="font-size:1.2rem">📋</span>
-                    Preview Company Brochure
+                    Preview AIRS Brochure
                 </a>
 
                 {{-- Info Card --}}
