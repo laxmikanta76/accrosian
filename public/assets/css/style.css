@@ -4989,7 +4989,7 @@ select option {
 }
  
 .industry-card {
-    background: rgba(255,255,255,0.03);
+    background: var(--navy-light);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
     padding: 24px 16px;
