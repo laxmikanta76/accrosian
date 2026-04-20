@@ -27,7 +27,7 @@ the Accrosian team.')
     <div class="container">
         @forelse($posts as $post)
         <article
-            style="background:var(--card-bg);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:360px 1fr;gap:0;margin-bottom:32px;transition:transform 0.3s,box-shadow 0.3s"
+            style="background:var(--navy-light);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:360px 1fr;gap:0;margin-bottom:32px;transition:transform 0.3s,box-shadow 0.3s"
             class="reveal blog-list-card">
             <div style="overflow:hidden;height:260px">
                 <img src="{{ $post->image_url }}" alt="{{ $post->title }}"
@@ -36,17 +36,17 @@ the Accrosian team.')
             <div style="padding:40px">
                 <div style="display:flex;gap:16px;align-items:center;margin-bottom:16px">
                     <span
-                        style="background:rgba(255,107,53,0.1);color:var(--orange);padding:4px 12px;border-radius:50px;font-size:0.8rem;font-weight:600">Tech
+                        style="background:var(--navy);color:var(--white);padding:4px 12px;border-radius:50px;font-size:0.8rem;font-weight:600">Tech
                         Insights</span>
                     <span
-                        style="color:var(--text-muted);font-size:0.85rem">{{ $post->published_at?->format('M d, Y') }}</span>
-                    <span style="color:var(--text-muted);font-size:0.85rem">{{ $post->read_time }}</span>
+                        style="color:var(--white);font-size:0.85rem">{{ $post->published_at?->format('M d, Y') }}</span>
+                    <span style="color:var(--white);font-size:0.85rem">{{ $post->read_time }}</span>
                 </div>
-                <h2 style="font-size:1.4rem;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.4">
+                <h2 style="font-size:1.4rem;font-weight:700;color:var(--white);margin-bottom:12px;line-height:1.4">
                     <a href="{{ route('blog.show', $post->slug) }}"
                         style="color:inherit;text-decoration:none;transition:color 0.3s">{{ $post->title }}</a>
                 </h2>
-                <p style="color:var(--text-light);line-height:1.7;margin-bottom:24px">
+                <p style="color:var(--white);line-height:1.7;margin-bottom:24px">
                     {{ Str::limit($post->excerpt, 180) }}</p>
                 <a href="{{ route('blog.show', $post->slug) }}" class="btn btn-outline btn-sm"
                     style="display:inline-flex;align-items:center;gap:8px">
