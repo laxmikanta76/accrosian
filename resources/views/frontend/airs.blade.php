@@ -380,7 +380,7 @@
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Transformation</span>
             <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);
-                       font-weight:900;color:var(--white);margin:16px 0">
+                       font-weight:900;color:var(--navy);margin:16px 0">
                 What Changes <span class="text-gradient">After AIRS</span>
             </h2>
         </div>
@@ -408,10 +408,10 @@
                     ] as $item)
                     <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
                         <div style="width:22px;height:22px;border-radius:50%;flex-shrink:0;
-                                    background:rgba(235,87,87,0.15);border:1px solid rgba(235,87,87,0.4);
+                                    background:rgba(49, 36, 167, 0.42);border:1px solid rgba(49, 36, 167, 0.4);
                                     display:flex;align-items:center;justify-content:center;
-                                    font-size:0.72rem;font-weight:700;color:#eb5757">✗</div>
-                        <span style="color:var(--text-light);font-size:0.9rem">{{ $item }}</span>
+                                    font-size:0.72rem;font-weight:700;color:#3124a7">✗</div>
+                        <span style="color:var(--black);font-size:0.9rem">{{ $item }}</span>
                     </div>
                     @endforeach
                 </div>
