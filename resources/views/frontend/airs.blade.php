@@ -183,10 +183,10 @@
             <div class="reveal">
                 <span class="section-tag">About AIRS</span>
                 <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);
-                           font-weight:900;color:var(--white);margin:16px 0;line-height:1.2">
+                           font-weight:900;color:var(--navy);margin:16px 0;line-height:1.2">
                     What is <span class="text-gradient">AIRS?</span>
                 </h2>
-                <p style="color:var(--text-light);font-weight:700;margin-bottom:28px;font-size:1rem">
+                <p style="color:var(--black);font-weight:700;margin-bottom:28px;font-size:1rem">
                     Bridging the gap between learning and industry.
                 </p>
 
