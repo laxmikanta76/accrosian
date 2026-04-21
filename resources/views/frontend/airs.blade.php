@@ -72,7 +72,7 @@
                     </a>
                 </div>
 
-                {{-- Stats --}}
+                <!-- {{-- Stats --}}
                 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
                             padding:24px;background:rgba(255,255,255,0.03);
                             border:1px solid rgba(255,255,255,0.06);border-radius:16px">
@@ -83,7 +83,7 @@
                         <div style="color:var(--text-muted);font-size:0.78rem;margin-top:4px">{{ $l }}</div>
                     </div>
                     @endforeach
-                </div>
+                </div> -->
             </div>
 
             {{-- RIGHT — Bridge Visual --}}
