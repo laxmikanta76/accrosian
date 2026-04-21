@@ -47,12 +47,12 @@
                     <span style="font-weight:600;color:var(--text)">Share this article:</span>
                     <a href="https://twitter.com/intent/tweet?text={{ urlencode($post->title) }}&url={{ urlencode(url()->current()) }}"
                         target="_blank"
-                        style="background:var(--card-bg);border:1px solid var(--border);color:var(--text-light);padding:8px 16px;border-radius:8px;text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:6px">
+                        style="background:var(--navy);border:1px solid var(--border);color:var(--text-light);padding:8px 16px;border-radius:8px;text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:6px">
                         <i class="fab fa-x-twitter"></i> Twitter
                     </a>
                     <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(url()->current()) }}&title={{ urlencode($post->title) }}"
                         target="_blank"
-                        style="background:var(--card-bg);border:1px solid var(--border);color:var(--text-light);padding:8px 16px;border-radius:8px;text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:6px">
+                        style="background:var(--navy);border:1px solid var(--border);color:var(--text-light);padding:8px 16px;border-radius:8px;text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:6px">
                         <i class="fab fa-linkedin-in"></i> LinkedIn
                     </a>
                 </div>
@@ -61,8 +61,8 @@
             {{-- SIDEBAR --}}
             <aside>
                 <div
-                    style="background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:24px">
-                    <h3 style="font-weight:700;margin-bottom:20px;color:var(--text)">Related Articles</h3>
+                    style="background:var(--navy-light);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:24px">
+                    <h3 style="font-weight:700;margin-bottom:20px;color:var(--white)">Related Articles</h3>
                     @forelse($related as $rel)
                     <a href="{{ route('blog.show', $rel->slug) }}"
                         style="display:flex;gap:12px;margin-bottom:20px;text-decoration:none;padding-bottom:20px;border-bottom:1px solid var(--border)">
@@ -70,14 +70,14 @@
                             style="width:70px;height:60px;object-fit:cover;border-radius:8px;flex-shrink:0" />
                         <div>
                             <p
-                                style="color:var(--text);font-size:0.9rem;font-weight:600;line-height:1.4;margin-bottom:4px">
+                                style="color:var(--white);font-size:0.9rem;font-weight:600;line-height:1.4;margin-bottom:4px">
                                 {{ Str::limit($rel->title,60) }}</p>
                             <span
-                                style="color:var(--text-muted);font-size:0.8rem">{{ $rel->published_at?->format('M d, Y') }}</span>
+                                style="color:var(--white);font-size:0.8rem">{{ $rel->published_at?->format('M d, Y') }}</span>
                         </div>
                     </a>
                     @empty
-                    <p style="color:var(--text-light);font-size:0.9rem">No related posts yet.</p>
+                    <p style="color:var(--white);font-size:0.9rem">No related posts yet.</p>
                     @endforelse
                 </div>
 
