@@ -362,7 +362,7 @@
                         @foreach([$p1,$p2] as $point)
                         <div style="display:flex;align-items:center;gap:8px;
                                     font-size:0.8rem;color:var(--black)">
-                            <span style="color:{{ $color }};font-weight:700">✓</span>
+                            <span style="color:var(--black);font-weight:700">✓</span>
                             {{ $point }}
                         </div>
                         @endforeach
