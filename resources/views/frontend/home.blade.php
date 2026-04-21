@@ -211,6 +211,47 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
     </div>
 </section>
 
+
+
+{{-- WHY CHOOSE US --}}
+<section class="process-section">
+    <div class="container">
+        <div style="text-align:center;margin-bottom:60px" class="reveal">
+            <span class="section-tag">Why Accrosian</span>
+            <h2 class="section-title">Built for <span class="text-gradient">Performance & Scale</span></h2>
+            <p class="process-header-sub">“We deliver high-performance, secure, and scalable digital solutions with
+                speed, reliability, and dedicated support to drive your business growth, leveraging cutting-edge
+                technologies, industry best practices, and a results-driven approach to ensure seamless execution,
+                enhanced efficiency, and long-term success</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Fast Delivery</h3>
+                <p class="feature-text">Agile processes ensure rapid delivery without sacrificing quality or attention
+                    to detail.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">Enterprise Security</h3>
+                <p class="feature-text">Bank-grade security practices baked into every layer of our solutions.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="feature-icon">📈</div>
+                <h3 class="feature-title">Scalable Architecture</h3>
+                <p class="feature-text">Systems designed to grow with your business from startup to enterprise scale.
+                </p>
+            </div>
+            <div class="feature-card reveal reveal-delay-4">
+                <div class="feature-icon">🤝</div>
+                <h3 class="feature-title">Dedicated Support</h3>
+                <p class="feature-text">24/7 dedicated support teams ensuring your systems run flawlessly around the
+                    clock.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- PROCESS --}}
 <section class="process-section">
     <div class="container">
@@ -262,45 +303,6 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
                     <p class="process-desc">We deploy your product and provide continuous support to ensure lasting
                         success.</p>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- WHY CHOOSE US --}}
-<section class="process-section">
-    <div class="container">
-        <div style="text-align:center;margin-bottom:60px" class="reveal">
-            <span class="section-tag">Why Accrosian</span>
-            <h2 class="section-title">Built for <span class="text-gradient">Performance & Scale</span></h2>
-            <p class="process-header-sub">“We deliver high-performance, secure, and scalable digital solutions with
-                speed, reliability, and dedicated support to drive your business growth, leveraging cutting-edge
-                technologies, industry best practices, and a results-driven approach to ensure seamless execution,
-                enhanced efficiency, and long-term success</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card reveal reveal-delay-1">
-                <div class="feature-icon">⚡</div>
-                <h3 class="feature-title">Fast Delivery</h3>
-                <p class="feature-text">Agile processes ensure rapid delivery without sacrificing quality or attention
-                    to detail.</p>
-            </div>
-            <div class="feature-card reveal reveal-delay-2">
-                <div class="feature-icon">🔒</div>
-                <h3 class="feature-title">Enterprise Security</h3>
-                <p class="feature-text">Bank-grade security practices baked into every layer of our solutions.</p>
-            </div>
-            <div class="feature-card reveal reveal-delay-3">
-                <div class="feature-icon">📈</div>
-                <h3 class="feature-title">Scalable Architecture</h3>
-                <p class="feature-text">Systems designed to grow with your business from startup to enterprise scale.
-                </p>
-            </div>
-            <div class="feature-card reveal reveal-delay-4">
-                <div class="feature-icon">🤝</div>
-                <h3 class="feature-title">Dedicated Support</h3>
-                <p class="feature-text">24/7 dedicated support teams ensuring your systems run flawlessly around the
-                    clock.</p>
             </div>
         </div>
     </div>
