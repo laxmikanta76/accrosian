@@ -529,8 +529,8 @@
                         transition:all 0.3s" onmouseover="this.style.transform='translateY(-5px)'"
                 onmouseout="this.style.transform=''">
                 <div style="font-size:2.2rem;margin-bottom:14px">{{ $icon }}</div>
-                <div style="font-weight:800;color:var(--black);font-size:0.92rem;margin-bottom:6px">{{ $title }}</div>
-                <div style="color:var(--black);font-size:0.8rem;line-height:1.5">{{ $desc }}</div>
+                <div style="font-weight:800;color:var(--white);font-size:0.92rem;margin-bottom:6px">{{ $title }}</div>
+                <div style="color:var(--white);font-size:0.8rem;line-height:1.5">{{ $desc }}</div>
             </div>
             @endforeach
         </div>
@@ -545,7 +545,7 @@
                 onmouseout="this.style.transform='';this.style.boxShadow='0 10px 40px rgba(255,107,53,0.4)'">
                 🎯 Apply for Fellowship →
             </a>
-            <p style="color:var(--text-muted);font-size:0.82rem;margin-top:14px">
+            <p style="color:var(--black);font-size:0.82rem;margin-top:14px">
                 Limited seats — Applications reviewed on rolling basis
             </p>
         </div>
