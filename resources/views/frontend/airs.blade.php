@@ -464,10 +464,10 @@
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">How It Works</span>
             <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);
-                       font-weight:900;color:var(--white);margin:16px 0">
+                       font-weight:900;color:var(--navy);margin:16px 0">
                 How AIRS <span class="text-gradient">Operates</span>
             </h2>
-            <p style="color:var(--text-light);max-width:440px;margin:0 auto">
+            <p style="color:var(--black);max-width:440px;margin:0 auto">
                 Engaging students directly through multiple touchpoints
             </p>
         </div>
@@ -487,14 +487,14 @@
             ['📜','Certification','Industry-recognized certificates to validate your skills and
             learning.','rgba(245,158,11,0.1)','rgba(245,158,11,0.3)'],
             ] as $i => [$icon,$title,$desc,$bg,$border])
-            <div class="reveal" style="background:{{ $bg }};border:1px solid {{ $border }};
+            <div class="reveal" style="background:var(--navy-light);border:1px solid {{ $border }};
                         border-radius:20px;padding:32px 26px;
                         transition:all 0.3s;cursor:default" onmouseover="this.style.transform='translateY(-5px)'"
                 onmouseout="this.style.transform=''">
                 <div style="font-size:2.5rem;margin-bottom:18px">{{ $icon }}</div>
                 <h4 style="font-family:var(--font-display);font-weight:800;
                            color:var(--white);font-size:1rem;margin-bottom:10px">{{ $title }}</h4>
-                <p style="color:var(--text-muted);font-size:0.84rem;line-height:1.7">{{ $desc }}</p>
+                <p style="color:var(--white);font-size:0.84rem;line-height:1.7">{{ $desc }}</p>
             </div>
             @endforeach
         </div>
