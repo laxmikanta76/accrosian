@@ -507,10 +507,10 @@
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Fellowship Program</span>
             <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);
-                       font-weight:900;color:var(--white);margin:16px 0">
+                       font-weight:900;color:var(--navy);margin:16px 0">
                 Apply for the <span class="text-gradient">AIRS Fellowship</span>
             </h2>
-            <p style="color:var(--text-light);max-width:580px;margin:0 auto;line-height:1.75">
+            <p style="color:var(--black);max-width:580px;margin:0 auto;line-height:1.75">
                 A selective program for high-potential students — with dedicated mentorship,
                 real project assignments, and a direct pathway to Accrosian internships.
             </p>
@@ -524,13 +524,13 @@
             ['📜','Certificate','AIRS Fellowship certified','rgba(34,197,94,0.12)','rgba(34,197,94,0.35)'],
             ['🚀','Fast-Track','Priority Accrosian internship','rgba(86,204,242,0.12)','rgba(86,204,242,0.35)'],
             ] as [$icon,$title,$desc,$bg,$border])
-            <div style="background:{{ $bg }};border:1px solid {{ $border }};
+            <div style="background:var(--navy-light);border:1px solid {{ $border }};
                         border-radius:18px;padding:28px 20px;text-align:center;
                         transition:all 0.3s" onmouseover="this.style.transform='translateY(-5px)'"
                 onmouseout="this.style.transform=''">
                 <div style="font-size:2.2rem;margin-bottom:14px">{{ $icon }}</div>
-                <div style="font-weight:800;color:var(--white);font-size:0.92rem;margin-bottom:6px">{{ $title }}</div>
-                <div style="color:var(--text-muted);font-size:0.8rem;line-height:1.5">{{ $desc }}</div>
+                <div style="font-weight:800;color:var(--black);font-size:0.92rem;margin-bottom:6px">{{ $title }}</div>
+                <div style="color:var(--black);font-size:0.8rem;line-height:1.5">{{ $desc }}</div>
             </div>
             @endforeach
         </div>
