@@ -287,12 +287,12 @@
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">The Problem</span>
             <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);
-                       font-weight:900;color:var(--white);margin:16px 0">
+                       font-weight:900;color:var(--navy);margin:16px 0">
                 The Gap is <span class="text-gradient">Real</span>
             </h2>
-            <p style="color:var(--text-light);max-width:500px;margin:0 auto;line-height:1.7">
+            <p style="color:var(--black);max-width:500px;margin:0 auto;line-height:1.7">
                 Talent exists. Opportunity exists.
-                <em style="color:var(--orange);font-style:normal;font-weight:700">But the connection is missing.</em>
+                <em style="color:var(--black);font-style:normal;font-weight:700">But the connection is missing.</em>
             </p>
         </div>
 
@@ -307,7 +307,7 @@
             ['🏭','No Industry Exposure','Zero connection to how real companies think and
             operate.','rgba(86,204,242,0.1)','rgba(86,204,242,0.3)'],
             ] as [$icon,$title,$desc,$bg,$border])
-            <div class="reveal" style="background:{{ $bg }};border:1px solid {{ $border }};
+            <div class="reveal" style="background:var(--navy-light);border:1px solid {{ $border }};
                         border-radius:20px;padding:32px 24px;text-align:center;
                         transition:all 0.3s;cursor:default"
                 onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.3)'"
