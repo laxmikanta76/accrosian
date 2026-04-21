@@ -419,10 +419,10 @@
 
             {{-- DIVIDER --}}
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
-                        background:linear-gradient(180deg,rgba(255,107,53,0.08),rgba(255,107,53,0.15));
+                        background:var(--navy);
                         border-left:1px solid rgba(255,107,53,0.2);border-right:1px solid rgba(255,107,53,0.2);
                         gap:10px">
-                <div style="font-size:1.6rem;color:var(--orange);font-weight:900">→</div>
+                <div style="font-size:1.6rem;color:var(--white);font-weight:900">→</div>
                 <div style="font-size:0.6rem;font-weight:900;color:var(--orange);
                             letter-spacing:2px;writing-mode:vertical-rl;text-orientation:mixed">AIRS</div>
             </div>
