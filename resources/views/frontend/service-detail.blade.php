@@ -63,7 +63,7 @@
         </div>
 
         {{-- Buttons --}}
-        <div style="margin-top:36px;display:flex;gap:16px;flex-wrap:wrap;" class="reveal">
+        <div style="display:flex;gap:16px;flex-wrap:wrap;" class="reveal">
             <a href="{{ route('contact') }}" class="btn btn-primary">Get a Quote</a>
             <a href="{{ route('services') }}" class="btn btn-outline">All Services</a>
         </div>
