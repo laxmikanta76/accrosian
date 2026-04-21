@@ -3938,7 +3938,7 @@ select option {
  
 /* ── PROBLEM SOLUTION ── */
 .prob-sol-section {
-    padding: 100px 80px;
+    padding: 60px 60px;
     background: var(--white);
     position: relative;
     overflow: hidden;
@@ -4048,7 +4048,7 @@ select option {
  
 /* ── CORE SERVICES GRID ── */
 .core-services {
-    padding: 100px 80px;
+    padding: 60px 60px;
     background: var(--white);
     position: relative;
 }
@@ -4199,7 +4199,7 @@ select option {
  
 /* ── CASE STUDIES ── */
 .case-studies-section {
-    padding: 100px 80px;
+    padding: 60px 60px;
     background: var(--white);
 }
  
