@@ -176,7 +176,7 @@
 </section>
 
 {{-- ═══════════ WHAT IS AIRS ═══════════ --}}
-<section class="cta-section style=" padding:90px 0;background:var(--white)">
+<section style=" padding:90px 0;background:var(--white)">
     <div class="container">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center">
 
@@ -323,7 +323,7 @@
 </section>
 
 {{-- ═══════════ WHY AIRS ═══════════ --}}
-<section class="cta-section style=" padding:90px 0;background:var(--white)">
+<section style=" padding:90px 0;background:var(--white)">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Our Solution</span>
@@ -459,7 +459,7 @@
 </section>
 
 {{-- ═══════════ HOW AIRS OPERATES ═══════════ --}}
-<section class="cta-section style=" padding:90px 0;background:var(--white)">
+<section style=" padding:90px 0;background:var(--white)">
     <div class="container">
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">How It Works</span>
