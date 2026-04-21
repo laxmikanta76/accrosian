@@ -205,7 +205,8 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
 
     <div id="proc-detail"></div>
 
-    <div style="display:flex;justify-content:center;gap:12px;margin:20px 0 0;">
+    <div style="display:flex;justify-content:center;gap:12px;margin:20px 0 0;background:var(--gradient-orange);"
+        id="proc-nav">
         <button onclick="procNav(-1)" class="btn btn-outline btn-sm">← Previous</button>
         <button onclick="procNav(1)" class="btn btn-primary btn-sm">Next →</button>
     </div>
