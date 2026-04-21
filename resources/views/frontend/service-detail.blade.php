@@ -30,7 +30,7 @@
 
 </section>
 
-<section style="padding:100px 0">
+<section style="padding:60px 0">
     <div style="max-width:100%;padding:0 40px">
 
         {{-- Top: Image right, intro text left --}}
@@ -72,7 +72,7 @@
 </section>
 
 @if($others->isNotEmpty())
-<section style="padding:10px 0;background:var(--surface)">
+<section style="padding:50px 0;background:var(--surface)">
     <div class="container">
         <div style="text-align:center;margin-bottom:48px">
             <span class="section-tag">Explore More</span>
