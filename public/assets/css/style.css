@@ -5399,7 +5399,7 @@ select option {
 .proc-ring{position:absolute;top:-6px;left:-6px;right:-6px;bottom:-6px;border-radius:50%;border:1.5px dashed rgba(232,117,10,.4);animation:procOrbit 8s linear infinite;opacity:0;transition:opacity .4s;}
 .proc-node-wrap.active .proc-ring{opacity:1;}
 .proc-step-num{position:absolute;top:-8px;right:-8px;background:var(--orange);color:var(--white);font-size:9px;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
-.proc-node-label{font-size:12px;font-weight:600;color:var(--black);text-align:center;transition:color .3s;}
+.proc-node-label{font-size:12px;font-weight:700;color:var(--black);text-align:center;transition:color .3s;}
 .proc-node-wrap.active .proc-node-label{color:var(--white);}
 .proc-connector{flex:1;height:2px;margin-top:30px;position:relative;min-width:12px;}
 .proc-cline{height:2px;background:var(--gradient-orange);width:0;transition:width .6s ease;border-radius:1px;}
