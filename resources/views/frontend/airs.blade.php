@@ -206,7 +206,7 @@
                                 background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);
                                 display:flex;align-items:center;justify-content:center;
                                 font-size:0.75rem;font-weight:800;color:#22c55e;flex-shrink:0">✓</div>
-                    <span style="color:var(--text-light);font-size:0.95rem">{{ $item }}</span>
+                    <span style="color:var(--black);font-size:0.95rem">{{ $item }}</span>
                     <span style="margin-left:auto;font-size:1.2rem">{{ $emoji }}</span>
                 </div>
                 @endforeach
