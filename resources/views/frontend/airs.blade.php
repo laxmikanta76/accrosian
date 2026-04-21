@@ -203,7 +203,7 @@
                     onmouseover="this.style.borderColor='rgba(255,107,53,0.3)';this.style.background='rgba(255,107,53,0.05)'"
                     onmouseout="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
                     <div style="width:36px;height:36px;border-radius:10px;
-                                background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);
+                                background:var(--navy-light);color:var(--white);
                                 display:flex;align-items:center;justify-content:center;
                                 font-size:0.75rem;font-weight:800;color:#22c55e;flex-shrink:0">✓</div>
                     <span style="color:var(--black);font-size:0.95rem">{{ $item }}</span>
@@ -255,7 +255,7 @@
                 </div>
 
                 {{-- Corporate side --}}
-                <div style="background:linear-gradient(135deg,rgba(6,78,59,0.4),rgba(5,150,105,0.2));
+                <div style="background:var(--navy-light);
                             border:1px solid rgba(5,150,105,0.3);border-radius:16px;padding:24px">
                     <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
                         <div style="font-size:2rem;background:rgba(5,150,105,0.2);
@@ -263,7 +263,7 @@
                                     display:flex;align-items:center;justify-content:center">🏢</div>
                         <div>
                             <div style="font-weight:800;color:var(--white);font-size:1rem">Corporate Ready</div>
-                            <div style="color:rgba(110,231,183,0.8);font-size:0.82rem">What industry expects</div>
+                            <div style="color:var(--white);font-size:0.82rem">What industry expects</div>
                         </div>
                     </div>
                     <div style="display:flex;flex-direction:column;gap:8px">
@@ -271,7 +271,7 @@
                         <div style="display:flex;align-items:center;gap:10px;
                                     background:rgba(34,197,94,0.08);border-radius:8px;padding:8px 12px">
                             <span style="color:#22c55e;font-size:0.8rem;font-weight:700">✓</span>
-                            <span style="color:var(--text-light);font-size:0.85rem">{{ $i }}</span>
+                            <span style="color:var(--white);font-size:0.85rem">{{ $i }}</span>
                         </div>
                         @endforeach
                     </div>
