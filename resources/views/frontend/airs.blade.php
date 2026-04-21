@@ -477,7 +477,7 @@
             ['🎓','College Sessions','Direct on-campus sessions bringing industry insight to your
             classroom.','rgba(37,99,235,0.1)','rgba(37,99,235,0.3)'],
             ['🛠','Workshops','Hands-on skill workshops designed around real industry
-            requirements.','rgba(255,107,53,0.1)','rgba(255,107,53,0.3)'],
+            requirements.','rgba(37,99,235,0.1)','rgba(37,99,235,0.3)'],
             ['🎤','Interactive Events','Panel discussions, hackathons, and networking events with
             professionals.','rgba(108,99,255,0.1)','rgba(108,99,255,0.3)'],
             ['💻','Online Platform','Coming soon — dedicated platform for structured learning and
