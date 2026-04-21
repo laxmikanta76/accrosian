@@ -223,15 +223,15 @@
             {{-- Campus-Corporate Visual --}}
             <div class="reveal" style="display:flex;flex-direction:column;gap:16px">
                 {{-- Campus side --}}
-                <div style="background:linear-gradient(135deg,rgba(30,58,138,0.4),rgba(37,99,235,0.2));
+                <div style="background:var(--navy-light);
                             border:1px solid rgba(37,99,235,0.3);border-radius:16px;padding:24px">
                     <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
-                        <div style="font-size:2rem;background:rgba(37,99,235,0.2);
+                        <div style="font-size:2rem;background:var(--navy);
                                     width:52px;height:52px;border-radius:14px;
                                     display:flex;align-items:center;justify-content:center">🎓</div>
                         <div>
                             <div style="font-weight:800;color:var(--white);font-size:1rem">Campus Reality</div>
-                            <div style="color:rgba(147,197,253,0.8);font-size:0.82rem">What students currently face
+                            <div style="color:var(--white);font-size:0.82rem">What students currently face
                             </div>
                         </div>
                     </div>
@@ -240,7 +240,7 @@
                         <div style="display:flex;align-items:center;gap:10px;
                                     background:rgba(235,87,87,0.08);border-radius:8px;padding:8px 12px">
                             <span style="color:#eb5757;font-size:0.8rem;font-weight:700">✗</span>
-                            <span style="color:var(--text-muted);font-size:0.85rem">{{ $i }}</span>
+                            <span style="color:var(--white);font-size:0.85rem">{{ $i }}</span>
                         </div>
                         @endforeach
                     </div>
