@@ -346,7 +346,7 @@
             ] as [$icon,$title,$color,$desc,$p1,$p2])
             <div class="reveal" style="border-radius:20px;overflow:hidden;
                         border:1px solid rgba(255,255,255,0.06);
-                        background:rgba(54, 46, 126, 0.09);
+                        background:rgba(31, 24, 95, 0.09);
                         transition:transform 0.3s" onmouseover="this.style.transform='translateY(-8px)'"
                 onmouseout="this.style.transform=''">
                 <div style="background:{{ $color }};padding:20px 22px;
