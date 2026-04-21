@@ -101,14 +101,14 @@
 @push('scripts')
 <style>
 .blog-content h2 {
-    color: var(--text);
+    color: var(--white);
     font-size: 1.5rem;
     font-weight: 700;
     margin: 32px 0 16px;
 }
 
 .blog-content h3 {
-    color: var(--text);
+    color: var(--white);
     font-size: 1.25rem;
     font-weight: 700;
     margin: 28px 0 12px;
