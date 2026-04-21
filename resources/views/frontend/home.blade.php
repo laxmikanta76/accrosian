@@ -187,6 +187,30 @@ delivering innovative web, mobile, cloud, and AI solutions for modern businesses
         </div>
 </section>
 
+<section style="padding:60px 60px;background:var(--white);position:relative;overflow:hidden;">
+    <div style="text-align:center;margin-bottom:36px;" class="sec-header reveal">
+        <span class="section-tag">How We Work</span>
+        <h2 class="section-title">Our <span class="text-gradient">Development Process</span></h2>
+        <p class="section-subtitle" style="margin:0 auto">A streamlined workflow that delivers results on time, every
+            time.</p>
+    </div>
+
+    <div style="display:flex;justify-content:center;gap:0;position:relative;padding:0 24px;" id="proc-steps"></div>
+
+    <div style="height:2px;background:rgba(255,255,255,.1);border-radius:1px;margin:20px 24px 0;">
+        <div id="proc-prog"
+            style="height:2px;background:var(--gradient-orange);border-radius:1px;width:0;transition:width .5s ease;">
+        </div>
+    </div>
+
+    <div id="proc-detail"></div>
+
+    <div style="display:flex;justify-content:center;gap:12px;margin:20px 0 0;">
+        <button onclick="procNav(-1)" class="btn btn-outline btn-sm">← Previous</button>
+        <button onclick="procNav(1)" class="btn btn-primary btn-sm">Next →</button>
+    </div>
+</section>
+
 {{-- PROCESS --}}
 <section class="process-section">
     <div class="container">
