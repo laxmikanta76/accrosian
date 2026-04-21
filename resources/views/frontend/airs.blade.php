@@ -315,7 +315,7 @@
                 <div style="font-size:2.8rem;margin-bottom:18px">{{ $icon }}</div>
                 <h4 style="font-family:var(--font-display);font-weight:800;color:var(--white);
                            font-size:0.95rem;margin-bottom:12px">{{ $title }}</h4>
-                <p style="color:var(--text-muted);font-size:0.83rem;line-height:1.65">{{ $desc }}</p>
+                <p style="color:var(--white);font-size:0.83rem;line-height:1.65">{{ $desc }}</p>
             </div>
             @endforeach
         </div>
@@ -328,7 +328,7 @@
         <div style="text-align:center;margin-bottom:60px" class="reveal">
             <span class="section-tag">Our Solution</span>
             <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);
-                       font-weight:900;color:var(--white);margin:16px 0">
+                       font-weight:900;color:var(--navy);margin:16px 0">
                 Why <span class="text-gradient">AIRS?</span>
             </h2>
         </div>
@@ -346,7 +346,7 @@
             ] as [$icon,$title,$color,$desc,$p1,$p2])
             <div class="reveal" style="border-radius:20px;overflow:hidden;
                         border:1px solid rgba(255,255,255,0.06);
-                        background:rgba(255,255,255,0.02);
+                        background:var(--navy-light);
                         transition:transform 0.3s" onmouseover="this.style.transform='translateY(-8px)'"
                 onmouseout="this.style.transform=''">
                 <div style="background:{{ $color }};padding:20px 22px;
