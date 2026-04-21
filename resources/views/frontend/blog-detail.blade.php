@@ -36,7 +36,7 @@
 
             {{-- MAIN CONTENT --}}
             <article>
-                <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:48px;color:var(--text-light);line-height:1.9;font-size:1.05rem"
+                <div style="background:var(--navy-light);border:1px solid var(--border);border-radius:16px;padding:48px;color:var(--text-light);line-height:1.9;font-size:1.05rem"
                     class="blog-content">
                     {!! $post->content !!}
                 </div>
