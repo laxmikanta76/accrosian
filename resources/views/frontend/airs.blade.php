@@ -446,10 +446,10 @@
                     ] as $item)
                     <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
                         <div style="width:22px;height:22px;border-radius:50%;flex-shrink:0;
-                                    background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.4);
+                                    background:rgba(49, 36, 167, 0.42);border:1px solid rgba(49, 36, 167, 0.4);
                                     display:flex;align-items:center;justify-content:center;
-                                    font-size:0.72rem;font-weight:700;color:#22c55e">✓</div>
-                        <span style="color:var(--text-light);font-size:0.9rem">{{ $item }}</span>
+                                    font-size:0.72rem;font-weight:700;color:#3124a7">✓</div>
+                        <span style="color:var(--black);font-size:0.9rem">{{ $item }}</span>
                     </div>
                     @endforeach
                 </div>
