@@ -11,15 +11,15 @@ background:linear-gradient(145deg,#0b1026,#121a40);
 border-radius:20px;
 box-shadow:0 25px 80px rgba(0,0,0,0.6), 0 0 40px rgba(232,117,10,0.2);
 border:1px solid rgba(255,255,255,0.05);
-padding:10px;">
+padding:10px;margin-top:70px;">
 
         ```
         <!-- HEADER -->
         <div style="text-align:center;margin-bottom:30px;padding-top:20px">
-            <a href="{{ route('home') }}" style="display:inline-block;margin-bottom:18px">
+            <!-- <a href="{{ route('home') }}" style="display:inline-block;margin-bottom:18px">
                 <img src="{{ asset('assets/images/logo2.png') }}" alt="Accrosian"
                     style="height:48px;border-radius:10px;opacity:0.9" />
-            </a>
+            </a> -->
 
             <h1 style="font-family:var(--font-display);
     font-size:1.9rem;
@@ -67,7 +67,7 @@ box-shadow: inset 0 0 20px rgba(255,255,255,0.02);">
                 ] as $field)
 
                 <div style="margin-bottom:20px">
-                    <label style="display:block;font-size:0.9rem;font-weight:600;color:var(--text);margin-bottom:8px">
+                    <label style="display:block;font-size:0.9rem;font-weight:600;color:var(--white);margin-bottom:8px">
                         {{ $field[1] }}
                     </label>
 
