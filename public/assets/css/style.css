@@ -222,10 +222,11 @@ body {
   height: 80px;
   display: flex;
   align-items: center;
-  grid-template-columns: auto 1fr auto;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
 }
 
 .nav-logo {
@@ -233,7 +234,6 @@ body {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  justify-self: start;
 }
 
 .nav-logo img {
@@ -257,10 +257,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-left: 50px;
   list-style: none;
-  position: static;
-  justify-self: center;
 } 
 
 .nav-menu a {
