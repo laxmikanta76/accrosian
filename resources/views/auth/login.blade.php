@@ -9,12 +9,12 @@
             <a href="{{ route('home') }}" style="display:inline-block;margin-bottom:24px">
                 <!-- <img src="{{ asset('assets/images/logo2.png') }}" alt="Accrosian" style="height:48px;border-radius:10px" /> -->
             </a>
-            <h1 style="font-family:var(--font-display);font-size:1.8rem;font-weight:800;color:var(--text)">Welcome Back
+            <h1 style="font-family:var(--font-display);font-size:1.8rem;font-weight:800;color:var(--white)">Welcome Back
             </h1>
             <p style="color:var(--text-light);margin-top:8px">Sign in to your Accrosian account</p>
         </div>
 
-        <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:40px">
+        <div style="background:var(--navy);border:1px solid var(--border);border-radius:16px;padding:40px">
             @if($errors->any())
             <div
                 style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);border-radius:8px;padding:14px;margin-bottom:20px;color:#ef4444;font-size:0.9rem">
