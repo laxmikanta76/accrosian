@@ -226,7 +226,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  position: relative;
+  /* position: relative; */
 }
 
 .nav-logo {
@@ -258,9 +258,9 @@ body {
   align-items: center;
   gap: 8px;
   list-style: none;
-  position: absolute;
+  /* position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
 }
 
 .nav-menu a {
