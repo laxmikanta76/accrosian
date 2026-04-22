@@ -23,8 +23,9 @@
     <div class="container page-hero-inner">
         <!-- <div style="font-size:4rem;margin-bottom:16px">{{ $service->icon }}</div> -->
         <h1 class="page-hero-title"><span class="text-gradient">{{ $service->title }}</span></h1>
-        <p class="page-hero-sub">Right from conceptualization to planning and development to deployment, we prioritize
-            collaboration and transparency at every stage of mobile app development.</p>
+        <p class="page-hero-sub">We deliver innovative, scalable, and secure solutions tailored to your business needs,
+            ensuring performance, reliability, seamless user experience, and long-term growth through cutting-edge
+            technologies</p>
         <a style="margin-top:20px" href="{{ route('contact') }}" class="btn btn-primary">Get a Quote</a>
     </div>
 
