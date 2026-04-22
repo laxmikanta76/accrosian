@@ -15,7 +15,7 @@ padding:10px;">
 
         ```
         <!-- HEADER -->
-        <div style="text-align:center;margin-bottom:30px;padding-top:20px">
+        <div style="text-align:center;margin-bottom:30px;">
             <h1 style="font-family:var(--font-display);
     font-size:1.9rem;
     font-weight:800;
