@@ -351,35 +351,66 @@ console.log(
 })();
 
 (function(){
-const steps=[
-  {icon:'🎯',title:'Discovery',label:'Discovery',desc:'We deep-dive into your business goals, target users, and competitive landscape to build a solid foundation.',tags:['Stakeholder interviews','Market research','Requirements mapping','Goal alignment']},
-  {icon:'📋',title:'Planning',label:'Planning',desc:'Strategy, architecture, and roadmap defined. We break scope into milestones with clear deliverables and timelines.',tags:['System architecture','Sprint planning','Tech stack selection','Risk assessment']},
-  {icon:'🎨',title:'Design',label:'Design',desc:'High-fidelity wireframes and interactive prototypes that feel native, polished, and purpose-built for your audience.',tags:['UI/UX wireframes','Design system','Prototype testing','Brand alignment']},
-  {icon:'💻',title:'Development',label:'Development',desc:'Clean, scalable code built with modern frameworks. Every feature is peer-reviewed and performance-tested from day one.',tags:['Agile sprints','Code reviews','API integration','CI/CD pipelines']},
-  {icon:'🧪',title:'Testing',label:'Testing',desc:'Rigorous QA across devices, browsers, and edge cases — performance, security, and accessibility before launch.',tags:['Unit & E2E tests','Performance audits','Security checks','Accessibility']},
-  {icon:'🚀',title:'Launch',label:'Launch & Support',desc:'Smooth deployment with zero-downtime strategies, followed by dedicated monitoring and iterative improvements.',tags:['Zero-downtime deploy','Monitoring','Documentation','Ongoing support']},
-];
-let current=0;
-const stepsEl=document.getElementById('proc-steps');
-const detailEl=document.getElementById('proc-detail');
-const prog=document.getElementById('proc-prog');
+  const acDevSteps=[
+    {icon:'🎯',title:'Discovery',label:'Discovery',desc:'We deep-dive into your business goals, target users, and competitive landscape to build a solid foundation.',tags:['Stakeholder interviews','Market research','Requirements mapping','Goal alignment']},
+    {icon:'📋',title:'Planning',label:'Planning',desc:'Strategy, architecture, and roadmap defined. We break scope into milestones with clear deliverables and timelines.',tags:['System architecture','Sprint planning','Tech stack selection','Risk assessment']},
+    {icon:'🎨',title:'Design',label:'Design',desc:'High-fidelity wireframes and interactive prototypes that feel native, polished, and purpose-built for your audience.',tags:['UI/UX wireframes','Design system','Prototype testing','Brand alignment']},
+    {icon:'💻',title:'Development',label:'Development',desc:'Clean, scalable code built with modern frameworks. Every feature is peer-reviewed and performance-tested from day one.',tags:['Agile sprints','Code reviews','API integration','CI/CD pipelines']},
+    {icon:'🧪',title:'Testing',label:'Testing',desc:'Rigorous QA across devices, browsers, and edge cases — performance, security, and accessibility before launch.',tags:['Unit & E2E tests','Performance audits','Security checks','Accessibility']},
+    {icon:'🚀',title:'Launch',label:'Launch & Support',desc:'Smooth deployment with zero-downtime strategies, followed by dedicated monitoring and iterative improvements.',tags:['Zero-downtime deploy','Monitoring','Documentation','Ongoing support']},
+  ];
 
-steps.forEach((s,i)=>{
-  if(i>0){const c=document.createElement('div');c.className='proc-connector';c.id='pconn-'+(i-1);c.innerHTML='<div class="proc-cline" id="pcline-'+(i-1)+'"></div><div class="proc-cdot"></div>';stepsEl.appendChild(c);}
-  const w=document.createElement('div');w.className='proc-node-wrap';w.id='pnode-'+i;
-  w.innerHTML=`<div class="proc-circle" id="pcircle-${i}"><div class="proc-ring"></div><span style="font-size:22px">${s.icon}</span><div class="proc-step-num">${String(i+1).padStart(2,'0')}</div></div><div class="proc-node-label">${s.label}</div>`;
-  w.onclick=()=>procGo(i);stepsEl.appendChild(w);
-  setTimeout(()=>{const c=document.getElementById('pcircle-'+i);if(c)c.classList.add('popped');},200+i*120);
-});
+  let acDevCurrent=0;
+  const acDevStepsEl=document.getElementById('ac-dev-steps-row');
+  const acDevDetailEl=document.getElementById('ac-dev-detail');
+  const acDevProg=document.getElementById('ac-dev-prog');
 
-window.procGo=function(idx){
-  current=idx;
-  document.querySelectorAll('.proc-node-wrap').forEach((el,i)=>el.classList.toggle('active',i===current));
-  for(let i=0;i<steps.length-1;i++){const l=document.getElementById('pcline-'+i);const c=document.getElementById('pconn-'+i);if(l)l.style.width=i<current?'100%':'0';if(c)c.classList.toggle('done',i<current);}
-  prog.style.width=(current/(steps.length-1)*100)+'%';
-  const s=steps[current];
-  detailEl.innerHTML=`<div class="proc-detail-card"><h3><span>${s.icon}</span>${s.title}</h3><p>${s.desc}</p><div class="proc-tags">${s.tags.map(t=>'<span class="proc-tag">'+t+'</span>').join('')}</div></div>`;
-};
-window.procNav=function(dir){procGo(Math.max(0,Math.min(steps.length-1,current+dir)));};
-setTimeout(()=>procGo(0),900);
+  acDevSteps.forEach((s,i)=>{
+    if(i>0){
+      const c=document.createElement('div');
+      c.className='ac-dev-connector';
+      c.id='ac-dev-conn-'+(i-1);
+      c.innerHTML='<div class="ac-dev-cline" id="ac-dev-cline-'+(i-1)+'"></div><div class="ac-dev-cdot"></div>';
+      acDevStepsEl.appendChild(c);
+    }
+    const w=document.createElement('div');
+    w.className='ac-dev-node';
+    w.id='ac-dev-node-'+i;
+    w.innerHTML=`<div class="ac-dev-circle" id="ac-dev-circle-${i}">
+      <div class="ac-dev-ring"></div>
+      <span style="font-size:22px">${s.icon}</span>
+      <div class="ac-dev-stepnum">${String(i+1).padStart(2,'0')}</div>
+    </div>
+    <div class="ac-dev-label">${s.label}</div>`;
+    w.onclick=()=>acDevGo(i);
+    acDevStepsEl.appendChild(w);
+    setTimeout(()=>{
+      const c=document.getElementById('ac-dev-circle-'+i);
+      if(c) c.classList.add('ac-dev-popped');
+    },200+i*120);
+  });
+
+  window.acDevGo=function(idx){
+    acDevCurrent=idx;
+    document.querySelectorAll('.ac-dev-node').forEach((el,i)=>el.classList.toggle('ac-dev-active',i===acDevCurrent));
+    for(let i=0;i<acDevSteps.length-1;i++){
+      const l=document.getElementById('ac-dev-cline-'+i);
+      const c=document.getElementById('ac-dev-conn-'+i);
+      if(l) l.style.width=i<acDevCurrent?'100%':'0';
+      if(c) c.classList.toggle('ac-dev-done',i<acDevCurrent);
+    }
+    acDevProg.style.width=(acDevCurrent/(acDevSteps.length-1)*100)+'%';
+    const s=acDevSteps[acDevCurrent];
+    acDevDetailEl.innerHTML=`<div class="ac-dev-card">
+      <h3><span>${s.icon}</span>${s.title}</h3>
+      <p>${s.desc}</p>
+      <div class="ac-dev-tags">${s.tags.map(t=>'<span class="ac-dev-tag">'+t+'</span>').join('')}</div>
+    </div>`;
+  };
+
+  window.acDevNav=function(dir){
+    acDevGo(Math.max(0,Math.min(acDevSteps.length-1,acDevCurrent+dir)));
+  };
+
+  setTimeout(()=>acDevGo(0),900);
 })();
