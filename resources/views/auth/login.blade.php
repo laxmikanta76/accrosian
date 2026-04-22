@@ -11,7 +11,7 @@ background:linear-gradient(145deg,#0b1026,#121a40);
 border-radius:20px;
 box-shadow:0 25px 80px rgba(0,0,0,0.6), 0 0 40px rgba(232,117,10,0.2);
 border:1px solid rgba(255,255,255,0.05);
-padding:10px;">
+padding:10px;margin-top:50px;">
 
         ```
         <!-- HEADER -->
