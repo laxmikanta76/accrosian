@@ -11,7 +11,7 @@ background:linear-gradient(145deg,#0b1026,#121a40);
 border-radius:20px;
 box-shadow:0 25px 80px rgba(0,0,0,0.6), 0 0 40px rgba(232,117,10,0.2);
 border:1px solid rgba(255,255,255,0.05);
-padding:10px;margin-top:50px;">
+padding:10px;margin-top:70px;">
 
         ```
         <!-- HEADER -->
@@ -55,7 +55,7 @@ box-shadow: inset 0 0 20px rgba(255,255,255,0.02);">
 
                 <!-- EMAIL -->
                 <div style="margin-bottom:20px">
-                    <label style="display:block;font-size:0.9rem;font-weight:600;color:var(--text);margin-bottom:8px">
+                    <label style="display:block;font-size:0.9rem;font-weight:600;color:var(--white);margin-bottom:8px">
                         Email Address
                     </label>
 
@@ -75,7 +75,7 @@ box-shadow: inset 0 0 20px rgba(255,255,255,0.02);">
 
                 <!-- PASSWORD -->
                 <div style="margin-bottom:20px">
-                    <label style="display:block;font-size:0.9rem;font-weight:600;color:var(--text);margin-bottom:8px">
+                    <label style="display:block;font-size:0.9rem;font-weight:600;color:var(--white);margin-bottom:8px">
                         Password
                     </label>
 
