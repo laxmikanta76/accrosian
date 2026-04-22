@@ -72,7 +72,7 @@
             </li>
         </ul>
         @auth
-        <div style="display:flex;align-items:center;gap:8px;margin-left:8px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-left:16px;">
             @if(auth()->user()->role === 'admin')
             <a href="{{ route('admin.dashboard') }}" class="btn btn-primary btn-sm nav-cta">Admin</a>
             @endif
