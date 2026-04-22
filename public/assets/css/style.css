@@ -5403,7 +5403,7 @@ select option {
 .ac-dev-ring{position:absolute;top:-6px;left:-6px;right:-6px;bottom:-6px;border-radius:50%;border:1.5px dashed rgba(232,117,10,.4);animation:acDevOrbit 8s linear infinite;opacity:0;transition:opacity .4s;}
 .ac-dev-node.ac-dev-active .ac-dev-ring{opacity:1;}
 .ac-dev-stepnum{position:absolute;top:-8px;right:-8px;background:var(--orange);color:var(--white);font-size:9px;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
-.ac-dev-label{font-size:12px;font-weight:600;color:var(--text-light);text-align:center;transition:color .3s;}
+.ac-dev-label{font-size:12px;font-weight:800;color:var(--black);text-align:center;transition:color .3s;}
 .ac-dev-node.ac-dev-active .ac-dev-label{color:var(--white);}
 .ac-dev-connector{flex:1;height:2px;margin-top:30px;position:relative;min-width:12px;}
 .ac-dev-cline{height:2px;background:var(--gradient-orange);width:0;transition:width .6s ease;border-radius:1px;}
@@ -5412,7 +5412,7 @@ select option {
 .ac-dev-progress-bar{height:2px;background:rgba(255,255,255,.08);border-radius:1px;margin:20px 24px 0;}
 .ac-dev-progress-fill{height:2px;background:var(--gradient-orange);border-radius:1px;width:0;transition:width .5s ease;}
 .ac-dev-detail{margin:28px 24px 0;}
-.ac-dev-card{background:var(--navy);border:1px solid var(--glass-border);border-radius:var(--border-radius-lg);padding:20px 24px;animation:acDevFadeUp .35s ease forwards;}
+.ac-dev-card{background:var(--navy-light);border:1px solid var(--glass-border);border-radius:var(--border-radius-lg);padding:20px 24px;animation:acDevFadeUp .35s ease forwards;}
 .ac-dev-card h3{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--white);margin:0 0 8px;display:flex;align-items:center;gap:10px;}
 .ac-dev-card p{font-size:.9rem;color:var(--white);margin:0 0 14px;line-height:1.7;}
 .ac-dev-tags{display:flex;gap:8px;flex-wrap:wrap;}
