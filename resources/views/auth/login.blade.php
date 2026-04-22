@@ -4,8 +4,8 @@
 @section('content')
 <section
     style="min-height:80vh;display:flex;align-items:center;justify-content:center;padding:80px 20px;background:var(--navy-light)">
-    <div style="width:100%;max-width:440px">
-        <div style="text-align:center;margin-bottom:40px;background:var(--navy)">
+    <div style="width:100%;max-width:440px;background:var(--navy)">
+        <div style="text-align:center;margin-bottom:40px">
             <a href="{{ route('home') }}" style="display:inline-block;margin-bottom:24px">
                 <!-- <img src="{{ asset('assets/images/logo2.png') }}" alt="Accrosian" style="height:48px;border-radius:10px" /> -->
             </a>
