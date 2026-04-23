@@ -4362,7 +4362,7 @@ select option {
 }
  
 .tech-tag-item:hover {
-    background: rgba(232,117,10,0.1);
+    background: var(--navy);
     border-color: rgba(232,117,10,0.35);
     color: var(--orange-light);
     transform: translateY(-3px);
