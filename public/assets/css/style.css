@@ -5424,7 +5424,7 @@ select option {
 
 .desc-title{
   font-family: var(--font-display);
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(2rem, 3.4vw, 3rem);
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 20px;
