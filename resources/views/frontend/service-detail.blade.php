@@ -41,7 +41,7 @@
                 <h2 class="section-title">High-Performance Software <span class="text-gradient">& Digital
                         Solutions</span></h2>
                 <p style="color:var(--black);line-height:1.8;margin-top:16px;font-size:1.05rem;font-weight:500">
-                    {{ $service->short_description }}
+                    {{!! $service->short_description !!}}
                 </p>
             </div>
             <div class="reveal reveal-delay-2">
