@@ -40,7 +40,7 @@
                 <!-- <span class="section-tag">Overview</span> -->
                 <!-- <h2 class="section-title">High-Performance Software <span class="text-gradient">& Digital
                         Solutions</span></h2> -->
-                <p style="color:var(--navy);line-height:1.8;font-size:1rem;font-weight:500">
+                <p style="color:var(--navy);line-height:1.8;font-size:1.05rem;font-weight:500">
                     {!! $service->short_description !!}
                 </p>
             </div>
