@@ -180,7 +180,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 .btn-outline:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   box-shadow: 0 8px 32px rgba(232, 117, 10, 0.5);
 }
 
