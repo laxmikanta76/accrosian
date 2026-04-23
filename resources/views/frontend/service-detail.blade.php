@@ -73,7 +73,7 @@
 </section>
 
 @if($others->isNotEmpty())
-<section style="padding:50px 0;background:var(--surface)">
+<section style="padding:20px 0;background:var(--surface)">
     <div class="container">
         <div style="text-align:center;margin-bottom:48px">
             <span class="section-tag">Explore More</span>
