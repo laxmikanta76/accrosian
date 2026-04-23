@@ -5420,3 +5420,13 @@ select option {
 .ac-dev-tags{display:flex;gap:8px;flex-wrap:wrap;}
 .ac-dev-tag{font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:20px;background:rgba(232,117,10,.1);border:1px solid rgba(232,117,10,.25);color:var(--orange-light);}
 .ac-dev-nav{display:flex;justify-content:center;gap:12px;margin:20px 0 0;}
+
+
+.desc-title{
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: var(--navy);
+}
