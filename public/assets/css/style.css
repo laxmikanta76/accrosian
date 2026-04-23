@@ -4192,9 +4192,9 @@ select option {
 }
  
 .proc-step-desc {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     color: var(--black);
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.5;
 }
  
