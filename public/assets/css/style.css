@@ -4178,7 +4178,7 @@ select option {
  
 .proc-step:hover .proc-step-num {
     border-color: var(--navy);
-    background: rgba(232,117,10,0.12);
+    background: var(--gradient-orange);
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(232,117,10,0.3);
 }
@@ -4192,9 +4192,9 @@ select option {
 }
  
 .proc-step-desc {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--black);
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.5;
 }
  
