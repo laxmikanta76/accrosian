@@ -38,8 +38,8 @@
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start;" class="reveal">
             <div>
                 <!-- <span class="section-tag">Overview</span> -->
-                <h2 class="section-title">High-Performance Software <span class="text-gradient">& Digital
-                        Solutions</span></h2>
+                <!-- <h2 class="section-title">High-Performance Software <span class="text-gradient">& Digital
+                        Solutions</span></h2> -->
                 <p style="color:var(--black);line-height:1.8;font-size:1.05rem;font-weight:500">
                     {!! $service->short_description !!}
                 </p>
