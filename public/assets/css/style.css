@@ -5420,6 +5420,55 @@ select option {
 .ac-dev-tag{font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:20px;background:rgba(232,117,10,.1);border:1px solid rgba(232,117,10,.25);color:var(--orange-light);}
 .ac-dev-nav{display:flex;justify-content:center;gap:12px;margin:20px 0 0;}
 
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px){
+
+  .ac-dev-section{
+    padding: 40px 12px;
+  }
+
+  .ac-dev-steps-row{
+    flex-wrap: wrap;              /* IMPORTANT */
+    justify-content: center;
+    gap: 20px;                   /* spacing between items */
+    padding: 0;
+  }
+
+  .ac-dev-node{
+    flex: 0 0 30%;               /* 3 items per row */
+    max-width: 30%;
+  }
+
+  .ac-dev-circle{
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .ac-dev-label{
+    font-size: 11px;
+    text-align: center;
+  }
+
+  /* REMOVE CONNECTOR LINE IN MOBILE */
+  .ac-dev-connector{
+    display: none;
+  }
+
+  .ac-dev-progress-bar{
+    display: none;
+  }
+
+  .ac-dev-detail{
+    margin: 20px 10px 0;
+  }
+
+  .ac-dev-card{
+    padding: 16px;
+  }
+
+}
+
 
 .desc-title{
   font-family: var(--font-display);
