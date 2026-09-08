@@ -2890,7 +2890,7 @@
 
     {{-- ══════════════ PROCESS ══════════════ --}}
     {{-- =====================================================
-     OUR PROCESS — SOCIAL MEDIA MARKETING BHUBANESWAR
+     OUR PROCESS — SOCIAL MEDIA MARKETING BBSR
 ===================================================== --}}
 
     <section class="smm-process">
