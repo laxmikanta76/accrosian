@@ -16168,7 +16168,7 @@ select option {
 }
 .ex-inner {
   position: relative;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -16417,63 +16417,6 @@ select option {
 .ex-table td:nth-child(2) { font-weight: 700; color: #15803d; }
 .ex-table td:nth-child(3) { font-weight: 500; color: #b91c1c; }
 
-/* ---------- FAQ ---------- */
-.ex-faq { max-width: 860px; margin: 0 auto; display: grid; gap: 14px; }
-.ex-faq-item {
-  background: #fff;
-  border: 1px solid var(--ex-line);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: opacity 0.7s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.ex-faq-item.is-open { border-color: rgba(255, 122, 51, 0.45); box-shadow: 0 12px 32px rgba(10, 14, 46, 0.08); }
-.ex-faq-item h3 { margin: 0; font-size: inherit; }
-.ex-faq-q {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 20px 24px;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  text-align: left;
-  font-family: var(--ex-display);
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.4;
-  color: var(--ex-navy-mid);
-}
-.ex-faq-q:focus-visible { outline: 2px solid var(--ex-orange); outline-offset: -2px; }
-.ex-faq-ico {
-  position: relative;
-  flex: 0 0 28px;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: rgba(232, 117, 10, 0.1);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-.ex-faq-ico::before,
-.ex-faq-ico::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 12px;
-  height: 2px;
-  margin: -1px 0 0 -6px;
-  border-radius: 2px;
-  background: var(--ex-orange);
-  transition: background 0.3s ease;
-}
-.ex-faq-ico::after { transform: rotate(90deg); }
-.ex-faq-item.is-open .ex-faq-ico { transform: rotate(45deg); background: var(--ex-grad); }
-.ex-faq-item.is-open .ex-faq-ico::before,
-.ex-faq-item.is-open .ex-faq-ico::after { background: #fff; }
-.ex-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-.ex-faq-a p { padding: 0 24px 22px; font-size: 0.95rem; line-height: 1.8; color: var(--ex-ink); margin: 0; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
